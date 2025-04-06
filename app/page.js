@@ -6,7 +6,7 @@ const Page = () => {
   const router = useRouter();
 
   useEffect(() => {
-    router.push("/en");
+    router.push("/");
   }, [router]);
 
   return null;
