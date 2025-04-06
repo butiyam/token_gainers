@@ -1,0 +1,347 @@
+{
+  "header": {
+    "nav": {
+      "home": "Accueil",
+      "features": "Fonctionnalités",
+      "unifiedAI": "Unified AI",
+      "depin": "DePIN",
+      "rwa": "RWA",
+      "roadmap": "Feuille de Route",
+      "tokenomics": "Tokenomics",
+      "whitepaper": "Livre Blanc",
+      "faqs": "Questions Fréquemment Posées"
+    },   
+    "btn": "Connect",
+    "btnConnected": "Connected"
+  },
+  "tavtabs": {
+    "body": "Corps",
+    "sports": "Sports",
+    "coaches": "Entraîneurs",
+    "podcasts": "Podcasts",
+    "tutorials": "Tutoriels",
+    "store": "Magasin"
+  },
+  "btns": {
+    "learn-more": "En Savoir Plus"
+  },
+  "home": {
+    "hero": {
+      "new": "NOUVEAU",
+      "integrationLive": "L'intégration de nouvelle génération est en direct !",
+      "poweringFuture": "Alimenter l'avenir : IA, DePIN et RWA dans une grille unifiée",
+      "description": "Puissance de calcul alimentée par IA, actifs tokenisés et infrastructure décentralisée dans un écosystème unique.",
+      "staking": "Staking",
+      "whitepaper": "Livre Blanc"
+    },
+    "buyNowBox": {
+      "title": "Acheter",
+      "now": "Maintenant",
+      "untilPriceIncrease": "Jusqu'à l'augmentation de prix",
+      "currentPrice": "Prix actuel",
+      "nextPrice": "Prix suivant",
+      "raised": "Collecté",
+      "stackableVRN": "VRN Empilables",
+      "purchasedVRN": "VRN Achetés",
+      "listingPrice": "Prix de liste",
+      "chooseAmount": "Choisir le montant",
+      "vrnYouReceive": "$VRN que vous recevez",
+      "availableBonus": "Bonus Disponible",
+      "spendMore": "Dépenser",
+      "toGetBonus": "plus pour obtenir 10 % de tokens bonus",
+      "buyNow": "Acheter Maintenant"
+    },
+    "featuredIn": {
+      "title": "Présenté Dans"
+    },
+    "ourFeatures": {
+      "title": "Nos Fonctionnalités",
+      "description": "VORN AI est un écosystème autosuffisant, alimenté par IA, qui intègre l'IA, DePIN et la tokenisation RWA pour créer une économie décentralisée entièrement autonome.",
+      "aiTitle": "IA - Le Cerveau Intelligent",
+      "aiDescription": "L'IA dans VORN.AI sert de noyau intelligent, optimisant l'allocation des ressources, automatisant les contrats intelligents et améliorant la sécurité du réseau grâce à une surveillance en temps réel. Elle prédit la demande en ressources de calcul et d'énergie, garantissant une distribution efficace et une utilisation maximale. L'IA gère également l'optimisation des rendements pour les pools de staking et soutient la gouvernance décentralisée en rationalisant l'analyse des propositions et les processus de vote.",
+      "depinTitle": "DePIN – L'Épine Dorsale Physique",
+      "depinDescription": "DePIN fournit l'infrastructure physique, y compris les nœuds de calcul, les dispositifs de stockage et les réseaux d'énergie, permettant aux utilisateurs de contribuer et de monétiser leurs ressources. L'IA alloue dynamiquement ces ressources en fonction des besoins du réseau, créant un marché décentralisé pour la puissance de calcul, le stockage en nuage et le commerce d'énergie renouvelable, tout en récompensant les contributeurs avec des tokens VRN.",
+      "rwaTitle": "RWA – Le Moteur Économique",
+      "rwaDescription": "La tokenisation RWA relie les actifs du monde réel à la blockchain, permettant à des infrastructures telles que l'immobilier, les centres de données et les réseaux d'énergie d'être converties en NFTs fractionnés. Les utilisateurs peuvent échanger, staker et emprunter contre ces actifs tokenisés, gagnant un revenu passif grâce à la distribution de rendements gérée par l'IA tout en bénéficiant de la liquidité mondiale et de la propriété décentralisée.",
+      "learn-more": "En Savoir Plus"
+    },
+    "buyNRTX": {
+      "title": "Comment Acheter des Tokens VRN",
+      "description": "Achetez des Tokens VRN en trois étapes simples",
+      "steps": {
+        "step1": {
+          "step": "Étape 01",
+          "title": "Créez votre Portefeuille",
+          "description": "Si vous avez déjà un portefeuille compatible, passez à l'étape 2. Nous recommandons MetaMask pour le bureau et Trust Wallet pour mobile. Téléchargez et configurez votre portefeuille pour commencer."
+        },
+        "step2": {
+          "step": "Étape 02",
+          "title": "Alimentez Votre Portefeuille",
+          "description": "Alimentez votre portefeuille avec ETH, USDT ou USDC pour acheter des VRN. Si vous payez par carte de crédit/débit, vous pouvez sauter cette étape."
+        },
+        "step3": {
+          "step": "Étape 03",
+          "title": "Achetez des Tokens VRN",
+          "description": "Cliquez sur 'Acheter Maintenant' et approuvez la transaction dans votre portefeuille. Une fois réussi, vos tokens VRN seront automatiquement envoyés à votre portefeuille."
+        }
+      }
+    },
+    "earnRewards": {
+      "title": {
+        "start": "Gagner des Récompenses",
+        "end": "Revenu Passif Sans Effort"
+      },
+      "description": "Surveillez vos récompenses en temps réel et réclamez vos gains lorsqu'ils sont disponibles.",
+      "cards": [
+        {
+          "title": "Acheter des Tokens VRN",
+          "description": "Connectez votre portefeuille et achetez des VRN pour commencer.",
+          "buttonText": "Acheter Maintenant"
+        },
+        {
+          "title": "Staker des VRN",
+          "description": "Allez dans la section 'Staking' sur la plateforme. Choisissez une durée de staking qui correspond à votre stratégie. Un staking plus long = plus de récompenses et de pouvoir de gouvernance."
+        },
+        {
+          "title": "Gagner des Récompenses",
+          "description": "Surveillez vos récompenses en temps réel et réclamez vos gains lorsqu'ils sont disponibles. Les récompenses sont distribuées en fonction des contributions au réseau. Réinvestir ou retirer selon les règles de la plateforme."
+        }
+      ]
+    },
+    "rewardsCalculator": {
+      "title": {
+        "start": "Staking",
+        "end": "Calendrier des Récompenses"
+      },
+      "description": "Calculez vos récompenses potentielles en fonction de la durée du staking.",
+      "cards": [
+        {
+          "title": "3 Mois",
+          "apr": "APR : 300%"
+        },
+        {
+          "title": "6 Mois",
+          "apr": "APR : 300%"
+        },
+        {
+          "title": "9 Mois",
+          "apr": "APR : 1200%"
+        },
+        {
+          "title": "12 Mois",
+          "apr": "APR : 1900%"
+        }
+      ],
+      "buttonText": "Staker Maintenant"
+    },
+    "roadMap": {
+      "subTitle": "Feuille de Route de VORN AI",
+      "title": "Pionniers de l'Avenir de l'IA Décentralisée",
+      "description": "Notre feuille de route décrit le parcours vers un écosystème d'IA évolutif, sécurisé et entièrement autonome.",
+      "phases": [
+        {
+          "quarter": "T1 2025",
+          "title": "Recherche et Développement"
+        },
+        {
+          "quarter": "T2 2025",
+          "title": "Lancement de Prototype / Testnet"
+        },
+        {
+          "quarter": "T3 2025",
+          "title": "Lancement de Mainnet"
+        },
+        {
+          "quarter": "T4 2025",
+          "title": "Mise à l'Échelle et Adoption Mondiale"
+        }
+      ],
+      "items": {
+        "marketResearch": "Recherche de Marché",
+        "whitepaperRelease": "Publication du Livre Blanc",
+        "tokenomicsDesign": "Conception de Tokenomics",
+        "technicalArchitecture": "Architecture Technique",
+        "communityBuilding": "Construction de Communauté",
+        "earlyPartnerships": "Partenariats Précoces",
+        "aiComputeGridTestnet": "Testnet de la Grille de Calcul AI",
+        "rwaTokenizationBeta": "Bêta de Tokenisation RWA",
+        "depinNodeDeployment": "Déploiement de Nœuds DePIN",
+        "aiDaoPrototype": "Prototype AI-DAO",
+        "smartContractAudits": "Audits de Contrats Intelligents",
+        "testnetIncentiveProgram": "Programme d'Incentives Testnet",
+        "mainnetDeployment": "Déploiement de Mainnet",
+        "rwaMarketplace": "Marché RWA",
+        "aiManagedStakingPools": "Pools de Staking Gérés par IA",
+        "energyTradingPlatform": "Plateforme de Commerce d'Énergie",
+        "cexDexListings": "Listes CEX/DEX",
+        "ecosystemIncentives": "Incentives de l'Écosystème",
+        "aiModelMarketplace": "Marché de Modèles IA",
+        "crossChainCompatibility": "Compatibilité Inter-Chaines",
+        "layer2Scaling": "Mise à l'Échelle de la Couche 2",
+        "enterpriseIntegrations": "Intégrations d'Entreprise",
+        "rwaExpansion": "Expansion RWA",
+        "globalOutreach": "Portée Mondiale"
+      }
+    },
+    "tokenomics": {
+      "subTitle": "Tokenomics",
+      "title": {
+        "start": "Tokenomics :",
+        "end": "L'Économie de VORN AI"
+      },
+      "description": "L'écosystème VORN AI ($VRN) est conçu pour une durabilité à long terme, équilibrant utilité, récompenses et gouvernance. Ci-dessous se trouve le modèle de distribution de tokens garantissant croissance, sécurité et décentralisation.",
+      "liquidityAndExchangeListings": "Listes de Liquidité et d'Échange",
+      "infrastructureAndDevelopment": "Infrastructure et Développement",
+      "teamAndAdvisors": "Équipe et Conseillers",
+      "ecosystemAndRewards": "Écosystème et Récompenses",
+      "publicAndPrivateSales": "Ventes Publiques et Privées"
+    },
+    "builtOn": {
+      "title": "Construit Sur",
+      "poweredBy": "Alimenté par",
+      "innovation": "Innovation, Construit pour l'Avenir."
+    },
+    "faqs": {
+      "title": "Questions Fréquemment Posées",
+      "subtitle": "Questions Fréquemment Posées",
+      "question1": "Qu'est-ce que VORN.AI ?",
+      "answer1": "VORN.AI est une plateforme décentralisée alimentée par IA pour l'infrastructure et la tokenisation des actifs du monde réel (RWA).",
+      "question2": "Comment VORN.AI utilise-t-il l'IA ?",
+      "answer2": "VORN.AI utilise l'intelligence artificielle pour l'évaluation automatisée des actifs, l'évaluation des risques et l'analyse de marché. La plateforme utilise des algorithmes avancés d'IA pour optimiser les processus de tokenisation et améliorer la prise de décision dans la gestion des actifs du monde réel.",
+      "question3": "Que puis-je faire avec les tokens VRN ?",
+      "answer3": "Les tokens VRN servent à plusieurs fins au sein de l'écosystème VORN. Vous pouvez les staker pour des récompenses, participer à des décisions de gouvernance, accéder à des fonctionnalités premium et les échanger sur des bourses prises en charge.",
+      "question4": "Qu'est-ce que DePIN dans VORN.AI ?",
+      "answer4": "DePIN (Réseau d'Infrastructure Physique Décentralisée) dans VORN.AI est un cadre qui connecte l'infrastructure du monde réel à la technologie blockchain, permettant la gestion décentralisée et la tokenisation des actifs physiques.",
+      "question5": "Que sont les RWAs tokenisés dans VORN.AI ?",
+      "answer5": "Les RWAs tokenisés (Actifs du Monde Réel) dans VORN.AI sont des représentations numériques d'actifs physiques sur la blockchain. Cela inclut l'immobilier, l'infrastructure, les matières premières et d'autres actifs tangibles qui ont été convertis en tokens numériques négociables."
+    }
+  },
+  "aiUtility": {
+    "title": "IA Unifiée – Le Cerveau de VORN.AI",
+    "description": "L'IA dans VORN.AI agit comme la couche d'automatisation intelligente, optimisant l'infrastructure, les transactions et la sécurité à travers le réseau décentralisé. Elle garantit un fonctionnement fluide, la prévention des fraudes, la gestion des rendements et la prise de décision en temps réel.",
+    "intelligentAutomation": {
+      "title": "Automatisation Intelligente pour des Opérations Efficaces, Sécurisées et Décentralisées",
+      "description": "VORN.AI améliore l'efficacité informatique, automatise les contrats intelligents, prédit les tendances du marché, renforce la sécurité contre la fraude et optimise la gouvernance pour garantir des opérations décentralisées sans faille et sans confiance."
+    },
+    "services": {
+      "title": "Services d'Utilité de l'IA",
+      "subtitle": "pour une Automatisation Fluide et Rentable"
+    },
+    "timeline": {
+      "first": {
+        "title": "Grille de Calcul Alimentée par l'IA :",
+        "description": "Ce service gère des ressources GPU/CPU décentralisées, allouant dynamiquement les charges de travail d'IA et d'apprentissage automatique aux nœuds les plus appropriés, garantissant des solutions de calcul rentables pour les développeurs et des récompenses pour les fournisseurs de ressources."
+      },
+      "second": {
+        "title": "Système de Gestion des Rendements de l'IA :",
+        "description": "Le système de gestion des rendements de l'IA ajuste les récompenses de staking en temps réel en fonction de la performance du réseau, de l'utilisation des actifs et des besoins de liquidité, offrant aux utilisateurs des opportunités de revenus passifs optimisés grâce à des pools de staking gérés par l'IA."
+      },
+      "third": {
+        "title": "Marché de l'Énergie Optimisé par l'IA :",
+        "description": "Le marché de l'énergie optimisé par l'IA équilibre l'offre et la demande pour les énergies renouvelables sélectionnées en prédisant les cycles et la consommation, en fixant dynamiquement les prix des bénéfices commerciaux et en facilitant le commerce d'énergie de pair à pair."
+      }
+    }
+  },
+  "staking": {
+    "totalVRNBalance": "Solde Total $VRN",
+    "stakingReward": "Récompense de Staking",
+    "referralEarnings": "Vos Gains de Référence",
+    "stakingSection": {
+      "title": "Staking",
+      "totalStaking": "Total Staking",
+      "stakingPeriod": "Durée de Staking",
+      "apr": "APR {{apr}}",
+      "placeholder": "10 000,00 VRN",
+      "max": "MAX",
+      "stakeNow": "STAKER MAINTENANT",
+      "stakeAmount": "Montant à Staker",
+      "estimatedProfit": "Profit Estimé",
+      "total": "Total",
+      "lcaiToBeLocked": "LCAI à être verrouillé",
+      "duration": "Durée",
+      "unlockOn": "Déverrouiller le"
+    },
+    "referral": {
+      "title": "Référence",
+      "totalReferrals": "Total des Références",
+      "totalEarnedAmount": "Montant Total Gagné",
+      "yourReferralLink": "Votre Lien de Référence :",
+      "copied": "Copié !"
+    },
+    "leaderboard": {
+      "title": "Classement",
+      "sr": "SR",
+      "user": "Utilisateur",
+      "amount": "Montant $VRN"
+    }
+  },
+  "depin": {
+    "title": "DePIN – L'Épine Dorsale de VORN.AI",
+    "description": "DePIN dans VORN.AI fournit les ressources physiques pour l'écosystème, telles que des nœuds de calcul, des dispositifs de stockage et des réseaux d'énergie, permettant aux utilisateurs de monétiser leur infrastructure tout en alimentant des opérations décentralisées.",
+    "poweringVORN": {
+      "title1": "Nœuds de Calcul AI Décentralisés",
+      "description1": "Partagez votre puissance de calcul pour des tâches d'IA, avec l'IA optimisant les charges de travail. Gagnez des tokens VRN en fonction de votre contribution.",
+      "title2": "Stockage en Nuage Décentralisé :",
+      "description2": "Fournissez un stockage sécurisé et décentralisé avec l'IA gérant le chiffrement et la récupération. Recevez des récompenses en tokens VRN.",
+      "title3": "Réseau Énergétique Décentralisé",
+      "description3": "Tokenisez et échangez de l'énergie renouvelable pendant que l'IA équilibre les charges du réseau. Gagnez des tokens VRN pour avoir contribué des ressources énergétiques.",
+      "title4": "Intégration IoT et Villes Intelligentes :",
+      "description4": "L'IA traite les données IoT en temps réel pour des applications intelligentes telles que la surveillance du trafic et de l'environnement. Les opérateurs de dispositifs gagnent des tokens VRN."
+    }
+  },
+  "rwa": {
+    "title": "RWA – Le Moteur Économique de VORN.AI",
+    "description": "La tokenisation RWA dans VORN.AI relie le monde physique à la technologie blockchain, permettant aux utilisateurs de tokeniser, échanger et gagner sur des actifs du monde réel.",
+    "rwaContent": {
+      "title": "Déverrouiller les Actifs du Monde Réel pour Tous.",
+      "description": "RWA Core révolutionne la propriété des actifs en tokenisant l'infrastructure en actifs blockchain, permettant la propriété fractionnée pour les petits investisseurs. Avec une distribution automatisée des rendements fournissant un revenu passif et un marché P2P pour un commerce mondial sans faille, RWA Core rend les actifs de grande valeur accessibles à tous.",
+      "heading": {
+        "start": "Relier les Actifs du Monde Réel",
+        "end": "avec une Utilité Alimentée par Blockchain."
+      },
+      "features": {
+        "title1": "Plateforme de Tokenisation RWA",
+        "description1": "Cette plateforme facilite la conversion de l'infrastructure du monde réel en tokens soutenus par des NFT, permettant aux propriétaires d'actifs de tokeniser et de fractionner leurs actifs pour des investissements mondiaux et la génération de revenus.",
+        "title2": "Marché RWA",
+        "description2": "Le marché RWA est une bourse décentralisée pour acheter, vendre et échanger des actifs tokenisés tels que l'immobilier et les crédits d'énergie, avec l'IA garantissant des évaluations précises, la prévention des fraudes et une liquidité instantanée.",
+        "title3": "Pools de Staking RWA",
+        "description3": "Les pools de staking RWA permettent aux utilisateurs de staker des actifs tokenisés et de gagner des rendements générés par les actifs du monde réel sous-jacents, l'IA gérant la distribution des rendements en fonction de la performance et des conditions du marché.",
+        "title4": "Colateralisation et Prêt RWA",
+        "description4": "Les services de colateralisation et de prêt RWA fournissent de la liquidité en permettant aux utilisateurs de verrouiller leurs actifs tokenisés comme collatéral pour des prêts, l'IA évaluant les risques, gérant les taux d'intérêt et garantissant des transactions sécurisées."
+      },
+      "buttonText": "Staker Maintenant"
+    }
+  },
+  "footer": {
+    "description": "VORN.AI – Alimenter l'Avenir de l'Intelligence Décentralisée. Alimenté par l'IA. Soutenu par l'Infrastructure. Tokenisé par des Actifs.",
+    "product": {
+      "title": "Produit",
+      "features": "Fonctionnalités",
+      "unifiedAI": "IA Unifiée",
+      "depin": "DePIN",
+      "rwa": "RWA"
+    },
+    "company": {
+      "title": "Entreprise",
+      "home": "Accueil",
+      "roadmap": "Feuille de Route",
+      "tokenomics": "Tokenomics",
+      "faqs": "Questions Fréquemment Posées"
+    },
+    "resources": {
+      "title": "Ressources",
+      "staking": "Staking",
+      "whitepaper": "Livre Blanc",
+      "cookiePolicy": "Politique de Cookies"
+    },
+    "newsletter": {
+      "title": "Rejoignez notre newsletter",
+      "subtitle": "Restez à jour avec tout.",
+      "placeholder": "Entrez votre e-mail",
+      "subscribe": "S'abonner"
+    },
+    "privacyPolicy": "Politique de Confidentialité",
+    "termsConditions": "Conditions Générales",
+    "rights": "© 2025, VORN AI. Tous droits réservés."
+  }
+}

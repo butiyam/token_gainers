@@ -1,0 +1,347 @@
+{
+  "header": {
+    "nav": {
+      "home": "ホーム",
+      "features": "機能",
+      "unifiedAI": "Unified AI",
+      "depin": "DePIN",
+      "rwa": "RWA",
+      "roadmap": "ロードマップ",
+      "tokenomics": "トークノミクス",
+      "whitepaper": "ホワイトペーパー",
+      "faqs": "よくある質問"
+    },
+    "btn": "Connect",
+    "btnConnected": "Connected"
+  },
+  "tavtabs": {
+    "body": "ボディ",
+    "sports": "スポーツ",
+    "coaches": "コーチ",
+    "podcasts": "ポッドキャスト",
+    "tutorials": "チュートリアル",
+    "store": "ストア"
+  },
+  "btns": {
+    "learn-more": "もっと知る"
+  },
+  "home": {
+    "hero": {
+      "new": "新しい",
+      "integrationLive": "次世代の統合がライブです！",
+      "poweringFuture": "未来を支える：AI、DePIN、RWAを一つの統合されたグリッドで",
+      "description": "AI駆動の計算能力、トークン化された資産、そして一つのエコシステムにおける分散型インフラ。",
+      "staking": "ステーキング",
+      "whitepaper": "ホワイトペーパー"
+    },
+    "buyNowBox": {
+      "title": "購入",
+      "now": "今",
+      "untilPriceIncrease": "価格上昇まで",
+      "currentPrice": "現在の価格",
+      "nextPrice": "次の価格",
+      "raised": "調達済み",
+      "stackableVRN": "スタッカブルVRN",
+      "purchasedVRN": "購入したVRN",
+      "listingPrice": "リスティング価格",
+      "chooseAmount": "金額を選択",
+      "vrnYouReceive": "$VRNを受け取ります",
+      "availableBonus": "利用可能なボーナス",
+      "spendMore": "もっと使う",
+      "toGetBonus": "10%のボーナストークンを得るために",
+      "buyNow": "今すぐ購入"
+    },
+    "featuredIn": {
+      "title": "掲載"
+    },
+    "ourFeatures": {
+      "title": "私たちの機能",
+      "description": "VORN AIは自己持続型のAI駆動エコシステムで、AI、DePIN、RWAトークン化を統合し、完全に自律的な分散型経済を創造します。",
+      "aiTitle": "AI - インテリジェントな脳",
+      "aiDescription": "VORN.AIのAIはインテリジェントコアとして機能し、リソースの割り当てを最適化し、スマートコントラクトを自動化し、リアルタイムの監視を通じてネットワークのセキュリティを向上させます。計算とエネルギーリソースの需要を予測し、効率的な配分と最大限の利用を確保します。AIはまた、ステーキングプールの収益最適化を管理し、提案の分析と投票プロセスを合理化することで分散型ガバナンスをサポートします。",
+      "depinTitle": "DePIN - 物理的なバックボーン",
+      "depinDescription": "DePINは計算ノード、ストレージデバイス、エネルギーグリッドを含む物理インフラを提供し、ユーザーがリソースを提供し、収益化できるようにします。AIはネットワークのニーズに基づいてこれらのリソースを動的に割り当て、計算能力、クラウドストレージ、再生可能エネルギー取引のための分散型市場を作成し、貢献者にVRNトークンで報酬を与えます。",
+      "rwaTitle": "RWA - 経済エンジン",
+      "rwaDescription": "RWAトークン化は、現実の資産をブロックチェーンと結びつけ、リアルエステート、データセンター、エネルギーグリッドなどのインフラを分割NFTに変換できるようにします。ユーザーはこれらのトークン化された資産を取引、ステーク、借り入れすることができ、AIによって管理された収益分配を通じて受動的な収入を得ることができ、グローバルな流動性と分散型の所有権の恩恵を受けます。",
+      "learn-more": "もっと知る"
+    },
+    "buyNRTX": {
+      "title": "VRNトークンの購入方法",
+      "description": "3つの簡単なステップでVRNトークンを購入",
+      "steps": {
+        "step1": {
+          "step": "ステップ01",
+          "title": "ウォレットを作成",
+          "description": "すでに互換性のあるウォレットをお持ちの場合は、ステップ2に進んでください。デスクトップ用にはMetaMask、モバイル用にはTrust Walletをお勧めします。ウォレットをダウンロードして設定し、開始します。"
+        },
+        "step2": {
+          "step": "ステップ02",
+          "title": "ウォレットに資金を追加",
+          "description": "VRNを購入するために、ETH、USDT、またはUSDCでウォレットに資金を追加してください。クレジット/デビットカードで支払う場合は、このステップをスキップできます。"
+        },
+        "step3": {
+          "step": "ステップ03",
+          "title": "VRNトークンを購入",
+          "description": "'今すぐ購入'をクリックし、ウォレットでトランザクションを承認します。成功した場合、VRNトークンは自動的にウォレットに送信されます。"
+        }
+      }
+    },
+    "earnRewards": {
+      "title": {
+        "start": "報酬を得る",
+        "end": "手間いらずの受動的収入"
+      },
+      "description": "リアルタイムで報酬を監視し、利用可能なときに収益を請求します。",
+      "cards": [
+        {
+          "title": "VRNトークンを購入",
+          "description": "ウォレットを接続し、VRNを購入して開始します。",
+          "buttonText": "今すぐ購入"
+        },
+        {
+          "title": "VRNをステーク",
+          "description": "プラットフォームの「ステーキング」セクションに移動します。戦略に合ったステーキング期間を選択します。長いステーキング = より多くの報酬とガバナンス権。"
+        },
+        {
+          "title": "報酬を得る",
+          "description": "リアルタイムで報酬を監視し、利用可能なときに収益を請求します。報酬はネットワークへの貢献に基づいて分配されます。プラットフォームのルールに従って再投資または引き出します。"
+        }
+      ]
+    },
+    "rewardsCalculator": {
+      "title": {
+        "start": "ステーキング",
+        "end": "報酬カレンダー"
+      },
+      "description": "ステーキング期間に基づいて潜在的な報酬を計算します。",
+      "cards": [
+        {
+          "title": "3 月 ",
+          "apr": "APR: 300%"
+        },
+        {
+          "title": "6 月 ",
+          "apr": "APR: 700%"
+        },
+        {
+          "title": "9 月 ",
+          "apr": "APR: 1200%"
+        },
+        {
+          "title": "12 月 ",
+          "apr": "APR: 1900%"
+        }
+      ],
+      "buttonText": "今すぐステーク"
+    },
+    "roadMap": {
+      "subTitle": "VORN AIのロードマップ",
+      "title": "分散型AIの未来を切り開く",
+      "description": "私たちのロードマップは、スケーラブルで安全、完全に自律的なAIエコシステムへの旅を示しています。",
+      "phases": [
+        {
+          "quarter": "Q1 2025",
+          "title": "研究と開発"
+        },
+        {
+          "quarter": "Q2 2025",
+          "title": "プロトタイプ/テストネットの開始"
+        },
+        {
+          "quarter": "Q3 2025",
+          "title": "メインネットの開始"
+        },
+        {
+          "quarter": "Q4 2025",
+          "title": "スケーリングとグローバルな採用"
+        }
+      ],
+      "items": {
+        "marketResearch": "市場調査",
+        "whitepaperRelease": "ホワイトペーパーの発表",
+        "tokenomicsDesign": "トークン設計",
+        "technicalArchitecture": "技術アーキテクチャ",
+        "communityBuilding": "コミュニティ構築",
+        "earlyPartnerships": "初期パートナーシップ",
+        "aiComputeGridTestnet": "AI計算グリッドテストネット",
+        "rwaTokenizationBeta": "RWAトークン化ベータ",
+        "depinNodeDeployment": "DePINノードの展開",
+        "aiDaoPrototype": "AI-DAOプロトタイプ",
+        "smartContractAudits": "スマートコントラクト監査",
+        "testnetIncentiveProgram": "テストネットインセンティブプログラム",
+        "mainnetDeployment": "メインネットの展開",
+        "rwaMarketplace": "RWAマーケットプレイス",
+        "aiManagedStakingPools": "AI管理のステーキングプール",
+        "energyTradingPlatform": "エネルギー取引プラットフォーム",
+        "cexDexListings": "CEX/DEXリスト",
+        "ecosystemIncentives": "エコシステムインセンティブ",
+        "aiModelMarketplace": "AIモデルマーケットプレイス",
+        "crossChainCompatibility": "クロスチェーン互換性",
+        "layer2Scaling": "レイヤー2スケーリング",
+        "enterpriseIntegrations": "企業統合",
+        "rwaExpansion": "RWA拡張",
+        "globalOutreach": "グローバルな展開"
+      }
+    },
+    "tokenomics": {
+      "subTitle": "トークンノミクス",
+      "title": {
+        "start": "トークンノミクス:",
+        "end": "VORN AIの経済"
+      },
+      "description": "VORN AI ($VRN)エコシステムは、長期的な持続可能性のために設計されており、ユーティリティ、報酬、ガバナンスのバランスを取っています。以下は、成長、安全性、分散化を保証するトークン配分モデルです。",
+      "liquidityAndExchangeListings": "流動性と取引所リスト",
+      "infrastructureAndDevelopment": "インフラと開発",
+      "teamAndAdvisors": "チームとアドバイザー",
+      "ecosystemAndRewards": "エコシステムと報酬",
+      "publicAndPrivateSales": "公募と私募"
+    },
+    "builtOn": {
+      "title": "構築された",
+      "poweredBy": "によって駆動される",
+      "innovation": "革新、未来のために構築された。"
+    },
+    "faqs": {
+      "title": "よくある質問",
+      "subtitle": "よくある質問",
+      "question1": "VORN.AIとは何ですか？",
+      "answer1": "VORN.AIは、インフラと現実世界の資産（RWA）のトークン化のためのAI駆動の分散型プラットフォームです。",
+      "question2": "VORN.AIはどのようにAIを利用していますか？",
+      "answer2": "VORN.AIは、資産の自動評価、リスク評価、市場分析のために人工知能を活用しています。プラットフォームは、トークン化プロセスを最適化し、現実世界の資産管理における意思決定を改善するために、高度なAIアルゴリズムを使用しています。",
+      "question3": "VRNトークンで何ができますか？",
+      "answer3": "VRNトークンは、VORNエコシステム内で複数の目的に使用されます。報酬のためにステークしたり、ガバナンスの決定に参加したり、プレミアム機能にアクセスしたり、サポートされている取引所で取引したりできます。",
+      "question4": "VORN.AIのDePINとは何ですか？",
+      "answer4": "DePIN（分散型物理インフラネットワーク）は、VORN.AIにおいて、現実のインフラをブロックチェーン技術に接続し、物理資産の分散管理とトークン化を可能にするフレームワークです。",
+      "question5": "VORN.AIのトークン化されたRWAとは何ですか？",
+      "answer5": "VORN.AIのトークン化されたRWA（現実世界の資産）は、ブロックチェーン上の物理資産のデジタル表現です。これには、不動産、インフラ、商品、その他の有形資産が含まれ、取引可能なデジタルトークンに変換されています。"
+    }
+  },
+  "aiUtility": {
+    "title": "統合AI - VORN.AIの脳",
+    "description": "VORN.AIのAIは、分散型ネットワーク全体のインフラ、トランザクション、セキュリティを最適化するインテリジェントな自動化層として機能します。シームレスな運用、詐欺防止、収益管理、リアルタイムの意思決定を保証します。",
+    "intelligentAutomation": {
+      "title": "効率的で安全、分散型の運用のためのインテリジェントな自動化",
+      "description": "VORN.AIは計算効率を向上させ、スマートコントラクトを自動化し、市場のトレンドを予測し、詐欺に対するセキュリティを強化し、シームレスで信頼のない分散型運用を保証するためにガバナンスを最適化します。"
+    },
+    "services": {
+      "title": "AIユーティリティサービス",
+      "subtitle": "シームレスで収益性の高い自動化のために"
+    },
+    "timeline": {
+      "first": {
+        "title": "AI駆動の計算グリッド:",
+        "description": "このサービスは、分散型GPU/CPUリソースを管理し、AIと機械学習のワークロードを最も適したノードに動的に割り当て、開発者にとってコスト効果の高い計算ソリューションとリソースプロバイダーへの報酬を保証します。"
+      },
+      "second": {
+        "title": "AI収益管理システム:",
+        "description": "AI収益管理システムは、ネットワークのパフォーマンス、資産の利用状況、流動性のニーズに基づいて、リアルタイムでステーキング報酬を調整し、AI管理のステーキングプールを通じて最適化された受動的収入の機会を提供します。"
+      },
+      "third": {
+        "title": "AI最適化エネルギーマーケット:",
+        "description": "AI最適化エネルギーマーケットは、選択された再生可能エネルギーの供給と需要をバランスさせ、サイクルと消費を予測し、取引利益の価格を動的に設定し、ピアツーピアエネルギー取引を促進します。"
+      }
+    }
+  },
+  "staking": {
+    "totalVRNBalance": "合計$VRN残高",
+    "stakingReward": "ステーキング報酬",
+    "referralEarnings": "あなたの紹介報酬",
+    "stakingSection": {
+      "title": "ステーキング",
+      "totalStaking": "合計ステーキング",
+      "stakingPeriod": "ステーキング期間",
+      "apr": "APR {{apr}}",
+      "placeholder": "10,000.00 VRN",
+      "max": "最大",
+      "stakeNow": "今すぐステーク",
+      "stakeAmount": "ステーク金額",
+      "estimatedProfit": "推定利益",
+      "total": "合計",
+      "lcaiToBeLocked": "ロックされるLCAI",
+      "duration": "期間",
+      "unlockOn": "解除日"
+    },
+    "referral": {
+      "title": "紹介",
+      "totalReferrals": "合計紹介数",
+      "totalEarnedAmount": "合計獲得金額",
+      "yourReferralLink": "あなたの紹介リンク:",
+      "copied": "コピーしました！"
+    },
+    "leaderboard": {
+      "title": "リーダーボード",
+      "sr": "SR",
+      "user": "ユーザー",
+      "amount": "$VRN金額"
+    }
+  },
+  "depin": {
+    "title": "DePIN - VORN.AIの背骨",
+    "description": "DePINは、計算ノード、ストレージデバイス、エネルギーグリッドなど、エコシステムの物理リソースを提供し、ユーザーがインフラを収益化し、分散型運用を支えることを可能にします。",
+    "poweringVORN": {
+      "title1": "分散型AI計算ノード",
+      "description1": "AIタスクのために計算能力を共有し、AIがワークロードを最適化します。あなたの貢献に基づいてVRNトークンを獲得します。",
+      "title2": "分散型クラウドストレージ:",
+      "description2": "安全で分散型のストレージを提供し、AIが暗号化と復元を管理します。VRNトークンで報酬を受け取ります。",
+      "title3": "分散型エネルギーグリッド",
+      "description3": "再生可能エネルギーをトークン化し、取引し、AIがグリッドの負荷を調整します。エネルギーリソースを提供することでVRNトークンを獲得します。",
+      "title4": "IoTとスマートシティの統合:",
+      "description4": "AIはリアルタイムのIoTデータを処理し、交通や環境の監視などのスマートアプリケーションに利用します。デバイスオペレーターはVRNトークンを獲得します。"
+    }
+  },
+  "rwa": {
+    "title": "RWA - VORN.AIの経済エンジン",
+    "description": "VORN.AIにおけるRWAトークン化は、物理的な世界とブロックチェーン技術を結びつけ、ユーザーが現実世界の資産をトークン化、取引、獲得できるようにします。",
+    "rwaContent": {
+      "title": "すべての人のために現実世界の資産を解放する。",
+      "description": "RWA Coreは、インフラをブロックチェーン資産にトークン化することで資産の所有権に革命をもたらし、小規模投資家のためのフラクショナル所有権を可能にします。自動化された収益分配により受動的な収入を提供し、シームレスなグローバル取引のためのP2Pマーケットプレイスを提供することで、RWA Coreは高価値の資産をすべての人にアクセス可能にします。",
+      "heading": {
+        "start": "現実世界の資産をつなぐ",
+        "end": "ブロックチェーン駆動のユーティリティと共に。"
+      },
+      "features": {
+        "title1": "RWAトークン化プラットフォーム",
+        "description1": "このプラットフォームは、現実のインフラをNFTサポートのトークンに変換するプロセスを簡素化し、資産所有者が資産をトークン化し、フラクショナル化してグローバルな投資と収益生成を行えるようにします。",
+        "title2": "RWAマーケットプレイス",
+        "description2": "RWAマーケットプレイスは、トークン化された資産（不動産やエネルギークレジットなど）を購入、販売、取引するための分散型取引所であり、AIが正確な評価、詐欺防止、即時流動性を保証します。",
+        "title3": "RWAステーキングプール",
+        "description3": "RWAステーキングプールは、ユーザーがトークン化された資産をステークし、基礎となる現実世界の資産から生成される収益を得ることを可能にし、AIがパフォーマンスと市場条件に基づいて収益分配を管理します。",
+        "title4": "RWA担保化と貸付",
+        "description4": "RWA担保化と貸付サービスは、ユーザーがトークン化された資産を担保としてロックすることで流動性を提供し、AIがリスクを評価し、金利を管理し、安全な取引を保証します。"
+      },
+      "buttonText": "今すぐステーク"
+    }
+  },
+  "footer": {
+    "description": "VORN.AI - 分散型インテリジェンスの未来を支える。AIによって駆動される。インフラによって支えられる。資産によってトークン化される。",
+    "product": {
+      "title": "製品",
+      "features": "機能",
+      "unifiedAI": "統合AI",
+      "depin": "DePIN",
+      "rwa": "RWA"
+    },
+    "company": {
+      "title": "会社",
+      "home": "ホーム",
+      "roadmap": "ロードマップ",
+      "tokenomics": "トークンノミクス",
+      "faqs": "よくある質問"
+    },
+    "resources": {
+      "title": "リソース",
+      "staking": "ステーキング",
+      "whitepaper": "ホワイトペーパー",
+      "cookiePolicy": "クッキーポリシー"
+    },
+    "newsletter": {
+      "title": "ニュースレターに登録",
+      "subtitle": "すべての最新情報を受け取る。",
+      "placeholder": "メールアドレスを入力",
+      "subscribe": "登録する"
+    },
+    "privacyPolicy": "プライバシーポリシー",
+    "termsConditions": "利用規約",
+    "rights": "© 2025, VORN AI. 全著作権所有。"
+  }
+}

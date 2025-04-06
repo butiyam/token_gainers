@@ -1,0 +1,347 @@
+{
+  "header": {
+    "nav": {
+      "home": "Startseite",
+      "features": "Funktionen",
+      "unifiedAI": "Unified AI",
+      "depin": "DePIN",
+      "rwa": "RWA",
+      "roadmap": "Fahrplan",
+      "tokenomics": "Tokenomics",
+      "whitepaper": "Weißbuch",
+      "faqs": "Häufig gestellte Fragen"
+    },
+    "btn": "Connect",
+    "btnConnected": "Connected"
+  },
+  "tavtabs": {
+    "body": "Körper",
+    "sports": "Sport",
+    "coaches": "Trainer",
+    "podcasts": "Podcasts",
+    "tutorials": "Tutorials",
+    "store": "Shop"
+  },
+  "btns": {
+    "learn-more": "Mehr Erfahren"
+  },
+  "home": {
+    "hero": {
+      "new": "NEU",
+      "integrationLive": "Integration der nächsten Generation ist live!",
+      "poweringFuture": "Die Zukunft stärken: KI, DePIN & RWA in einem einheitlichen Netzwerk",
+      "description": "KI-gesteuerte Rechenleistung, tokenisierte Vermögenswerte und dezentrale Infrastruktur in einem Ökosystem.",
+      "staking": "Staking",
+      "whitepaper": "Weißbuch"
+    },
+    "buyNowBox": {
+      "title": "Kaufen",
+      "now": "Jetzt",
+      "untilPriceIncrease": "Bis zur Preiserhöhung",
+      "currentPrice": "Aktueller Preis",
+      "nextPrice": "Nächster Preis",
+      "raised": "Eingenommen",
+      "stackableVRN": "Stapelfähige VRN",
+      "purchasedVRN": "Gekaufte VRN",
+      "listingPrice": "Listenpreis",
+      "chooseAmount": "Betrag wählen",
+      "vrnYouReceive": "$VRN, das Sie erhalten",
+      "availableBonus": "Verfügbarer Bonus",
+      "spendMore": "Ausgeben",
+      "toGetBonus": "mehr, um 10% Bonus-Token zu erhalten",
+      "buyNow": "Jetzt Kaufen"
+    },
+    "featuredIn": {
+      "title": "Präsentiert In"
+    },
+    "ourFeatures": {
+      "title": "Unsere Funktionen",
+      "description": "VORN AI ist ein selbsttragendes, KI-gesteuertes Ökosystem, das KI, DePIN und RWA-Tokenisierung integriert, um eine vollständig autonome dezentrale Wirtschaft zu schaffen.",
+      "aiTitle": "KI - Das Intelligente Gehirn",
+      "aiDescription": "KI in VORN.AI dient als intelligenter Kern, optimiert die Ressourcenzuteilung, automatisiert Smart Contracts und verbessert die Netzwerksicherheit durch Echtzeitüberwachung. Sie sagt die Nachfrage nach Rechen- und Energie-Ressourcen voraus, sorgt für eine effiziente Verteilung und maximale Nutzung. KI verwaltet auch die Ertragsoptimierung für Staking-Pools und unterstützt die dezentrale Governance, indem sie die Analyse von Vorschlägen und Abstimmungsprozesse rationalisiert.",
+      "depinTitle": "DePIN – Die Physische Rückgrat",
+      "depinDescription": "DePIN bietet die physische Infrastruktur, einschließlich Rechenknoten, Speichergeräte und Energienetze, die es den Nutzern ermöglicht, ihre Ressourcen beizutragen und zu monetarisieren. KI weist diese Ressourcen dynamisch basierend auf den Bedürfnissen des Netzwerks zu und schafft einen dezentralen Marktplatz für Rechenleistung, Cloud-Speicher und den Handel mit erneuerbaren Energien, während sie die Beitragszahler mit VRN-Token belohnt.",
+      "rwaTitle": "RWA – Der Wirtschaftsmotor",
+      "rwaDescription": "Die RWA-Tokenisierung verbindet reale Vermögenswerte mit Blockchain, sodass Infrastrukturen wie Immobilien, Rechenzentren und Energienetze in fraktionierte NFTs umgewandelt werden können. Nutzer können mit diesen tokenisierten Vermögenswerten handeln, sie staken und Kredite aufnehmen, während sie passives Einkommen durch von KI verwaltete Ertragsverteilung verdienen und von globaler Liquidität und dezentralem Eigentum profitieren.",
+      "learn-more": "Mehr Erfahren"
+    },
+    "buyNRTX": {
+      "title": "Wie man VRN-Token kauft",
+      "description": "Kaufen Sie VRN-Token in drei einfachen Schritten",
+      "steps": {
+        "step1": {
+          "step": "Schritt 01",
+          "title": "Erstellen Sie Ihre Brieftasche",
+          "description": "Wenn Sie bereits eine kompatible Brieftasche haben, fahren Sie mit Schritt 2 fort. Wir empfehlen MetaMask für Desktop und Trust Wallet für Mobilgeräte. Laden Sie Ihre Brieftasche herunter und richten Sie sie ein, um zu beginnen."
+        },
+        "step2": {
+          "step": "Schritt 02",
+          "title": "Laden Sie Ihre Brieftasche auf",
+          "description": "Füllen Sie Ihre Brieftasche mit ETH, USDT oder USDC, um VRN zu kaufen. Wenn Sie mit Kredit-/Debitkarte bezahlen, können Sie diesen Schritt überspringen."
+        },
+        "step3": {
+          "step": "Schritt 03",
+          "title": "Kaufen Sie VRN-Token",
+          "description": "Klicken Sie auf 'Jetzt Kaufen' und genehmigen Sie die Transaktion in Ihrer Brieftasche. Nach erfolgreichem Abschluss werden Ihre VRN-Token automatisch an Ihre Brieftasche gesendet."
+        }
+      }
+    },
+    "earnRewards": {
+      "title": {
+        "start": "Belohnungen Verdienen",
+        "end": "Passives Einkommen Mühelos"
+      },
+      "description": "Überwachen Sie Ihre Belohnungen in Echtzeit und fordern Sie Gewinne an, wenn sie verfügbar sind.",
+      "cards": [
+        {
+          "title": "Kaufen Sie VRN-Token",
+          "description": "Verbinden Sie Ihre Brieftasche und kaufen Sie VRN, um zu beginnen.",
+          "buttonText": "Jetzt Kaufen"
+        },
+        {
+          "title": "VRN Staken",
+          "description": "Gehen Sie zum Abschnitt 'Staking' auf der Plattform. Wählen Sie eine Staking-Dauer, die zu Ihrer Strategie passt. Längeres Staken = höhere Belohnungen und Governance-Power."
+        },
+        {
+          "title": "Belohnungen Verdienen",
+          "description": "Überwachen Sie Ihre Belohnungen in Echtzeit und fordern Sie Gewinne an, wenn sie verfügbar sind. Die Belohnungen werden basierend auf den Beiträgen zum Netzwerk verteilt. Reinvestieren oder abheben gemäß den Regeln der Plattform."
+        }
+      ]
+    },
+    "rewardsCalculator": {
+      "title": {
+        "start": "Staking",
+        "end": "Belohnungskalender"
+      },
+      "description": "Berechnen Sie Ihre potenziellen Belohnungen basierend auf der Staking-Dauer.",
+      "cards": [
+        {
+          "title": "3 Monate",
+          "apr": "APR: 300%"
+        },
+        {
+          "title": "6 Monate",
+          "apr": "APR: 700%"
+        },
+        {
+          "title": "9 Monate",
+          "apr": "APR: 1200%"
+        },
+        {
+          "title": "12 Monate",
+          "apr": "APR: 1900%"
+        }
+      ],
+      "buttonText": "Jetzt Staken"
+    },
+    "roadMap": {
+      "subTitle": "VORN AI Fahrplan",
+      "title": "Pionierarbeit für die Zukunft der dezentralen KI",
+      "description": "Unser Fahrplan skizziert den Weg zu einem skalierbaren, sicheren und vollständig autonomen KI-Ökosystem.",
+      "phases": [
+        {
+          "quarter": "Q1 2025",
+          "title": "Forschung & Entwicklung"
+        },
+        {
+          "quarter": "Q2 2025",
+          "title": "Prototyp / Testnet-Start"
+        },
+        {
+          "quarter": "Q3 2025",
+          "title": "Mainnet-Start"
+        },
+        {
+          "quarter": "Q4 2025",
+          "title": "Skalierung & Globale Akzeptanz"
+        }
+      ],
+      "items": {
+        "marketResearch": "Marktforschung",
+        "whitepaperRelease": "Veröffentlichung des Weißbuchs",
+        "tokenomicsDesign": "Tokenomics-Design",
+        "technicalArchitecture": "Technische Architektur",
+        "communityBuilding": "Gemeinschaftsaufbau",
+        "earlyPartnerships": "Frühe Partnerschaften",
+        "aiComputeGridTestnet": "AI Compute Grid Testnet",
+        "rwaTokenizationBeta": "RWA-Tokenisierungs-Beta",
+        "depinNodeDeployment": "DePIN-Knotenbereitstellung",
+        "aiDaoPrototype": "AI-DAO-Prototyp",
+        "smartContractAudits": "Smart Contract Audits",
+        "testnetIncentiveProgram": "Testnet-Anreizprogramm",
+        "mainnetDeployment": "Mainnet-Bereitstellung",
+        "rwaMarketplace": "RWA-Marktplatz",
+        "aiManagedStakingPools": "KI-gesteuerte Staking-Pools",
+        "energyTradingPlatform": "Energiehandelsplattform",
+        "cexDexListings": "CEX/DEX-Listings",
+        "ecosystemIncentives": "Ökosystemanreize",
+        "aiModelMarketplace": "KI-Modellmarktplatz",
+        "crossChainCompatibility": "Cross-Chain-Kompatibilität",
+        "layer2Scaling": "Layer-2-Skalierung",
+        "enterpriseIntegrations": "Unternehmensintegrationen",
+        "rwaExpansion": "RWA-Expansion",
+        "globalOutreach": "Globale Reichweite"
+      }
+    },
+    "tokenomics": {
+      "subTitle": "Tokenomics",
+      "title": {
+        "start": "Tokenomics:",
+        "end": "Die Wirtschaft von VORN AI"
+      },
+      "description": "Das VORN AI ($VRN) Ökosystem ist auf langfristige Nachhaltigkeit ausgelegt, indem es Nutzen, Belohnungen und Governance in Einklang bringt. Nachfolgend finden Sie das Modell zur Tokenverteilung, das Wachstum, Sicherheit und Dezentralisierung gewährleistet.",
+      "liquidityAndExchangeListings": "Liquiditäts- und Börsenlistungen",
+      "infrastructureAndDevelopment": "Infrastruktur & Entwicklung",
+      "teamAndAdvisors": "Team & Berater",
+      "ecosystemAndRewards": "Ökosystem & Belohnungen",
+      "publicAndPrivateSales": "Öffentliche & Private Verkäufe"
+    },
+    "builtOn": {
+      "title": "Basierend Auf",
+      "poweredBy": "Angetrieben von",
+      "innovation": "Innovation, für die Zukunft gebaut."
+    },
+    "faqs": {
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Häufig gestellte Fragen",
+      "question1": "Was ist VORN.AI?",
+      "answer1": "VORN.AI ist eine KI-gesteuerte dezentrale Plattform für Infrastruktur und Tokenisierung von realen Vermögenswerten (RWA).",
+      "question2": "Wie nutzt VORN.AI KI?",
+      "answer2": "VORN.AI nutzt künstliche Intelligenz für automatisierte Vermögensbewertung, Risikobewertung und Marktanalyse. Die Plattform verwendet fortschrittliche KI-Algorithmen, um Tokenisierungsprozesse zu optimieren und die Entscheidungsfindung im Management realer Vermögenswerte zu verbessern.",
+      "question3": "Was kann ich mit VRN-Token machen?",
+      "answer3": "VRN-Token dienen mehreren Zwecken innerhalb des VORN-Ökosystems. Sie können sie für Belohnungen staken, an Governance-Entscheidungen teilnehmen, auf Premium-Funktionen zugreifen und sie an unterstützten Börsen handeln.",
+      "question4": "Was ist DePIN in VORN.AI?",
+      "answer4": "DePIN (Dezentrales Physisches Infrastruktur-Netzwerk) in VORN.AI ist ein Rahmenwerk, das reale Infrastruktur mit Blockchain-Technologie verbindet und die dezentrale Verwaltung und Tokenisierung physischer Vermögenswerte ermöglicht.",
+      "question5": "Was sind tokenisierte RWAs in VORN.AI?",
+      "answer5": "Tokenisierte RWAs (Reale Vermögenswerte) in VORN.AI sind digitale Darstellungen physischer Vermögenswerte auf der Blockchain. Dazu gehören Immobilien, Infrastruktur, Rohstoffe und andere greifbare Vermögenswerte, die in handelbare digitale Token umgewandelt wurden."
+    }
+  },
+  "aiUtility": {
+    "title": "Vereinte KI – Das Gehirn von VORN.AI",
+    "description": "KI in VORN.AI fungiert als intelligente Automatisierungsschicht, die Infrastruktur, Transaktionen und Sicherheit im gesamten dezentralen Netzwerk optimiert. Sie gewährleistet einen nahtlosen Betrieb, Betrugsprävention, Ertragsmanagement und Echtzeit-Entscheidungsfindung.",
+    "intelligentAutomation": {
+      "title": "Intelligente Automatisierung für effiziente, sichere und dezentrale Operationen",
+      "description": "VORN.AI verbessert die Recheneffizienz, automatisiert Smart Contracts, sagt Markttrends voraus, stärkt die Sicherheit gegen Betrug und optimiert die Governance, um nahtlose und vertrauenslose dezentrale Operationen zu gewährleisten."
+    },
+    "services": {
+      "title": "KI-Nutzungsdienste",
+      "subtitle": "für nahtlose und profitable Automatisierung"
+    },
+    "timeline": {
+      "first": {
+        "title": "KI-gesteuertes Rechenzentrum:",
+        "description": "Dieser Dienst verwaltet dezentrale GPU/CPU-Ressourcen und weist KI- und maschinelles Lernen Arbeitslasten dynamisch den geeignetsten Knoten zu, um kosteneffektive Rechenlösungen für Entwickler und Belohnungen für Ressourcenanbieter zu gewährleisten."
+      },
+      "second": {
+        "title": "KI-Ertragsmanagementsystem:",
+        "description": "Das KI-Ertragsmanagementsystem passt die Staking-Belohnungen in Echtzeit basierend auf der Netzwerkleistung, der Ressourcennutzung und den Liquiditätsbedürfnissen an und bietet den Nutzern optimierte passive Einkommensmöglichkeiten durch KI-gesteuerte Staking-Pools."
+      },
+      "third": {
+        "title": "KI-optimierter Energiemarkt:",
+        "description": "Der KI-optimierte Energiemarkt gleicht Angebot und Nachfrage für ausgewählte erneuerbare Energien aus, indem er Zyklen und Verbrauch vorhersagt, Handelsgewinne dynamisch preislich festlegt und den Peer-to-Peer-Energiehandel erleichtert."
+      }
+    }
+  },
+  "staking": {
+    "totalVRNBalance": "Gesamtbetrag $VRN",
+    "stakingReward": "Staking-Belohnung",
+    "referralEarnings": "Ihre Empfehlungsgewinne",
+    "stakingSection": {
+      "title": "Staking",
+      "totalStaking": "Gesamtstaken",
+      "stakingPeriod": "Staking-Dauer",
+      "apr": "APR {{apr}}",
+      "placeholder": "10.000,00 VRN",
+      "max": "MAX",
+      "stakeNow": "JETZT STAKEN",
+      "stakeAmount": "Staking-Betrag",
+      "estimatedProfit": "Geschätzter Gewinn",
+      "total": "Gesamt",
+      "lcaiToBeLocked": "LCAI zu sperren",
+      "duration": "Dauer",
+      "unlockOn": "Entsperren am"
+    },
+    "referral": {
+      "title": "Empfehlung",
+      "totalReferrals": "Gesamtzahl der Empfehlungen",
+      "totalEarnedAmount": "Gesamtbetrag verdient",
+      "yourReferralLink": "Ihr Empfehlungslink:",
+      "copied": "Kopiert!"
+    },
+    "leaderboard": {
+      "title": "Rangliste",
+      "sr": "SR",
+      "user": "Benutzer",
+      "amount": "$VRN-Betrag"
+    }
+  },
+  "depin": {
+    "title": "DePIN – Das Rückgrat von VORN.AI",
+    "description": "DePIN in VORN.AI bietet die physischen Ressourcen für das Ökosystem, wie Rechenknoten, Speichergeräte und Energienetze, die es den Nutzern ermöglichen, ihre Infrastruktur zu monetarisieren und dezentrale Operationen zu unterstützen.",
+    "poweringVORN": {
+      "title1": "Dezentrale KI-Computernodes",
+      "description1": "Teilen Sie Ihre Rechenleistung für KI-Aufgaben, während KI die Arbeitslasten optimiert. Verdienen Sie VRN-Token basierend auf Ihrem Beitrag.",
+      "title2": "Dezentrale Cloud-Speicherung:",
+      "description2": "Bieten Sie sichere, dezentrale Speicherung an, wobei KI die Verschlüsselung und Wiederherstellung verwaltet. Erhalten Sie Belohnungen in VRN-Token.",
+      "title3": "Dezentrales Energienetz",
+      "description3": "Tokenisieren und handeln Sie erneuerbare Energien, während KI die Lasten im Netz ausgleicht. Verdienen Sie VRN-Token für die Bereitstellung von Energie-Ressourcen.",
+      "title4": "IoT- und Smart-City-Integration:",
+      "description4": "KI verarbeitet Echtzeit-IoT-Daten für intelligente Anwendungen wie Verkehrs- und Umweltüberwachung. Gerätebetreiber verdienen VRN-Token."
+    }
+  },
+  "rwa": {
+    "title": "RWA – Der Wirtschaftsmotor von VORN.AI",
+    "description": "Die RWA-Tokenisierung in VORN.AI verbindet die physische Welt mit der Blockchain-Technologie, sodass Nutzer reale Vermögenswerte tokenisieren, handeln und verdienen können.",
+    "rwaContent": {
+      "title": "Echte Vermögenswerte für alle zugänglich machen.",
+      "description": "RWA Core revolutioniert das Eigentum an Vermögenswerten, indem es Infrastruktur in Blockchain-Vermögenswerte tokenisiert und fraktioniertes Eigentum für Kleinanleger ermöglicht. Mit automatisierter Ertragsverteilung, die passives Einkommen bietet, und einem P2P-Marktplatz für nahtlosen globalen Handel macht RWA Core hochwertige Vermögenswerte für alle zugänglich.",
+      "heading": {
+        "start": "Verknüpfung von echten Vermögenswerten",
+        "end": "mit blockchainbasierter Nutzung."
+      },
+      "features": {
+        "title1": "RWA-Tokenisierungsplattform",
+        "description1": "Diese Plattform erleichtert die Umwandlung von realer Infrastruktur in NFT-unterstützte Token, sodass Vermögensinhaber ihre Vermögenswerte für globale Investitionen und Einkommensgenerierung tokenisieren und fraktionieren können.",
+        "title2": "RWA-Marktplatz",
+        "description2": "Der RWA-Marktplatz ist eine dezentrale Börse zum Kaufen, Verkaufen und Handeln von tokenisierten Vermögenswerten wie Immobilien und Energiecredits, wobei KI genaue Bewertungen, Betrugsprävention und sofortige Liquidität gewährleistet.",
+        "title3": "RWA-Staking-Pools",
+        "description3": "RWA-Staking-Pools ermöglichen es Nutzern, tokenisierte Vermögenswerte zu staken und Erträge zu verdienen, die aus den zugrunde liegenden realen Vermögenswerten generiert werden, wobei KI die Ertragsverteilung basierend auf Leistung und Marktbedingungen verwaltet.",
+        "title4": "RWA-Kollateralisation und -Kredite",
+        "description4": "Die RWA-Kollateralisation und -Kreditdienste bieten Liquidität, indem sie es Nutzern ermöglichen, ihre tokenisierten Vermögenswerte als Sicherheit für Kredite zu sperren, wobei KI Risiken bewertet, Zinssätze verwaltet und sichere Transaktionen gewährleistet."
+      },
+      "buttonText": "Jetzt Staken"
+    }
+  },
+  "footer": {
+    "description": "VORN.AI – Die Zukunft der dezentralen Intelligenz stärken. Angetrieben von KI. Unterstützt durch Infrastruktur. Tokenisiert durch Vermögenswerte.",
+    "product": {
+      "title": "Produkt",
+      "features": "Funktionen",
+      "unifiedAI": "Vereinte KI",
+      "depin": "DePIN",
+      "rwa": "RWA"
+    },
+    "company": {
+      "title": "Unternehmen",
+      "home": "Startseite",
+      "roadmap": "Fahrplan",
+      "tokenomics": "Tokenomics",
+      "faqs": "Häufig gestellte Fragen"
+    },
+    "resources": {
+      "title": "Ressourcen",
+      "staking": "Staking",
+      "whitepaper": "Weißbuch",
+      "cookiePolicy": "Cookie-Richtlinie"
+    },
+    "newsletter": {
+      "title": "Abonnieren Sie unseren Newsletter",
+      "subtitle": "Bleiben Sie über alles informiert.",
+      "placeholder": "Geben Sie Ihre E-Mail-Adresse ein",
+      "subscribe": "Abonnieren"
+    },
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "termsConditions": "Allgemeine Geschäftsbedingungen",
+    "rights": "© 2025, VORN AI. Alle Rechte vorbehalten."
+  }
+}

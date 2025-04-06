@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", serif;
+  background-color: #020103;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.inter {
+  font-family: "Inter", serif;
+}
+
+/* Hero Section */
+@keyframes pulseShadow {
+  0% {
+    box-shadow: 0px 0px 5px 0px #9b59ff;
+  }
+  50% {
+    box-shadow: 0px 0px 12px 5px #9b59ff;
+  }
+  100% {
+    box-shadow: 0px 0px 1px 0px #9b59ff;
+  }
+}
+
+.animate-pulse-shadow {
+  animation: pulseShadow 2s infinite ease-in-out;
+}
+
+/* Earn Reward */
+.earn-reward {
+  background: radial-gradient(
+      32.52% 50% at 50% 50%,
+      rgba(132, 45, 255, 0.58) 0%,
+      rgba(2, 1, 3, 0.25) 100%
+    ),
+    linear-gradient(0deg, #000000, #000000);
+}
+
+.earn-reward-bg {
+  background-image: linear-gradient(
+      0deg,
+      rgba(162, 90, 240, 0.3) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(163, 90, 240, 0.3) 1px, transparent 1px);
+  background-size: 130px 130px;
+  mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  opacity: 0.3;
+}
+
+@media screen and (max-width: 900px) {
+  .earn-reward{
+    background: none;
+  }
+  .earn-reward-bg {
+    background-image: none;
+    background-size:none;
+    mask-image: none;
+    /* opacity: ; */
+  }
+}
+
+/* Staking */
+.shadow-custom {
+  position: relative;
+  width: 419px;
+  background: rgba(18, 9, 37, 0.03);
+  backdrop-filter: blur(30px);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 0px 25px rgba(139, 92, 246, 0.2),
+    inset 0px 0px 50px rgba(139, 92, 246, 0.5);
+}
+
+.shadow-custom::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 1px;
+  background: linear-gradient(180deg, #440675 0%, #7e0adb 100%);
+  mask: linear-gradient(white, white) content-box, linear-gradient(white, white);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.staking-section {
+  backdrop-filter: blur(30px);
+  box-shadow: 0px 0px 25px rgba(139, 92, 246, 0.2),
+    inset 0px 0px 50px rgba(139, 92, 246, 0.5);
+}
+
+.staking-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 1px;
+  background: linear-gradient(180deg, #440675 0%, #7e0adb 100%);
+  mask: linear-gradient(white, white) content-box, linear-gradient(white, white);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .shadow-custom {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .shadow-custom::before {
+    border-radius: 10px;
+  }
+}
+
+/* AI Utility Page */
+.ai-utility-hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-image: url("/assets/ai/ai_header_background.webp");
+}
+
+@media screen and (max-width: 1024px) {
+  .ai-utility-hero {
+    background-image: url("/assets/mobile-bg-ai.png");
+  }
+}
+
+/* Custom SVG Styling */
+.svg-container {
+  width: 530px;
+  height: 2256px;
+}
+
+@media (max-width: 1536px) {
+  .svg-container {
+    width: 530px;
+    height: 2356px;
+  }
+}
+@media (max-width: 1430px) {
+  .svg-container {
+    width: 520px;
+    height: 2056px;
+  }
+}
+@media (max-width: 1320px) {
+  .svg-container {
+    width: 500px;
+    height: 1800px;
+  }
+}
+@media (max-width: 1260px) {
+  .svg-container {
+    width: 480px;
+    height: 1800px;
+  }
+}
+@media (max-width: 1220px) {
+  .svg-container {
+    width: 460px;
+    height: 1400px;
+  }
+}
+@media (max-width: 1170px) {
+  .svg-container {
+    width: 440px;
+    height: 1200px;
+  }
+}
+@media (max-width: 1109px) {
+  .svg-container {
+    width: 420px;
+    height: 1000px;
+  }
+}
+@media (max-width: 1055px) {
+  .svg-container {
+    width: 400px;
+    height: 900px;
+  }
+}

@@ -1,0 +1,328 @@
+.stakingButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  --gradient-from: #6a11cb;
+  --gradient-to: #cda4ff;
+  --glow-color: #8400ff54;
+  --glow-spread: 15px;
+  --scale: 1;
+}
+
+.stakingButton::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  transition: all 0.5s ease-in-out;
+}
+
+.stakingButton {
+  box-shadow: 0px 10px 39.3px var(--sds-size-depth-negative-1200) #8400ff54;
+}
+
+.stakingButton:hover {
+  box-shadow: 0px 0px 15px var(--sds-size-depth-negative-1200) #8400ff80;
+}
+
+.gradientBorder {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: linear-gradient(180deg, var(--gradient-from), var(--gradient-to));
+  transition: all 0.5s ease-in-out;
+  transform: scale(var(--scale));
+}
+
+.buttonContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  font-size: 16px;
+  /* padding:0px 25px; */
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: radial-gradient(
+    50.91% 97.54% at 50% 2.46%,
+    #a052ff 0%,
+    #440675 100%
+  );
+}
+
+.glowEffect {
+  position: absolute;
+  height: 41px;
+  width: 100%;
+  filter: blur(10px);
+  transition: all 0.8s ease-in-out;
+  box-shadow: 0 0 var(--glow-spread) var(--glow-color);
+}
+
+.hovered {
+  --gradient-from: #cda4ff;
+  --gradient-to: #440675;
+  --glow-color: #8400ff80;
+  --glow-spread: 20px;
+  --scale: 1.05;
+}
+
+/* Buy Now Hero Section */
+.stakingButtonBuyNow {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  --gradient-from: #6a11cb;
+  --gradient-to: #cda4ff;
+  --glow-color: #8400ff54;
+  --glow-spread: 15px;
+  --scale: 1;
+}
+
+.stakingButtonBuyNow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  transition: all 0.5s ease-in-out;
+}
+
+.stakingButtonBuyNow {
+  box-shadow: 0px 300px 500px 300px #9b59ff inset;
+}
+
+.stakingButtonBuyNow:hover {
+  box-shadow: 0px 0px 15px var(--sds-size-depth-negative-1200) #8400ff80;
+}
+
+.gradientBorder {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: linear-gradient(180deg, var(--gradient-from), var(--gradient-to));
+  transition: all 0.5s ease-in-out;
+  transform: scale(var(--scale));
+}
+
+.buttonContentBuyNow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0px 0px 6px 3px #9b59ff inset;
+  background: radial-gradient(
+    50.91% 97.54% at 50% 2.46%,
+    #a052ff 0%,
+    #440675 100%
+  );
+}
+
+.glowEffectBuyNow {
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  filter: blur(10px);
+  transition: all 0.8s ease-in-out;
+  box-shadow: 0 0 var(--glow-spread) var(--glow-color);
+}
+
+.hovered {
+  --gradient-from: #cda4ff;
+  --gradient-to: #440675;
+  --glow-color: #8400ff80;
+  --glow-spread: 20px;
+  --scale: 1.05;
+}
+
+@media screen and (max-width: 480px) {
+  .stakingButtonBuyNow {
+    height: 39px;
+    border-radius: 6px;
+  }
+  .glowEffectBuyNow {
+    height: 39px;
+  }
+  .buttonContentBuyNow {
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .gradientBorder {
+    border-radius: 6px;
+  }
+  .stakingButtonBuyNow::before {
+    border-radius: 6px;
+  }
+}
+
+/* Button Audit */
+.stakingButtonAudit {
+  position: relative;
+  width: 129px;
+  height: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  --gradient-from: #6a11cb;
+  --gradient-to: #cda4ff;
+  --glow-color: #8400ff54;
+  --glow-spread: 15px;
+  --scale: 1;
+}
+
+.stakingButtonAudit::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  transition: all 0.5s ease-in-out;
+}
+
+.stakingButtonAudit {
+  box-shadow: 0px 10px 39.3px var(--sds-size-depth-negative-1200) #8400ff54;
+}
+
+.stakingButtonAudit:hover {
+  box-shadow: 0px 0px 15px var(--sds-size-depth-negative-1200) #8400ff80;
+}
+
+.gradientBorder {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: linear-gradient(180deg, var(--gradient-from), var(--gradient-to));
+  transition: all 0.5s ease-in-out;
+  transform: scale(var(--scale));
+}
+
+.buttonContentAudit {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: radial-gradient(
+    50.91% 97.54% at 50% 2.46%,
+    #a052ff 0%,
+    #440675 100%
+  );
+}
+
+.glowEffectAudit {
+  position: absolute;
+  height: 47px;
+  width: 100%;
+  filter: blur(10px);
+  transition: all 0.8s ease-in-out;
+  box-shadow: 0 0 var(--glow-spread) var(--glow-color);
+}
+
+.hovered {
+  --gradient-from: #cda4ff;
+  --gradient-to: #440675;
+  --glow-color: #8400ff80;
+  --glow-spread: 20px;
+  --scale: 1.05;
+}
+
+/* Staking page button stake now */
+.stakingButtonNow {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  --gradient-from: #6a11cb;
+  --gradient-to: #cda4ff;
+  --glow-color: #8400ff54;
+  --glow-spread: 15px;
+  --scale: 1;
+}
+
+.stakingButtonNow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  transition: all 0.5s ease-in-out;
+}
+
+.stakingButtonNow {
+  box-shadow: 0px 10px 39.3px var(--sds-size-depth-negative-1200) #8400ff54;
+}
+
+.stakingButtonNow:hover {
+  box-shadow: 0px 0px 15px var(--sds-size-depth-negative-1200) #8400ff80;
+}
+
+.buttonContentNow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: radial-gradient(
+    50.91% 97.54% at 50% 2.46%,
+    #a052ff 0%,
+    #440675 100%
+  );
+}
+
+.glowEffect {
+  position: absolute;
+  height: 60px;
+  width: 100%;
+  filter: blur(25px);
+  transition: all 0.8s ease-in-out;
+  box-shadow: 0 0 var(--glow-spread) var(--glow-color);
+}
+
+.hovered {
+  --gradient-from: #cda4ff;
+  --gradient-to: #440675;
+  --glow-color: #8400ff80;
+  --glow-spread: 20px;
+  --scale: 1.05;
+}
