@@ -23,9 +23,8 @@ const web3 = new Web3(Provider);
 
 // This is for changing button logo and name tabs will change the chain(input) name and logo
 const tabs = [
-  { id: "ETH", label: "ETH", icon: "/assets/icons/eth.svg" },
-  { id: "USDC", label: "USDC", icon: "/assets/icons/usdc.svg" },
-  { id: "USDT", label: "USDT", icon: "/assets/icons/usdt.svg" },
+  { id: "BUY", label: "BUY", icon: "/assets/icons/coin.pngg" },
+  { id: "SELL", label: "SELL", icon: "/assets/icons/usdt.svg" },
 ]
 
 const currenciesByChain = {
@@ -312,71 +311,6 @@ const BuyNowBox = () => {
     }
   }
   const result = useBalance({ address: address });
-  // function for selected bonus button
-  // async function selectedBonusButton(bonus) {
-  //   const currency = selectedCurrency;
-  //   setSelectedCurrency(currency)
-  //   if (!inputRef.current) return;
-  //   const amount = Number(bonus);
-  //   console.log(amount, "amount")
-  //   if (amount <= 0) return;
-  //   // Connect to the public RPC provider
-  //   const providerETH = new ethers.JsonRpcProvider('https://rpc.ankr.com/eth');
-  //   // Create a contract instance with the provider
-  //   const contractETH = new ethers.Contract(presaleAddress, presaleAbi.abi, providerETH);
-  //   try {
-  //     // Get currency rate
-  //     let currencyRateUSD = '1000000000000000000'; // Default for USDT
-  //     if (selectedCurrency.name === 'ETH') {
-  //       const priceBigInt = await contractETH.getLatestETHPrice();
-  //       currencyRateUSD = priceBigInt.toString(); // Convert BigInt to string
-  //     }
-  //     let eth = ethers.parseUnits(amount.toString(), 'ether');
-
-  //     if (selectedCurrency.name === 'USDT' || selectedCurrency.name === 'USDC') {
-  //       eth = eth / BigInt(1e12);
-  //     }
-  //     if (selectedCurrency.name === 'USDT' || selectedCurrency.name === 'USDC') {
-  //       inputRef.current.value = bonus.toString();
-  //       setBuyAmount(bonus);
-  //     } else {
-  //       const calculatedValue = (amount / (Number(currencyRateUSD) / 1e18)).toFixed(6);
-  //       inputRef.current.value = calculatedValue;
-  //       // Convert to wei
-  //       eth = ethers.parseUnits(calculatedValue, 'ether');
-  //       console.log(eth);
-  //     }
-  //     // Fetch expected tokens
-  //     const resultETH = selectedCurrency.name === 'ETH'
-  //         ? await contractETH.ethToTokens(1, BigInt(eth).toString())  // If ETH, call this function
-  //         : selectedCurrency.name === "USDT"
-  //           ? await contractETH.usdtToTokens(1, eth.toString())  // If USDT, call this function
-  //           : selectedCurrency.name === "USDC"
-  //           ? await contractETH.usdtToTokens(1, eth.toString())  // If USDC, call this function
-  //           :await contractETH.usdtToTokens(1, eth.toString())  
-  //     let tokens = Number(resultETH) / 1e18; // Convert to normal number
-  //        // add bonus when user manually add more than 500 usdt
-  //     if(selectedCurrency.name === "ETH") {
-  //       let amountInUSD = parseFloat(bonus * (Number(ethPriceLive) / 1e18) + 0.001) ;
-  //       if(amountInUSD < 500) tokens *= 1;
-  //       else if (amount == 500) tokens *= 1.05;
-  //       else if (amount == 1000 ) tokens *= 1.10;
-  //       else if (amount == 1500) tokens *= 1.15;
-  //       console.log(tokens)
-  //       setExpectedTokens(tokens);
-  //     } else if(selectedCurrency.name === "USDT" || selectedCurrency.name === "USDC"){
-  //       if(amount < 500) tokens *= 1;
-  //       else if (amount >= 500 && amount <= 999) tokens *= 1.05;
-  //       else if (amount >= 1000 && amount <= 1499) tokens *= 1.10;
-  //       else if (amount >= 1500) tokens *= 1.15;
-  //       console.log(tokens)
-  //       setExpectedTokens(tokens);
-  //     }
-  //   } catch (error) {
-  //     console.error('Error:', error);
-  //   }
-  // }
-
 // processTransaction function for handle buy button
 async function processTransaction(abi,address,functionName, value, args ) {
     try {
@@ -615,27 +549,14 @@ async function processTransaction(abi,address,functionName, value, args ) {
   }, [isConnected, address, balanceUSDTData, totalAmountInfo, allowanceUSDTData, result, balanceTokenData],)
 
 
-  // Add a new state for the modal
-  const [showReferModal, setShowReferModal] = useState(false)
-  const ReferEarnModal = () => {
-    if (!showReferModal) return null
-    // Only render in browser environment
-    if (typeof window === "undefined") return null
-    return createPortal(
-      <div className="fixed inset-0 z-[9999] flex items-center justify-center">
-        <div className="absolute inset-0 bg-black/70" onClick={() => setShowReferModal(false)}></div>
-        <ReferEarnPopup />
-      </div>,
-      document.body,
-    )
-  }
+  
 
   return (
     <div className="relative text-center w-full h-full">
       <div className="px-4 sm:px-[30px]">
         <h2 className="text-[24px] sm:text-[32px] leading-[29px] sm:leading-[38.4px] font-bold text-white">
           {t("home.buyNowBox.title")}
-          <span className="text-[#8E00FF]">$VRN</span> {t("home.buyNowBox.now")}
+          <span className="text-[#8E00FF]">$TG</span> {t("home.buyNowBox.now")}
         </h2>
         <h4 className="text-white/90 text-[13px] sm:text-[14px] leading-[16.8px] font-medium pt-[15px]">
           {t("home.buyNowBox.untilPriceIncrease")}
@@ -671,14 +592,14 @@ async function processTransaction(abi,address,functionName, value, args ) {
         <div className="max-w-[300px] sm:max-w-[395px] mx-auto w-full flex items-center justify-between sm:gap-[85px] py-2.5">
           <div>
             <h2 className="text-[13px] sm:text-[14px] leading-[16.8px] font-medium mb-[5px]">
-              {t("home.buyNowBox.stackableVRN")}
+            Stackable TG
             </h2>
             <h3 className="text-[#C176FF] text-[13px] sm:text-[14px] leading-[16.8px] font-normal">{stackableTokenBalance}</h3>
           </div>
           <div className="bg-[#842DFF] h-[40px] w-[0.5px]"></div>
           <div>
             <h2 className="text-[13px] sm:text-[14px] leading-[16.8px] font-medium mb-[5px]">
-              {t("home.buyNowBox.purchasedVRN")}
+            Purchased TG
             </h2>
             <h3 className="text-[#C176FF] text-[13px] sm:text-[14px] leading-[16.8px] font-normal">{tokenBalance}</h3>
           </div>
@@ -702,13 +623,6 @@ async function processTransaction(abi,address,functionName, value, args ) {
               }
               onClick={() => setActiveTab(tab.id)}
             >
-              <Image
-                src={tab.icon || "/placeholder.svg"}
-                alt={tab.label}
-                width={24}
-                height={24}
-                className="sm:w-[24px] sm:h-[24px] w-[19px] h-[19px]"
-              />
               <span className="text-[14px] sm:text-[16px] leading-[19.2px] font-normal">{tab.label}</span>
             </button>
           ))}
@@ -763,7 +677,7 @@ async function processTransaction(abi,address,functionName, value, args ) {
           {/* $VRN you receive */}
           <div className="flex flex-col gap-1.5 sm:gap-2 items-start w-full">
             <h2 className="text-[13px] sm:text-[14px] leading-[16.8px] font-bold text-white">
-              {t("home.buyNowBox.vrnYouReceive")}
+               $TG you receive
             </h2>
             <div className="w-full h-[39px] sm:h-[50px] rounded-md sm:rounded-lg border border-[#8616DF] flex items-center justify-between px-4 gap-5">
               <span id="expectedTokens" className="text-white">
@@ -775,7 +689,7 @@ async function processTransaction(abi,address,functionName, value, args ) {
         </div>
 
         {/* Available Bonus */}
-        <div className="my-[15px] sm:my-5 space-y-2 sm:space-y-[11px]">
+        <div style={{visibility: 'hidden'}} className="my-[15px] sm:my-5 space-y-2 sm:space-y-[11px]">
           <h3 className="text-white text-[13px] sm:text-[14px] leading-[16.8px] font-bold text-left">
             {t("home.buyNowBox.availableBonus")}
           </h3>
@@ -837,16 +751,7 @@ async function processTransaction(abi,address,functionName, value, args ) {
       {/* Modal */}
       <div className="px-5 sm:px-[30px]">
         <div className="mt-5 flex items-center flex-wrap justify-center sm:justify-between gap-4 sm:gap-3">
-          <button
-            className="flex items-center gap-2 sm:gap-2.5"
-            onClick={() => {
-              console.log("Refer & Earn button clicked")
-              setShowReferModal(true)
-            }}
-          >
-            <Image src="/assets/icons/refer-earn.svg" alt="Refer Earn" width={16} height={16} />
-            <h3 className="text-white/90 text-[13px] sm:text-[14px] leading-[16.8px] font-normal">Refer & Earn</h3>
-          </button>
+          
           <Link href="https://vorn-ai.gitbook.io/" target="_blank" className="flex items-center gap-2 sm:gap-2.5">
             <Image src="/assets/icons/how-to-buy.svg" alt="How to buy" width={16} height={16} />
             <h3 className="text-white/90 text-[13px] sm:text-[14px] leading-[16.8px] font-normal">How to buy</h3>
@@ -864,8 +769,6 @@ async function processTransaction(abi,address,functionName, value, args ) {
           </Link>
         </div>
       </div>
-      <div className="hidden">Modal state: {showReferModal ? "open" : "closed"}</div>
-      {ReferEarnModal()}
     </div>
   )
 }

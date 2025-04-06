@@ -14,10 +14,10 @@ if (!projectId) {
 }
 // 2. Create a metadata object - optional
 const metadata = {
-  name: 'Vorn AI Souce',
+  name: 'Token Gainers',
   description: 'Trade Smarter. Invest Better. Automate Everything',
-  url: 'https://www.vorn.ai/en', // origin must match your domain & subdomain
-  icons: ["https://www.vorn.ai/assets/logo.svg"]
+  url: 'https://tokengainers.com/', // origin must match your domain & subdomain
+  icons: ["https://tokengainers.com/assets/logo.png"]
 }
 // 3. Set the networks
 const networks = [mainnet]
@@ -25,8 +25,8 @@ const networks = [mainnet]
 // 5. Create modal
 createAppKit({
   adapters: [wagmiAdapter, coinbaseWallet({
-    appName: 'Vorn AI Souce',
-    appLogoUrl: 'https://www.vorn.ai/assets/logo.svg', 
+    appName: 'Token Gainers',
+    appLogoUrl: 'https://tokengainers.com/assets/logo.png', 
     preference: { options: 'all'}
   })],
   networks,
