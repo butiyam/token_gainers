@@ -36,7 +36,7 @@ const currenciesByChain = {
 const BuyNowBox = () => {
   const { t } = useTranslation()
   const [isHovered, setIsHovered] = useState(false)
-  const [activeTab, setActiveTab] = useState("ETH")
+  const [activeTab, setActiveTab] = useState("BUY")
   const [currencies, setCurrencies] = useState(currenciesByChain.ETH)
   const [selectedCurrency, setSelectedCurrency] = useState(currenciesByChain.ETH[0])
 
@@ -91,10 +91,9 @@ const BuyNowBox = () => {
     };
     fetchInfo();
   }, []);
-  // Used for ETH, USDt, USDC buttons tabs
+  // Used for BUY,SELL buttons tabs
   useEffect(() => {
     setCurrencies(currenciesByChain[activeTab])
-    setSelectedCurrency(currenciesByChain[activeTab][0])
   }, [activeTab])
 
   // fetch live eth price
@@ -109,39 +108,6 @@ const BuyNowBox = () => {
     fetchEthPrice();
   }, []);
 
-  // used for Percent box
-  const getActiveTabs = () => {
-    let amountInUSD = buyAmount; // Default for USDT
-    if (selectedCurrency.name === "ETH") {
-      // Convert ETH to USD based on price
-      amountInUSD = buyAmount * (Number(ethPriceLive) / 1e18);
-    }
-    if (amountInUSD < 500) return [{ bonusBelowText }];
-    if (amountInUSD >= 500 && amountInUSD < 1000) return ["500"];
-    if (amountInUSD >= 1000 && amountInUSD < 1500) return ["500", "1000"];
-    if (amountInUSD >= 1500) return ["500", "1000", "1500"];
-  };
-
-  const activeTabs = getActiveTabs();
-  useEffect(() => {
-    const amount = Number(inputRef.current.value)
-    let amountInUSD = buyAmount;
-    if (selectedCurrency.name === "ETH") {
-      amountInUSD = buyAmount * (Number(ethPriceLive) / 1e18);
-    }
-    if (amountInUSD < 500) {
-      const remaining = 500 - amountInUSD;
-      setBonusBelowText(`Add $${parseFloat(remaining).toFixed(2)} more and get 5% extra tokens!`); 
-    } else if (amountInUSD == 500 && amountInUSD < 1000) {
-      const remaining = 1000 - amountInUSD;
-      setBonusBelowText(`Add $${parseFloat(remaining).toFixed(2)} more and get 10% extra tokens!`);
-    } else if (amountInUSD == 1000 && amountInUSD < 1500) {
-      const remaining = 1500 - amountInUSD;
-      setBonusBelowText(`Add $${parseFloat(remaining).toFixed(2)} more and get 15% extra tokens!`);
-    } else if (amountInUSD >= 1500) {
-      setBonusBelowText(`congrats you get 15% extra tokens!`);
-    }
-  }, [buyAmount, selectedCurrency]);
 
   // token balance of user who connected for stackable
   const [stackableTokenBalance, setStackableTokenBalance] = useState(0);
@@ -558,11 +524,11 @@ async function processTransaction(abi,address,functionName, value, args ) {
           {t("home.buyNowBox.title")}
           <span className="text-[#8E00FF]">$TG</span> {t("home.buyNowBox.now")}
         </h2>
-        <h4 className="text-white/90 text-[13px] sm:text-[14px] leading-[16.8px] font-medium pt-[15px]">
+        <h4 className="hidden text-white/90 text-[13px] sm:text-[14px] leading-[16.8px] font-medium pt-[15px]">
           {t("home.buyNowBox.untilPriceIncrease")}
         </h4>
         {/* Current & Next Price */}
-        <div className="mt-5">
+        <div className="hidden mt-5">
           <div className="flex items-center justify-between gap-5">
             <h2 className="text-white/90 text-[13px] sm:text-[14px] leading-[16.8px] font-normal">
               {t("home.buyNowBox.currentPrice")}: {currentPrice}
@@ -689,35 +655,13 @@ async function processTransaction(abi,address,functionName, value, args ) {
         </div>
 
         {/* Available Bonus */}
-        <div style={{visibility: 'hidden'}} className="my-[15px] sm:my-5 space-y-2 sm:space-y-[11px]">
-          <h3 className="text-white text-[13px] sm:text-[14px] leading-[16.8px] font-bold text-left">
+        <div style={{visibility: 'hidden'}} className="space-y-2 sm:space-y-[11px]">
+          <h3 className="text-white text-[13px] sm:text-[14px] font-bold text-left">
             {t("home.buyNowBox.availableBonus")}
           </h3>
           <div className="grid grid-cols-3 gap-[9px] sm:gap-[11px] mt-4">
-            {[
-              { discount: "5", amount: "500" },
-              { discount: "10", amount: "1000" },
-              { discount: "15", amount: "1500" },
-            ].map((item) => (
-              <button
-                key={item.amount}
-                // onClick={() => selectedBonusButton(item.amount)}
-                className={`border border-[#8616DF] rounded-lg p-[5px] sm:p-2 text-[12px] sm:text-[14px] leading-[16.8px] font-medium ${activeTabs.includes(item.amount) ? "text-white" : "text-white/50"
-                  }`}
-                style={
-                  activeTabs.includes(item.amount)
-                    ? { background: "radial-gradient(42.46% 123.69% at 57.02% 58.9%, #A761FF 0%, #490A84 100%)" }
-                    : {}
-                }
-              >
-                {item.discount}%
-              </button>
-            ))}
+           
           </div>
-
-          <p onChange={updateBuyAmount} className="text-white/90 text-[12px] sm:text-[14px] font-normal leading-[16.8px] text-left">
-            {bonusBelowText}
-          </p>
         </div>
         {/* Connect and  Buy Now */}
         {

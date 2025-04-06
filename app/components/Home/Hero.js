@@ -60,31 +60,29 @@ const countDown =  new Date("2025-05-25").getTime(),
     <div className="flex items-center lg:items-start justify-between lg:flex-row flex-col gap-[52px] lg:gap-5">
       <div className="lg:max-w-[609px] text-white">
         <div className="mb-[30px] w-fit px-[14px] h-[42px] bg-[#170326] rounded-[50px] border border-[#FFFFFF26] flex items-center gap-2 justify-center animate-pulse-shadow">
-          <div className="bg-[#9B59FF] px-[5px] w-fit h-[18px] rounded-[40px] flex items-center justify-center inter text-black text-[10px] leading-[26px] tracking-[-0.01em] font-bold">
+          <div className="bg-[#ffff00] px-[5px] w-fit h-[18px] rounded-[40px] flex items-center justify-center inter text-black text-[10px] leading-[26px] tracking-[-0.01em] font-bold">
             {t("home.hero.new")}
           </div>
-          <h2 className="text-[#9B59FF] text-[16px] leading-[26px] font-normal tracking-[-0.01em]">
+          <h2 className="text-[#FFF] text-[16px] leading-[26px] font-normal tracking-[-0.01em]">
             Token Launch In
           </h2>
-        </div>
-        <div className="mb-[30px] w-fit px-[14px] h-[42px] bg-[#170326] rounded-[50px] border border-[#FFFFFF26] flex items-center gap-2 justify-center animate-pulse-shadow">
-          <div id="days" className="bg-[#9B59FF] px-[5px] w-fit h-[18px] rounded-[40px] flex items-center justify-center inter text-black text-[10px] leading-[26px] tracking-[-0.01em] font-bold">
+          <div id="days" className="bg-[#ffff00] px-[5px] w-fit h-[18px] rounded-[40px] flex items-center justify-center inter text-black text-[10px] leading-[26px] tracking-[-0.01em] font-bold">
             00
           </div>
           :
-          <div id="hours" className="bg-[#9B59FF] px-[5px] w-fit h-[18px] rounded-[40px] flex items-center justify-center inter text-black text-[10px] leading-[26px] tracking-[-0.01em] font-bold">
+          <div id="hours" className="bg-[#ffff00] px-[5px] w-fit h-[18px] rounded-[40px] flex items-center justify-center inter text-black text-[10px] leading-[26px] tracking-[-0.01em] font-bold">
             00
           </div>
           :
-          <div id="minutes" className="bg-[#9B59FF] px-[5px] w-fit h-[18px] rounded-[40px] flex items-center justify-center inter text-black text-[10px] leading-[26px] tracking-[-0.01em] font-bold">
+          <div id="minutes" className="bg-[#ffff00] px-[5px] w-fit h-[18px] rounded-[40px] flex items-center justify-center inter text-black text-[10px] leading-[26px] tracking-[-0.01em] font-bold">
             00
           </div>
           :
-          <div id="seconds" className="bg-[#9B59FF] px-[5px] w-fit h-[18px] rounded-[40px] flex items-center justify-center inter text-black text-[10px] leading-[26px] tracking-[-0.01em] font-bold">
+          <div id="seconds" className="bg-[#ffff00] px-[5px] w-fit h-[18px] rounded-[40px] flex items-center justify-center inter text-black text-[10px] leading-[26px] tracking-[-0.01em] font-bold">
             00
           </div>
         </div>
-
+        
         <h1 className="text-[40px] leading-[48px] sm:text-[45px] lg:text-[54px] lg:leading-[74px] font-bold bg-clip-text text-transparent"
           style={{
             background:

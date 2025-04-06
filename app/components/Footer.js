@@ -222,8 +222,9 @@ const Footer = () => {
                   <Image
                     src={social.icon}
                     alt={social.name}
-                    width={24}
-                    height={24}
+                    style={{background: 'white', borderRadius: '25px'}}
+                    width={40}
+                    height={40}
                   />
                 </Link>
               ))}
