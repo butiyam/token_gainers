@@ -10,14 +10,14 @@ export default function EarnRewards() {
       icon: "/assets/icons/cart.svg",
       title: t("home.earnRewards.cards.0.title"),
       description: t("home.earnRewards.cards.0.description"),
-      buttonText: t("home.earnRewards.cards.0.buttonText"),
-      hasButton: true,
+      hasButton: false,
     },
     {
       icon: "/assets/icons/lock.svg",
       title: t("home.earnRewards.cards.1.title"),
       description: t("home.earnRewards.cards.1.description"),
-      hasButton: false,
+      buttonText: t("home.earnRewards.cards.1.buttonText"),
+      hasButton: true,
     },
     {
       icon: "/assets/icons/bag.svg",
@@ -78,7 +78,7 @@ export default function EarnRewards() {
               {card.hasButton && (
                 <Button
                   href="/staking"
-                  translationKey="home.earnRewards.cards.0.buttonText"
+                  translationKey="home.earnRewards.cards.1.buttonText"
                   paddingx="px-[28.5px]"
                   extraClass="h-[47px] text-nowrap md:-mt-0 -mt-20 min-w-[122px]"
                 />

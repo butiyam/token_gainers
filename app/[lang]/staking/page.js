@@ -108,7 +108,7 @@ const Staking = () => {
         >
           {/* Total $VRN Balance & Staking Reward & Your Referral Earnings */}
           <div className="w-full flex items-center gap-[20px] justify-between lg:flex-row flex-col">
-            <div className="w-full relative px-[15px] sm:px-5 py-[12px] lg:py-[12px] flex lg:flex-col flex-row lg:items-start items-center justify-between rounded-[10px] lg:rounded-[12px] shadow-custom">
+            <div style={{width: '50%'}} className="w-full relative px-[15px] sm:px-5 py-[12px] lg:py-[12px] flex lg:flex-col flex-row lg:items-start items-center justify-between rounded-[10px] lg:rounded-[12px] shadow-custom">
               <h3 className="text-white text-[18px] leading-[24px] font-normal">
                 {t("staking.totalVRNBalance")}
               </h3>
@@ -116,27 +116,18 @@ const Staking = () => {
                 {stackableTokenBalance}
               </h2>
             </div>
-            <div className="w-full relative px-[15px] sm:px-5 py-[12px] lg:py-[12px] flex lg:flex-col flex-row lg:items-start items-center justify-between rounded-[10px] lg:rounded-[12px] shadow-custom">
+            <div style={{width: '50%'}} className="w-full relative px-[15px] sm:px-5 py-[12px] lg:py-[12px] flex lg:flex-col flex-row lg:items-start items-center justify-between rounded-[10px] lg:rounded-[12px] shadow-custom">
               <h3 className="text-white text-[18px] leading-[24px] font-normal">
                 {t("staking.stakingReward")}
               </h3>
               <h2 className="text-white text-[24px] leading-[38.4px] font-normal">
               {totalReward > 0
-                  ? `${formatNumberWithCommas(totalReward.toFixed(2))} VRN`
-                  : "0.00 VRN"}
+                  ? `${formatNumberWithCommas(totalReward.toFixed(2))} Mine X`
+                  : "0.00 Mine X"}
                 
               </h2>
             </div>
-            <div className="w-full relative px-[15px] sm:px-5 py-[12px] lg:py-[12px] flex lg:flex-col flex-row lg:items-start items-center justify-between rounded-[10px] lg:rounded-[12px] shadow-custom">
-              <h3 className="text-white text-[18px] leading-[24px] font-normal">
-                {t("staking.referralEarnings")}
-              </h3>
-              <h2 className="text-white text-[24px] leading-[38.4px] font-normal">
-              {referralEarnings > 0
-                  ? `${formatNumberWithCommas(referralEarnings.toFixed(2))} VRN`
-                  : "0.00 VRN"}
-              </h2>
-            </div>
+           
           </div>
           <StakingSection />
           {/* Referral & Leaderboard */}

@@ -603,8 +603,8 @@ async function handleStakeToken(){
               </h2>
               <h2 className="text-[16px] sm:text-[18px] leading-[21.6px] font-normal">
                 {numericStakeAmount > 0
-                  ? `${formatNumberWithCommas(numericStakeAmount.toFixed(2))} VRN`
-                  : "0.00 VRN"}
+                  ? `${formatNumberWithCommas(numericStakeAmount.toFixed(2))} Mine X`
+                  : "0.00 Mine X"}
               </h2>
             </div>
 
@@ -614,8 +614,8 @@ async function handleStakeToken(){
               </h2>
               <h2 className="text-[#C176FF] text-[16px] sm:text-[18px] leading-[21.6px] font-normal">
                 {estimatedProfit > 0
-                  ? `${formatNumberWithCommas(estimatedProfit.toFixed(2))} VRN`
-                  : "0.00 VRN"}
+                  ? `${formatNumberWithCommas(estimatedProfit.toFixed(2))} Mine X`
+                  : "0.00 Mine X"}
               </h2>
             </div>
 
@@ -625,8 +625,8 @@ async function handleStakeToken(){
               </h2>
               <h2 className="text-[#C176FF] text-[16px] sm:text-[18px] leading-[21.6px] font-normal">
                 {totalAmount > 0
-                  ? `${formatNumberWithCommas(totalAmount.toFixed(2))} VRN`
-                  : "0.00 VRN"}
+                  ? `${formatNumberWithCommas(totalAmount.toFixed(2))} Mine X`
+                  : "0.00 Mine X"}
               </h2>
             </div>
           </div>
@@ -740,7 +740,7 @@ async function handleStakeToken(){
                         myStakes.map((item, index) => (
                           <tr key={index} className="border-b border-[#1e1e1e]">
                             <td className="text-white text-[0.75rem] px-[30px] py-[20px]">
-                              {(ethers.formatUnits(item.amount.toString(),'ether'))} VRN
+                              {(ethers.formatUnits(item.amount.toString(),'ether'))} Mine X
                             </td>
                             <td className="text-white text-[0.75rem] px-[30px] py-[20px]">
                               {monthDiff(item.rewardRate)}

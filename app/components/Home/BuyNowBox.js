@@ -373,7 +373,7 @@ const BuyNowBox = () => {
       <div className="px-4 sm:px-[30px]">
         <h2 className="text-[24px] sm:text-[32px] leading-[29px] sm:leading-[38.4px] font-bold text-white">
           {t("home.buyNowBox.title")}
-          <span className="text-[#8E00FF]">$TG</span> {t("home.buyNowBox.now")}
+          <span className="text-[#8E00FF]">$Mine X</span> {t("home.buyNowBox.now")}
         </h2>
         <h4 className="hidden text-white/90 text-[13px] sm:text-[14px] leading-[16.8px] font-medium pt-[15px]">
           {t("home.buyNowBox.untilPriceIncrease")}
@@ -406,14 +406,14 @@ const BuyNowBox = () => {
         <div className="max-w-[300px] sm:max-w-[395px] mx-auto w-full flex items-center justify-between sm:gap-[85px] py-2.5">
           <div>
             <h2 className="text-[13px] sm:text-[14px] leading-[16.8px] font-medium mb-[5px]">
-            Stackable TG
+            Stackable Mine X
             </h2>
             <h3 className="text-[#C176FF] text-[13px] sm:text-[14px] leading-[16.8px] font-normal">{stackableTokenBalance}</h3>
           </div>
           <div className="bg-[#842DFF] h-[40px] w-[0.5px]"></div>
           <div>
             <h2 className="text-[13px] sm:text-[14px] leading-[16.8px] font-medium mb-[5px]">
-            Purchased TG
+            Purchased Mine X
             </h2>
             <h3 className="text-[#C176FF] text-[13px] sm:text-[14px] leading-[16.8px] font-normal">{tokenBalance}</h3>
           </div>
@@ -532,11 +532,11 @@ const BuyNowBox = () => {
       <div className="px-5 sm:px-[30px]">
         <div className="mt-5 flex items-center flex-wrap justify-center sm:justify-between gap-4 sm:gap-3">
           
-          <Link href="https://vorn-ai.gitbook.io/" target="_blank" className="flex items-center gap-2 sm:gap-2.5">
+          <Link href="#" target="_blank" className="flex items-center gap-2 sm:gap-2.5">
             <Image src="/assets/icons/how-to-buy.svg" alt="How to buy" width={16} height={16} />
             <h3 className="text-white/90 text-[13px] sm:text-[14px] leading-[16.8px] font-normal">How to buy</h3>
           </Link>
-          <Link href="https://vorn-ai.gitbook.io/" target="_blank" className="flex items-center gap-2 sm:gap-2.5">
+          <Link href="#" target="_blank" className="flex items-center gap-2 sm:gap-2.5">
             <Image
               src="/assets/icons/my-wallet-wont-connect.svg"
               alt="My wallet won't connect!"

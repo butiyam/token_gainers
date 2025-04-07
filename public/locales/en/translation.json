@@ -30,8 +30,8 @@
     "hero": {
       "new": "NEW",
       "integrationLive": "Next-Gen Integration is Live!",
-      "poweringFuture": "Powering the Future: AI, DePIN & RWA in One Unified Grid",
-      "description": "AI-driven compute power, tokenized assets, and decentralized infrastructure in one ecosystem.",
+      "poweringFuture": "Earn 5% Daily with MineX VIP Staking Program",
+      "description": "Stake MINEX coins and experience secure, reliable, and consistent returns with our exclusive staking opportunity.",
       "staking": "Staking",
       "whitepaper": "Whitepaper"
     },
@@ -42,11 +42,11 @@
       "currentPrice": "Current price",
       "nextPrice": "Next price",
       "raised": "Raised",
-      "stackableVRN": "Stackable VRN",
-      "purchasedVRN": "Purchased VRN",
+      "stackableVRN": "Stackable Mine X",
+      "purchasedVRN": "Purchased Mine X",
       "listingPrice": "Listing price",
       "chooseAmount": "Choose amount",
-      "vrnYouReceive": "$VRN you receive",
+      "vrnYouReceive": "$Mine X you receive",
       "availableBonus": "Available Bonus",
       "spendMore": "Spend",
       "toGetBonus": "more to get 10% bonus tokens",
@@ -68,8 +68,8 @@
       "learn-more": "Learn More"
     },
     "buyNRTX": {
-      "title": "How to Buy VRN Tokens",
-      "description": "Buy VRN Tokens in three simple steps",
+      "title": "How to Buy Mine X Coin",
+      "description": "Buy Mine X Coin in three simple steps",
       "steps": {
         "step1": {
           "step": "Step 01",
@@ -79,12 +79,12 @@
         "step2": {
           "step": "Step 02",
           "title": "Top Up Your Wallet",
-          "description": "Fund your wallet with ETH, USDT or USDC to purchase VRN. If paying by Credit/debit card, you can skip this step."
+          "description": "Fund your wallet with BNB, USDT  to purchase Mine X. If paying by Credit/debit card, you can skip this step."
         },
         "step3": {
           "step": "Step 03",
-          "title": "Buy VRN Tokens",
-          "description": "Click 'Buy Now' and approve the transaction in your wallet. Once successful, your VRN tokens will be automatically sent to your wallet."
+          "title": "Buy Mine X Coin",
+          "description": "Click 'Buy Now' and approve the transaction in your wallet. Once successful, your Mine X Coin will be automatically sent to your wallet."
         }
       }
     },
@@ -96,13 +96,14 @@
       "description": "Monitor your rewards in real-time and claim earnings when available.",
       "cards": [
         {
-          "title": "Buy VRN Tokens",
-          "description": "Connect your wallet and purchase VRN to get started.",
-          "buttonText": "Buy Now"
+          "title": "Buy Mine X Coin",
+          "description": "Connect your wallet and purchase Mine X to get started."
+         
         },
         {
-          "title": "Stake VRN",
-          "description": "Go to the 'Staking' section on the platform. Choose a staking duration that fits your strategy. Longer staking = higher rewards & governance power."
+          "title": "Stake Mine X",
+          "description": "Go to the 'Staking' section on the platform. Choose a staking duration that fits your strategy. Longer staking = higher rewards & governance power.",
+          "buttonText": "Stake"
         },
         {
           "title": "Earn Rewards",
@@ -137,7 +138,7 @@
       "buttonText": "Stake Now"
     },
     "roadMap": {
-      "subTitle": "VORN AI Roadmap",
+      "subTitle": "Roadmap",
       "title": "Pioneering the Future of Decentralized AI",
       "description": "Our roadmap outlines the journey towards a scalable, secure, and fully autonomous AI ecosystem.",
       "phases": [
@@ -189,9 +190,9 @@
       "subTitle": "Tokenomics",
       "title": {
         "start": "Tokenomics:",
-        "end": "The Economy of VORN AI"
+        "end": "The Economy of TOKEN GAINERS"
       },
-      "description": "The VORN AI ($VRN) ecosystem is designed for long-term sustainability, balancing utility, rewards, and governance. Below is the token distribution model ensuring growth, security, and decentralization.",
+      "description": "The TOKEN GAINERS ($FiRA) ecosystem is designed for long-term sustainability, balancing utility, rewards, and governance. Below is the token distribution model ensuring growth, security, and decentralization.",
       "liquidityAndExchangeListings": "Liquidity & Exchange Listings",
       "infrastructureAndDevelopment": "Infrastructure & Development",
       "teamAndAdvisors": "Team & Advisors",
@@ -206,16 +207,16 @@
     "faqs": {
       "title": "FAQs",
       "subtitle": "Frequently Asked Questions",
-      "question1": "What is VORN.AI?",
+      "question1": "What is TOKENGAINERS.COM?",
       "answer1": "VORN.AI is an AI-powered decentralized platform for infrastructure and real-world asset (RWA) tokenization.",
-      "question2": "How does VORN.AI utilize AI?",
-      "answer2": "VORN.AI leverages artificial intelligence for automated asset valuation, risk assessment, and market analysis. The platform uses advanced AI algorithms to optimize tokenization processes and enhance decision-making in real-world asset management.",
-      "question3": "What can I do with VRN tokens?",
-      "answer3": "VRN tokens serve multiple purposes within the VORN ecosystem. You can stake them for rewards, participate in governance decisions, access premium features, and trade them on supported exchanges.",
-      "question4": "What is DePIN in VORN.AI?",
-      "answer4": "DePIN (Decentralized Physical Infrastructure Network) in VORN.AI is a framework that connects real-world infrastructure to blockchain technology, enabling decentralized management and tokenization of physical assets.",
-      "question5": "What are tokenized RWAs in VORN.AI?",
-      "answer5": "Tokenized RWAs (Real World Assets) in VORN.AI are digital representations of physical assets on the blockchain. This includes real estate, infrastructure, commodities, and other tangible assets that have been converted into tradable digital tokens."
+      "question2": "How does TOKEN GAINERS utilize?",
+      "answer2": "TOKEN GAINERS leverages artificial intelligence for automated asset valuation, risk assessment, and market analysis. The platform uses advanced AI algorithms to optimize tokenization processes and enhance decision-making in real-world asset management.",
+      "question3": "What can I do with Mine X coin?",
+      "answer3": "Mine X serve multiple purposes within the ecosystem. You can stake them for rewards, participate in governance decisions, access premium features, and trade them on supported exchanges.",
+      "question4": "What is Mine X in TOKEN GAINERS?",
+      "answer4": "Mine X in TOKEN GAINERS is a framework that connects real-world infrastructure to blockchain technology, enabling decentralized management and tokenization of physical assets.",
+      "question5": "What are tokenized Mine X in TOKEN GAINERS?",
+      "answer5": "Tokenized Mine X in TOKEN GAINERS are digital representations of physical assets on the blockchain. This includes real estate, infrastructure, commodities, and other tangible assets that have been converted into tradable digital tokens."
     }
   },
   "aiUtility": {
@@ -232,7 +233,7 @@
     "timeline": {
       "first": {
         "title": "Our goal is clear:",
-        "description": "to officially launch on MEXC Exchange, a prominent global trading platform.Once listed on such a major exchange, we anticipate a significant increase in value, backed by a robust, real-world mining operation."
+        "description": "to officially launch on Exchange, a prominent global trading platform.Once listed on such a major exchange, we anticipate a significant increase in value, backed by a robust, real-world mining operation."
       },
       "second": {
         "title": "Real Business, Real Value:",

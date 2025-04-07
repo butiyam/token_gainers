@@ -103,22 +103,22 @@ const Footer = () => {
   const socialLinks = [
     {
       name: 'Twitter',
-      href: 'https://www.x.com/vornai',
+      href: 'https://www.x.com/',
       icon: '/assets/icons/twitter.svg'
     },
     {
       name: 'Telegram',
-      href: 'https://t.me/vornai',
+      href: 'https://t.me/',
       icon: '/assets/icons/telegram.svg'
     },
     {
       name: 'Medium',
-      href: 'https://medium.com/vornai',
+      href: 'https://medium.com/',
       icon: '/assets/icons/m.svg'
     },
     {
       name: 'Linktree',
-      href: 'https://linktree.com/vornai',
+      href: 'https://linktree.com/',
       icon: '/assets/icons/tree.svg'
     }
   ];
@@ -236,7 +236,7 @@ const Footer = () => {
         </div>
 
         {/* Newsletter */}
-        <div className="py-10 sm:py-[50px] border-t border-[#8B5CF6]/20">
+        <div className="hidden py-10 sm:py-[50px] border-t border-[#8B5CF6]/20">
           <div className="flex items-center gap-6 sm:gap-4 justify-between flex-wrap">
             <div>
               <h2 className="text-white text-[16px] font-bold font-poppins mb-1">
