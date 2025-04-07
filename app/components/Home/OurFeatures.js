@@ -37,7 +37,7 @@ const OurFeatures = () => {
     <div id="features" className="pt-[20px] sm:pt-[70px] pb-20 px-[18px]">
       <SectionHeading text={t("home.ourFeatures.title")} />
       <h1 className="my-[25px] text-[32px] sm:text-[40px] leading-[44px] sm:leading-[44px] font-bold text-white text-center">
-        <span className="text-[#9442ED]">VORN AI:</span> Unified AI + DePIN + RWA Ecosystem
+        <span className="text-[#9442ED]">Mine X:</span> Take a Step Toward Your Financial Freedom
       </h1>
       <p className="max-w-[698px] mx-auto text-center w-full text-[18px] leading-[27px] font-normal font-poppins text-white/80">
         {t("home.ourFeatures.description")}
@@ -73,12 +73,6 @@ const OurFeatures = () => {
                     <p className="text-white/80 font-normal font-poppins text-[18px] leading-[27px]">
                       {t(feature.description)}
                     </p>
-                    <div className="mt-5">
-                      <LocalizedButtonLink
-                        href={feature.link}
-                        translationKey="home.ourFeatures.learn-more"
-                      />
-                    </div>
                   </div>
                 </div>
                 <div className="w-full lg:w-[472px] h-[400px] border border-[#7E0ADB] rounded-[10px]">
@@ -129,12 +123,6 @@ const OurFeatures = () => {
                     <p className="text-white/80 font-normal font-poppins text-[18px] leading-[27px]">
                       {t(feature.description)}
                     </p>
-                    <div className="mt-5">
-                      <LocalizedButtonLink
-                        href={feature.link}
-                        translationKey="home.ourFeatures.learn-more"
-                      />
-                    </div>
                   </div>
                 </div>
               </>

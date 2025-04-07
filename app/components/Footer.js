@@ -126,28 +126,6 @@ const Footer = () => {
   // Footer Links
   const footerLinks = [
     {
-      category: 'product',
-      title: t("footer.product.title"),
-      links: [
-        {
-          name: t("footer.product.features"),
-          href: "#features"
-        },
-        {
-          name: t("footer.product.unifiedAI"),
-          href: "/unified-ai"
-        },
-        {
-          name: t("footer.product.depin"),
-          href: "/de-pin"
-        },
-        {
-          name: t("footer.product.rwa"),
-          href: "/rwa"
-        }
-      ]
-    },
-    {
       category: 'company',
       title: t("footer.company.title"),
       links: [

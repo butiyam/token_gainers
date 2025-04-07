@@ -57,11 +57,11 @@
     },
     "ourFeatures": {
       "title": "Our Features",
-      "description": "VORN AI is a self-sustaining, AI-driven ecosystem that integrates AI, DePIN, and RWA tokenization to create a fully autonomous decentralized economy.",
-      "aiTitle": "AI - The Intelligent Brain",
-      "aiDescription": "AI in VORN.AI serves as the intelligent core, optimizing resource allocation, automating smart contracts, and enhancing network security through real-time monitoring. It predicts demand for computing and energy resources, ensuring efficient distribution and maximum utilization. AI also manages yield optimization for staking pools and supports decentralized governance by streamlining proposal analysis and voting processes.",
-      "depinTitle": "DePIN – The Physical Backbone",
-      "depinDescription": "DePIN provides the physical infrastructure, including computing nodes, storage devices, and energy grids, enabling users to contribute and monetize their resources. AI dynamically allocates these resources based on network needs, creating a decentralized marketplace for compute power, cloud storage, and renewable energy trading, while rewarding contributors with VRN tokens.",
+      "description": "This is a project that fuses innovation with real-world value, offering security, transparency, and genuine growth in the ever-evolving crypto space.",
+      "aiTitle": "Why Stake?",
+      "aiDescription": "We offer a unique and secure staking option that allows you to purchase and stake our crypto coin. This not only helps grow your investment but also provides a consistent and stable source of profit.Through staking on our platform, you’ll receive daily earnings.Your investment is secured by real-world assets, backed by our mining operations. By staking your coins, you unlock the opportunity for passive income. Now is the time to Buy and Stake Mine X Coin and  secure your financial Freedom On Our Platform.",
+      "depinTitle": "The Physical Backbone",
+      "depinDescription": "Welcome to Our Revolutionary Crypto Project, This is not just another cryptocurrency. Our coin is a decentralized asset, underpinned by a real-world, income-generating Bitcoin and Ethereum mining operation.Operational Mining Infrastructure: We have a fully functional, state-of-the-art mining setup actively generating daily revenue through Bitcoin and Ethereum mining.Real, Tangible Profits: Unlike other speculative projects, our coin is backed by real-world assets and a sustainable income stream, ensuring long-term value. ",
       "rwaTitle": "RWA – The Economic Engine",
       "rwaDescription": "RWA tokenization bridges real-world assets with blockchain, allowing infrastructure such as real estate, data centers, and energy grids to be converted into fractional NFTs. Users can trade, stake, and borrow against these tokenized assets, earning passive income through AI-managed yield distribution while benefiting from global liquidity and decentralized ownership.",
       "learn-more": "Learn More"
@@ -331,7 +331,7 @@
     }
   },
   "footer": {
-    "description": "VORN.AI – Powering the Future of Decentralized Intelligence AI-Driven. Infrastructure-Powered. Asset-Tokenized.",
+    "description": "FiRA – Welcome to Our Revolutionary Crypto Project. Powering the Future of Decentralized Intelligence AI-Driven.",
     "product": {
       "title": "Product",
       "features": "Features",

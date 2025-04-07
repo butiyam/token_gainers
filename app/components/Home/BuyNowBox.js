@@ -15,10 +15,12 @@ import url from 'url';
 import { getClient } from "../../config/blockchain"
 import toast from "react-hot-toast"
 import { formatUnits, parseEther } from "viem"
+
 import presaleAbi from "../contractABI/presaleAbi.json"
 import tokenAbi from "../contractABI/tokenAbi.json"
+
 // setup blockchain here 
-const Provider = new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/4558589699cd4522b9c817c99f72ce99");
+const Provider = new Web3.providers.HttpProvider("https://data-seed-prebsc-1-s1.bnbchain.org:8545");
 const web3 = new Web3(Provider);
 
 // This is for changing button logo and name tabs will change the chain(input) name and logo
@@ -36,15 +38,12 @@ const BuyNowBox = () => {
   const { t } = useTranslation()
   const [isHovered, setIsHovered] = useState(false)
   const [activeTab, setActiveTab] = useState("BUY")
-  const [sellCurrency, setSellCurrency] = useState(currenciesByChain.USDT[0])
-  const [buyCurrency, setBuyCurrency] = useState(currenciesByChain.TG[0])
+  const [sellCurrency, setSellCurrency] = useState(currenciesByChain.TG[0])
+  const [buyCurrency, setBuyCurrency] = useState(currenciesByChain.USDT[0])
 
   // states for managing api data in pre-sale box from backend api (ajax.php)
   const [currentPrice, setCurrentPrice] = useState(0)
-  const [nextPrice, setNextPrice] = useState(0)
-  const [raisedPrice, setRaisedPrice] = useState(0)
-  const [totalPrice, setTotalPrice] = useState(0)
-
+  
   // toast meassages 
   const notifyErrorMsg = (msg) => toast.error(msg);
   const notifySuccess = (msg) => toast.success(msg);
@@ -56,53 +55,12 @@ const BuyNowBox = () => {
   // usdt, allowedUSDT and eth balance of user who connected
   const [usdtBalance, setUSDTBalance] = useState(0);
   const [allowanceUSDT, setAllowanceUSDT] = useState(0);
-  const [usdcBalance, setUSDCBalance] = useState(0);
-  const [allowanceUSDC, setAllowanceUSDC] = useState(0);
-  const [ethBalance, setETHBalance] = useState(0);
+  const [allowanceCoin, setAllowanceCoin] = useState(0);
 
   // use usestate for buy amount and buy now button stars
   const [buyAmount, setBuyAmount] = useState(0)
   const [expectedTokens, setExpectedTokens] = useState(0);
   const [buyButtonText, setBuyButtonText] = useState('BUY NOW')
-  //set bonus text
-  const [bonusBelowText, setBonusBelowText] = useState("Buy minimum of $500 and 5% extra Tokens")
-  // use useEffect for fetching data from backend api 
-  useEffect(() => {
-    const fetchInfo = async () => {
-      try {
-        const response = await api.get("index.php", { responseType: "text" }); // Get HTML as text
-        const htmlString = response.data;
-
-        // Parse HTML using DOMParser
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(htmlString, "text/html");
-
-        // Extract values from input fields
-        const getValue = (name) => doc.querySelector(`input[name="${name}"]`)?.value || "0";
-
-        setCurrentPrice(getValue("current_price"));
-        setNextPrice(getValue("next_price"));
-        setRaisedPrice(getValue("usdt_raised"));
-        setTotalPrice(getValue("usdt_total"));
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    fetchInfo();
-  }, []);
-
-
-  // fetch live eth price
-  const [ethPriceLive, setEthPriceLive] = useState(0);
-  useEffect(() => {
-    async function fetchEthPrice() {
-      const providerETH = new ethers.JsonRpcProvider("https://mainnet.infura.io/v3/4558589699cd4522b9c817c99f72ce99");
-      const contractETH = new ethers.Contract(presaleAddress, presaleAbi.abi, providerETH);
-      const priceBigInt = await contractETH.getLatestETHPrice();
-      setEthPriceLive(priceBigInt.toString());
-    }
-    fetchEthPrice();
-  }, []);
 
 
   // token balance of user who connected for stackable
@@ -112,19 +70,9 @@ const BuyNowBox = () => {
 
   const { writeContractAsync } = useWriteContract();
 
-  const presaleAddress = "0x462eed0076dc1b2fe9deea0857df6d1953fe7d46";
-  const usdtAddress = "0xdAC17F958D2ee523a2206206994597C13D831ec7";
-  const usdcAddress = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
-  const tokenAddress = "0x888632bb147ba407d85f1881a817c0481ff8dcda";
+  const usdtAddress = "0x337610d27c682E347C9cD60BD4b3b107C9d34dDd";
+  const tokenAddress = "0x351B1d2564793a8cbd9a616D5dC5C5c2aBBD9587";
 
-  // use contract abi 
-  // showing how much user who connected will claim data
-  const { data: totalAmountInfo } = useReadContract({
-    abi: presaleAbi.abi,
-    address: presaleAddress,
-    functionName: 'userClaimData',
-    args: [address],
-  })
 
   // show user who connected all usdt in acc
   const { data: balanceUSDTData } = useReadContract({
@@ -133,13 +81,7 @@ const BuyNowBox = () => {
     functionName: 'balanceOf',
     args: [address],
   })
-  // show user who connected all usdt in acc
-  const { data: balanceUSDCData } = useReadContract({
-    abi: tokenAbi.abi,
-    address: usdcAddress,  // Define usdcAddress
-    functionName: 'balanceOf',
-    args: [address],
-  });
+
   // show user who connected all token in acc
   const { data: balanceTokenData } = useReadContract({
     abi: tokenAbi.abi,
@@ -153,92 +95,278 @@ const BuyNowBox = () => {
     abi: tokenAbi.abi,
     address: usdtAddress,
     functionName: 'allowance',
-    args: [address, presaleAddress],
+    args: [address, tokenAddress],
   })
-  const { data: allowanceUSDCData } = useReadContract({
-    abi: tokenAbi.abi,
-    address: usdcAddress,  // Make sure usdcAddress is defined
-    functionName: 'allowance',
-    args: [address, presaleAddress],
-  });
+
+    // how much it is capable for sell token
+    const { data: allowanceCoinData } = useReadContract({
+      abi: tokenAbi.abi,
+      address: tokenAddress,
+      functionName: 'allowance',
+      args: [address, tokenAddress],
+    })
 
   const switchBuyCurrency = async () =>{
     if(buyCurrency.name == "USDT"){
        setBuyCurrency(currenciesByChain.TG[0])
        setSellCurrency(currenciesByChain.USDT[0])
+       setBuyButtonText("SELL NOW");
     }else{
       setBuyCurrency(currenciesByChain.USDT[0])
       setSellCurrency(currenciesByChain.TG[0])
+      setBuyButtonText("BUY NOW");
     }
   }
-  
+
+  // use useref for buy amount input field 
+  const inputRef = useRef(null);
+  const updateBuyAmount = async () => {
+
+    if (!inputRef.current) return;
+
+    const amount = Number(inputRef.current.value)
+    if (amount <= 0) return; 
+
+    // Connect to the public RPC provider
+    const provider = new ethers.JsonRpcProvider('https://data-seed-prebsc-1-s1.bnbchain.org:8545');
+    // Create a contract instance with the provider
+    const contract = new ethers.Contract(tokenAddress, tokenAbi.abi, provider);
+    try {
+      
+      let tokens = '1000000000000000000'; // Default for USDT
+
+      setBuyAmount(amount.toString());
+      if (buyCurrency.name === 'USDT') {
+        
+        console.log(web3.utils.toWei(amount.toString(), 'ether'))
+        const priceBigInt = await contract.usdtToToken(web3.utils.toWei(amount.toString(), 'ether'));
+        tokens = priceBigInt.toString(); // Convert BigInt to string
+      }
+      //  Why converting mwei?? USDT (Tether) has 6 decimal places (while ETH has 18 decimal places)
+      if (buyCurrency.name === "TG") {
+        const exchangeRate = await contract.exchangeRate();
+        //console.log(exchangeRate)
+        tokens = (web3.utils.toWei(amount.toString(), 'ether') * exchangeRate.toString()) / 1e18;
+        
+      }
+      
+        setExpectedTokens(web3.utils.fromWei(tokens.toString(), 'ether'));  // Setting the expected tokens
+   
+    } catch (error) {
+      console.log("unable to load resultEth", error)
+    }
+  }
+
+
   // fetch web3 data 
   const fetchBalance = async () => {
     // Connect to the public RPC provider
-    const providerETH = new ethers.JsonRpcProvider('https://mainnet.infura.io/v3/4558589699cd4522b9c817c99f72ce99');
+    const provider = new ethers.JsonRpcProvider('https://data-seed-prebsc-1-s1.bnbchain.org:8545');
     // Create a contract instance with the provider
-    const contractETH = new ethers.Contract(presaleAddress, presaleAbi.abi, providerETH);
-    try {
-      let tokenPrice = await contractETH.presale(1);
-      tokenPrice = web3.utils.fromWei(tokenPrice[2].toString(), 'ether');
-    } catch (error) {
-      console.log('error')
-    }
+    const contract = new ethers.Contract(tokenAddress, tokenAbi.abi, provider);
+      if (isConnected) {
+          try {
+            let tokenBal = await contract.balanceOf(address);
+            const balance = web3.utils.fromWei(tokenBal.toString(), 'ether')
+            setTokenBalance(Number(balance));
 
-    // how much total token user can claim user wallet is connected
-    if (isConnected) {
-      try {
-        // total purchased token by connected user
-        let balance = await contractETH.userClaimData(address);
-        balance = web3.utils.fromWei(balance, "ether");
-        setTokenBalance(balance)
-      } catch (error) {
-        console.log('Unable to load user claim data', error)
-      }
+          } catch (error) {
+            console.log('error')
+          }
 
-      // call token contract when user is connected
-      const contractToken = new ethers.Contract(tokenAddress, tokenAbi.abi, providerETH);
-      // Check user balance of how  many token is remaining from total claimed tokens
-      try {
-        let balance = await contractToken.balanceOf(address);
-        balance = web3.utils.fromWei(balance, "ether");
-        setStackableTokenBalance(balance);
-      } catch (error) {
-        console.log('unable to load token contract', error)
       }
-    }
   }
 
+  // buy button functionality
+  async function handleBuyToken() {
+
+    const amount = Number(inputRef.current.value);
+
+    if (parseFloat(buyAmount) <= 0) {
+      setBuyButtonText('Buy Now');
+      notifyErrorMsg('Please enter amount');
+      return;
+    }
+    const publicClient = getClient();
+
+  
+    if (buyCurrency.name == 'USDT') {
+      // If buy amount is more than available balance of user
+      console.log(buyAmount)
+      console.log(usdtBalance.toString())
+      if (parseFloat(buyAmount) > parseFloat(usdtBalance.toString())) {
+        notifyErrorMsg('Insufficient USDT Balance');
+        return;
+      }
+
+      if(parseFloat(allowanceUSDTData.toString()) < parseFloat(buyAmount.toString())) {
+        try {
+          setBuyButtonText('Approving...');
+    
+          const hash = await  writeContractAsync({ 
+            abi: tokenAbi.abi,
+            address: usdtAddress,
+            functionName: 'approve',
+            args:[tokenAddress,parseUnits(String(buyAmount), 18)],
+          })
+    
+          const txn = await publicClient.waitForTransactionReceipt( { hash } );
+              
+          if(txn.status == "success"){
+
+            notifySuccess('Approve TXN Successful'); 
+            setBuyButtonText('Buying...');
+
+            try {
+              const hash = await writeContractAsync({
+                abi: tokenAbi.abi,
+                address: tokenAddress,
+                functionName: 'buy',
+                args:[parseUnits(String(buyAmount), 18)],
+              });
+          
+              const txn = await getClient().waitForTransactionReceipt({ hash });
+              if (txn.status === "success") {
+                notifySuccess(`${expectedTokens} Coins Bought Successfully`);
+              }
+      
+            } catch (error) {
+              console.error("Transaction failed", error);
+              notifyErrorMsg(error?.shortMessage || "An unknown error occurred.");
+            } finally {
+              setBuyButtonText("BUY NOW");
+            }
+          }
+        }catch(error){
+          console.log(error);
+          setBuyButtonText('BUY NOW');
+        }
+      }else{
+        try {
+          const hash = await writeContractAsync({
+            abi: tokenAbi.abi,
+            address: tokenAddress,
+            functionName: 'buy',
+            args:[parseUnits(String(buyAmount), 18)],
+          });
+      
+          const txn = await getClient().waitForTransactionReceipt({ hash });
+          if (txn.status === "success") {
+            notifySuccess(`${expectedTokens} Coins Bought Successfully`);
+          }
+  
+        } catch (error) {
+          console.error("Transaction failed", error);
+          notifyErrorMsg(error?.shortMessage || "An unknown error occurred.");
+        } finally {
+          setBuyButtonText("BUY NOW");
+        }
+      }
+
+     
+    } else{
+        // If sell amount is more than available balance of user
+        console.log(buyAmount)
+        console.log(usdtBalance.toString())
+        if (parseFloat(buyAmount) > parseFloat(tokenBalance.toString())) {
+          notifyErrorMsg('Insufficient Coin Balance');
+          return;
+        }
+  
+        if(parseFloat(allowanceCoin.toString()) < parseFloat(buyAmount.toString())) {
+          try {
+            setBuyButtonText('Approving...');
+      
+            const hash = await  writeContractAsync({ 
+              abi: tokenAbi.abi,
+              address: tokenAddress,
+              functionName: 'approve',
+              args:[tokenAddress,parseUnits(String(buyAmount), 18)],
+            })
+      
+            const txn = await publicClient.waitForTransactionReceipt( { hash } );
+                
+            if(txn.status == "success"){
+  
+              notifySuccess('Approve TXN Successful'); 
+              setBuyButtonText('Selling...');
+  
+              try {
+                const hash = await writeContractAsync({
+                  abi: tokenAbi.abi,
+                  address: tokenAddress,
+                  functionName: 'sell',
+                  args:[parseUnits(String(buyAmount), 18)],
+                });
+            
+                const txn = await getClient().waitForTransactionReceipt({ hash });
+                if (txn.status === "success") {
+                  notifySuccess(`${expectedTokens} Coins Sold Successfully`);
+                }
+        
+              } catch (error) {
+                console.error("Transaction failed", error);
+                notifyErrorMsg(error?.shortMessage || "An unknown error occurred.");
+              } finally {
+                setBuyButtonText("SELL NOW");
+              }
+            }
+          }catch(error){
+            console.log(error);
+            setBuyButtonText('SELL NOW');
+          }
+        }else{
+          try {
+            const hash = await writeContractAsync({
+              abi: tokenAbi.abi,
+              address: tokenAddress,
+              functionName: 'buy',
+              args:[parseUnits(String(buyAmount), 18)],
+            });
+        
+            const txn = await getClient().waitForTransactionReceipt({ hash });
+            if (txn.status === "success") {
+              notifySuccess(`${expectedTokens} Coins Bought Successfully`);
+            }
+    
+          } catch (error) {
+            console.error("Transaction failed", error);
+            notifyErrorMsg(error?.shortMessage || "An unknown error occurred.");
+          } finally {
+            setBuyButtonText("BUY NOW");
+          }
+        }
+  
+    }
+    // Update user balance after purchase
+    await fetchBalance();
+  }
   
   // use use-effect for isConnected and more things for prevent it from running multiple times(infinite loop)
   useEffect(() => {
     if (isConnected) {
-      if (totalAmountInfo) {
-        const balance = web3.utils.fromWei(totalAmountInfo.toString(), 'ether')
+      if (balanceTokenData) {
+        const balance = web3.utils.fromWei(balanceTokenData.toString(), 'ether')
         setTokenBalance(Number(balance));
       }
       if (balanceUSDTData) {
-        setUSDTBalance(Number(Number(balanceUSDTData.toString()) / 1e6));
+        setUSDTBalance(Number(Number(balanceUSDTData.toString()) / 1e18));
       }
       if (allowanceUSDTData) {
         setAllowanceUSDT(parseFloat(allowanceUSDTData.toString()));
       }
-      if (balanceUSDCData) {
-        setUSDCBalance(Number(Number(balanceUSDCData.toString()) / 1e6));
+      if(allowanceCoinData){
+        setAllowanceCoin(parseFloat(allowanceCoinData.toString()));
       }
-      if (allowanceUSDCData) {
-        setAllowanceUSDC(parseFloat(allowanceUSDCData.toString()));
-      }
+      
 
       if (balanceTokenData) {
         const stackableBalance = web3.utils.fromWei(balanceTokenData.toString(), "ether");
         setStackableTokenBalance(stackableBalance);
       }
     }
-  }, [isConnected, address, balanceUSDTData, totalAmountInfo, allowanceUSDTData, balanceTokenData],)
+  }, [isConnected, address, balanceUSDTData, allowanceUSDTData, balanceTokenData, allowanceCoinData],)
 
-
-  
 
   return (
     <div className="relative text-center w-full h-full">
@@ -254,24 +382,21 @@ const BuyNowBox = () => {
         <div className="hidden mt-5">
           <div className="flex items-center justify-between gap-5">
             <h2 className="text-white/90 text-[13px] sm:text-[14px] leading-[16.8px] font-normal">
-              {t("home.buyNowBox.currentPrice")}: {currentPrice}
+              {t("home.buyNowBox.currentPrice")}: 
             </h2>
             <h2 className="text-white/90 text-[13px] sm:text-[14px] leading-[16.8px] font-normal">
-              {t("home.buyNowBox.nextPrice")}: {nextPrice}
+              {t("home.buyNowBox.nextPrice")}: 
             </h2>
           </div>
           <div className="my-2 sm:my-2.5 bg-[#250142] rounded-[49px] w-full h-[15px]">
             <div
               className="h-full w-[180px] rounded-[11px]"
-              style={{
-                width: (raisedPrice / totalPrice * 100).toFixed(0) + "%",
-                background: "linear-gradient(270deg, #A052FF 0%, #440675 100%)",
-              }}
+              
             ></div>
           </div>
           <h3 className="text-[13px] sm:text-[14px] leading-[16.8px] font-normal text-[#C176FF]">
             <span className="text-white/90">{t("home.buyNowBox.raised")}:</span>
-            {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(raisedPrice)}/{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(totalPrice)}
+
           </h3>
         </div>
       </div>
@@ -307,6 +432,8 @@ const BuyNowBox = () => {
               <input
                 type="text"
                 id="inputbuyamount"
+                ref={inputRef}
+                onChange={updateBuyAmount}
                 defaultValue={buyAmount}
                 placeholder="0.00"
                 className="w-full bg-transparent outline-none placeholder:text-white/80 text-white text-[14px] sm:text-base font-normal"
@@ -352,7 +479,7 @@ const BuyNowBox = () => {
             </h2>
             <div className="w-full h-[39px] sm:h-[50px] rounded-md sm:rounded-lg border border-[#8616DF] flex items-center justify-between px-4 gap-5">
               <span id="expectedTokens" className="text-white">
-                {parseFloat(expectedTokens.toFixed(4))}
+                {(expectedTokens)}
               </span>
               <Image 
                 src={sellCurrency.icon || "/placeholder.svg"}
@@ -378,6 +505,7 @@ const BuyNowBox = () => {
               className={`${styles.stakingButtonBuyNow} ${isHovered ? styles.hovered : ""}`}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
+              
           
             >
               <div className={styles.gradientBorder} />
