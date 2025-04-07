@@ -64,7 +64,7 @@ const countDown =  new Date("2025-05-25").getTime(),
             {t("home.hero.new")}
           </div>
           <h2 className="text-[#FFF] text-[16px] leading-[26px] font-normal tracking-[-0.01em]">
-            FiRA Launch On Exchange
+            FIRA Launch On Exchange
           </h2>
         </div>
         <div className="mb-[30px] w-fit px-[14px] h-[42px] bg-[#170326] rounded-[50px] border border-[#FFFFFF26] flex items-center gap-2 justify-center animate-pulse-shadow">

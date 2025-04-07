@@ -112,14 +112,9 @@ const Footer = () => {
       icon: '/assets/icons/telegram.svg'
     },
     {
-      name: 'Medium',
-      href: 'https://medium.com/',
-      icon: '/assets/icons/m.svg'
-    },
-    {
-      name: 'Linktree',
-      href: 'https://linktree.com/',
-      icon: '/assets/icons/tree.svg'
+      name: 'MailUs',
+      href: 'mailto:admin@tokengainers.com',
+      icon: '/assets/icons/email.svg'
     }
   ];
 
@@ -200,7 +195,6 @@ const Footer = () => {
                   <Image
                     src={social.icon}
                     alt={social.name}
-                    style={{background: 'white', borderRadius: '25px'}}
                     width={40}
                     height={40}
                   />

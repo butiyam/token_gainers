@@ -110,7 +110,7 @@ const Staking = () => {
           <div className="w-full flex items-center gap-[20px] justify-between lg:flex-row flex-col">
             <div style={{width: '50%'}} className="w-full relative px-[15px] sm:px-5 py-[12px] lg:py-[12px] flex lg:flex-col flex-row lg:items-start items-center justify-between rounded-[10px] lg:rounded-[12px] shadow-custom">
               <h3 className="text-white text-[18px] leading-[24px] font-normal">
-                {t("staking.totalVRNBalance")}
+                Tolta Mine X Balance
               </h3>
               <h2 className="text-white text-[24px] leading-[38.4px] font-normal">
                 {stackableTokenBalance}
