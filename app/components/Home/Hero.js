@@ -66,6 +66,9 @@ const countDown =  new Date("2025-05-25").getTime(),
           <h2 className="text-[#FFF] text-[16px] leading-[26px] font-normal tracking-[-0.01em]">
             FiRA Launch On Exchange
           </h2>
+        </div>
+        <div className="mb-[30px] w-fit px-[14px] h-[42px] bg-[#170326] rounded-[50px] border border-[#FFFFFF26] flex items-center gap-2 justify-center animate-pulse-shadow">
+          
           <div id="days" className="bg-[#ffff00] px-[5px] w-fit h-[18px] rounded-[40px] flex items-center justify-center inter text-black text-[10px] leading-[26px] tracking-[-0.01em] font-bold">
             00
           </div>
@@ -83,7 +86,7 @@ const countDown =  new Date("2025-05-25").getTime(),
           </div>
         </div>
         
-        <h1 className="text-[40px] leading-[48px] sm:text-[45px] lg:text-[50px] lg:leading-[74px] font-bold bg-clip-text text-transparent"
+        <h1 className="text-[40px] leading-[48px] sm:text-[45px] lg:text-[50px] lg:leading-[74px] font-bold bg-clip-text"
           style={{
             background:
               "linear-gradient(291.9deg, #FFFFFF 62.65%, #000000 108.48%)",
@@ -93,8 +96,8 @@ const countDown =  new Date("2025-05-25").getTime(),
          Earn 5% Daily with <span style={{color: '#ffff00'}} className="font-bold">Mine X</span> VIP Staking Program
         </h1>
 
-        <p className="my-[30px] text-[18px] leading-[30px] font-normal font-poppins text-white/80 lg:max-w-[496px]">
-          {t("home.hero.description")}
+        <p className="my-[30px] text-[22px] leading-[30px] font-normal font-poppins text-white lg:max-w-[496px]">
+           Stake <span style={{color: '#ffff00'}} className="font-bold">MINEX</span> coins and experience secure, reliable, and consistent returns with our exclusive staking opportunity.
         </p>
 
         <div className="flex items-center gap-[30px]">

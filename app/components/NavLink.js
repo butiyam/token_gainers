@@ -74,7 +74,7 @@ const NavLink = ({ link, dropdownOpen, setDropdownOpen }) => {
             e.stopPropagation();
             router.push(link.href);
           }}
-          className="font-poppins text-base font-normal text-[#FFFFFF]/60 hover:text-primary transition duration-300"
+          className="font-poppins text-base font-normal text-[#FFFFFF] hover:text-primary transition duration-300"
         >
           {link.name}
         </button>
