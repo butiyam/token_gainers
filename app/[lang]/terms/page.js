@@ -58,17 +58,17 @@ const Terms = () => {
                     <div className="space-y-4">
                         <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">Security</h2>
                         <p className="text-gray-300">
-                            Security is important to VORN AI, and you therefore agree not to share your wallet access with any other user or third party, or knowingly carry out any activity which enables a third party to access or use your account. If we believe, acting in our discretion, that your account is used inappropriately, we reserve the right to suspend or terminate or cease to support your account without liability.
+                            Security is important to TOKEN GAINERS, and you therefore agree not to share your wallet access with any other user or third party, or knowingly carry out any activity which enables a third party to access or use your account. If we believe, acting in our discretion, that your account is used inappropriately, we reserve the right to suspend or terminate or cease to support your account without liability.
                         </p>
                         <p className="text-gray-300">
-                            We cannot check the identities of people using our Services and will not be liable if your wallet connection or account is used by someone else. If you become aware of any unauthorised use of your login, you should notify us immediately by contacting us at <a href="mailto:admin@vorn.ai" className="text-[#a35bf5] hover:underline">admin@vorn.ai</a>, using &ldquo;Security Breach&ldquo; as the subject line. Please note that we may need to verify your identity and validate ownership of the account. Be alert for other websites and services which may pretend to be us or to be associated with us.
+                            We cannot check the identities of people using our Services and will not be liable if your wallet connection or account is used by someone else. If you become aware of any unauthorised use of your login, you should notify us immediately by contacting us at <a href="mailto:admin@tokengainers.com" className="text-[#a35bf5] hover:underline">admin@tokengainers</a>, using &ldquo;Security Breach&ldquo; as the subject line. Please note that we may need to verify your identity and validate ownership of the account. Be alert for other websites and services which may pretend to be us or to be associated with us.
                         </p>
                     </div>
 
                     <div className="space-y-4">
                         <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">Removing Data</h2>
                         <p className="text-gray-300">
-                            If you would like us to delete any data we may hold on you, please contact us by emailing <a href="mailto:admin@vorn.ai" className="text-[#a35bf5] hover:underline">admin@vorn.ai</a>.
+                            If you would like us to delete any data we may hold on you, please contact us by emailing <a href="mailto:admin@tokengainers.com" className="text-[#a35bf5] hover:underline">admin@tokengainers.com</a>.
                         </p>
                         <p className="text-gray-300">
                             Whereas we do not require personal or identifiable information upon signing up to use our service, we may still hold details for you if you have provided an email address to us or given us permission to contact you. If you wish for your data to be removed, you must specify this in your email. If you do not request deletion, we will hold this information as outlined in our Privacy Policy.
@@ -96,7 +96,7 @@ const Terms = () => {
                     <div className="space-y-4">
                         <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">Violation of Rules</h2>
                         <p className="text-gray-300">
-                            If you believe that another user is violating these Rules, please let us know by emailing <a href="mailto:admin@vorn.ai" className="text-[#a35bf5] hover:underline">admin@vorn.ai</a>.
+                            If you believe that another user is violating these Rules, please let us know by emailing <a href="mailto:admin@tokengainers.com" className="text-[#a35bf5] hover:underline">admin@tokengainers.com</a>.
                         </p>
                         <p className="text-gray-300">
                             We cannot guarantee that other users will comply with these Rules, and we will not be responsible for any other user&ldquo;s lack of compliance. You and other users are responsible for your own actions.
@@ -106,7 +106,7 @@ const Terms = () => {
                     <div className="space-y-4">
                         <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">Service Interruption</h2>
                         <p className="text-gray-300">
-                            VORN AI does not guarantee that the Services will always be available, uninterrupted, timely, secure, or free from bugs or viruses. There may be times when the Services are unavailable due to maintenance or technical issues. We may also change, suspend, or discontinue certain Services without giving you prior notice.
+                           TOKEN GAINERS does not guarantee that the Services will always be available, uninterrupted, timely, secure, or free from bugs or viruses. There may be times when the Services are unavailable due to maintenance or technical issues. We may also change, suspend, or discontinue certain Services without giving you prior notice.
                         </p>
                         <p className="text-gray-300">
                             We will take reasonable steps to ensure that our Services are free from viruses and other malicious software, but we also recommend you use applicable antivirus software as relevant.
@@ -123,7 +123,7 @@ const Terms = () => {
                     <div className="space-y-4">
                         <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">Third Parties</h2>
                         <p className="text-gray-300">
-                            Some pages may link to third-party websites or services. These links are provided for convenience, and VORN AI is not responsible for any third-party content. If you visit any third-party website, please be aware that it may have its own terms of use and privacy policy.
+                            Some pages may link to third-party websites or services. These links are provided for convenience, and TOKEN GAINERS is not responsible for any third-party content. If you visit any third-party website, please be aware that it may have its own terms of use and privacy policy.
                         </p>
                     </div>
 
@@ -144,7 +144,7 @@ const Terms = () => {
                     <div className="space-y-4">
                         <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">Content and IP Rights</h2>
                         <p className="text-gray-300">
-                            All content and information contained in the Services are owned or licensed by VORN AI and are protected by intellectual property rights. You may not use, copy, reverse engineer, or modify any content without explicit permission.
+                            All content and information contained in the Services are owned or licensed by TOKEN GAINERS and are protected by intellectual property rights. You may not use, copy, reverse engineer, or modify any content without explicit permission.
                         </p>
                     </div>
 

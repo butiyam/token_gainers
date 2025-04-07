@@ -6,6 +6,7 @@
       "unifiedAI": "Unified AI",
       "depin": "DePIN",
       "rwa": "RWA",
+      "vision": "Our Vision",
       "roadmap": "RoadMap",
       "tokenomics": "Tokenomics",
       "whitepaper": "Whitepaper",
@@ -218,28 +219,36 @@
     }
   },
   "aiUtility": {
-    "title": "Unified AI – The Brain of VORN.AI",
+    "title": "Our Vision: Official Launch on Exchange",
     "description": "AI in VORN.AI acts as the intelligent automation layer, optimizing infrastructure, transactions, and  security across the decentralized network. It ensures seamless operation, fraud prevention, yield  management, and real-time decision-making.",
     "intelligentAutomation": {
       "title": "Intelligent Automation for Efficient, Secure & Decentralized Operations",
       "description": "VORN.AI enhances computing efficiency, automates smart contracts, predicts market trends, strengthens security against fraud, and optimizes governance to ensure seamless and trustless decentralized operations."
     },
     "services": {
-      "title": "AI Utility Services",
-      "subtitle": "for Seamless and Profitable Automation"
+      "title": "Our Vision",
+      "subtitle": "Official Launch FiRA on Exchange"
     },
     "timeline": {
       "first": {
-        "title": "AI-Powered Compute Grid:",
-        "description": "This service manages decentralized GPU/CPU resources, dynamically allocating AI and machine learning workloads to the most suitable nodes, ensuring cost-effective compute solutions for developers and rewards for resource providers."
+        "title": "Our goal is clear:",
+        "description": "to officially launch on MEXC Exchange, a prominent global trading platform.Once listed on such a major exchange, we anticipate a significant increase in value, backed by a robust, real-world mining operation."
       },
       "second": {
-        "title": "AI Yield Management System:",
-        "description": "The AI yield management system adjusts staking rewards in real-time based on network performance, asset utilization, and liquidity needs, offering users optimized passive income opportunities through AI-managed staking pools."
+        "title": "Real Business, Real Value:",
+        "description": "Your investment is not part of a speculative venture. It’s grounded in a tangible business with a fully operational, revenue-generating mining setup.The risk of loss is minimized as the project is underpinned by physical assets, providing a stable foundation."
       },
       "third": {
-        "title": "AI-Optimized Energy Marketplace:",
-        "description": "The AI-optimized energy marketplace balances supply and demand for selected renewable energy by predicting cycles and consumption, dynamically pricing trading profits, and facilitating peer-to-peer energy trading."
+        "title": "Early Adopter Advantage:",
+        "description": "As an early participant, you’re positioned to receive the highest returns, benefiting from the early-stage growth of this decentralized ecosystem."
+      },
+      "fourth": {
+        "title": "A Life-Changing Opportunity:",
+        "description": "This coin has the potential to transform your financial future, much like Bitcoin did for early adopters.Our vision is to empower you with a secure, transparent, and decentralized asset, offering long-term growth."
+      },
+      "fifth": {
+        "title": "Trust and Value:",
+        "description": "We consider your trust as our greatest achievement. Our commitment is to provide you with not just an investment, but a reliable pathway to financial Freedom. This project is not just another coin; it’s an opportunity to be part of a decentralized revolution, backed by real-world value and secure assets."
       }
     }
   },
@@ -360,7 +369,7 @@
     },
     "privacyPolicy": "Privacy Policy",
     "termsConditions": "Terms and Conditions",
-    "rights": "© 2025, VORN AI. All rights reserved"
+    "rights": "© 2025, TOKEN GAINERS. All rights reserved"
   },
   "btnText": "staking"
   

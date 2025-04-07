@@ -108,6 +108,45 @@ const Timeline = () => {
               />
             </div>
           </div>
+            {/* Fourth timeline item */}
+            <div className="relative grid grid-cols-2 gap-16 items-center">
+            <TimelinePoint />
+            <div className="flex justify-start">
+              <Image
+                src="/assets/ai/ai_powered_compute_grid_.webp"
+                alt="AI-Powered Compute Grid"
+                width={715}
+                height={453}
+              />
+            </div>
+            <div className="flex justify-end mr-1">
+              <TimelineCard
+                title={t("aiUtility.timeline.fourth.title")}
+                description={t("aiUtility.timeline.fourth.description")}
+              />
+            </div>
+           
+          </div>
+             {/* Fifth timeline item */}
+             <div className="relative grid grid-cols-2 gap-16 items-center">
+            <TimelinePoint />
+           
+            <div className="flex justify-start">
+              <TimelineCard
+                title={t("aiUtility.timeline.fifth.title")}
+                description={t("aiUtility.timeline.fifth.description")}
+              />
+            </div>
+            <div className="flex justify-end">
+              <Image
+                src="/assets/ai/ai_yield_management_system_.webp"
+                alt="AI Yield Management System"
+                width={521}
+                height={539}
+              />
+            </div>
+          </div>
+
         </div>
       </div>
 

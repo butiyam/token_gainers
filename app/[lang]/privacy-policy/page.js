@@ -18,7 +18,7 @@ const PrivacyPolicy = () => {
                 <div className="space-y-6">
                     <p className="text-gray-300">
                         This privacy policy (&quot;Policy&quot;) informs you of your choices and our practices in relation to your Information (as defined below).
-                        For the purposes of this Policy, &quot;we&quot;, &quot;us&quot;, and &quot;our&quot; refer to &quot;VORN AI&quot;.
+                        For the purposes of this Policy, &quot;we&quot;, &quot;us&quot;, and &quot;our&quot; refer to &quot;TOKEN GAINERS&quot;.
                     </p>
 
                     <div className="space-y-4">
@@ -137,7 +137,7 @@ const PrivacyPolicy = () => {
                     <div className="space-y-4">
                         <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">Contact & Complaints</h2>
                         <p className="text-gray-300">
-                            If you have any questions or complaints regarding this policy, please contact us at <a href="mailto:admin@vorn.ai" className="text-[#a35bf5] hover:underline">admin@vorn.ai</a>.
+                            If you have any questions or complaints regarding this policy, please contact us at <a href="mailto:admin@tokengainers.com" className="text-[#a35bf5] hover:underline">admin@tokengainers.com</a>.
                         </p>
                         <p className="text-gray-300">
                             If you wish to make a complaint about how we process your information, we will aim to respond within 30 days.

@@ -70,6 +70,7 @@ const Header = ({
         { name: t("header.nav.rwa"), href: "/rwa" },
       ],
     },*/
+    { name: t("header.nav.vision"), href: "/vision" },
     { name: t("header.nav.roadmap"), href: "/#roadmap" },
     { name: t("header.nav.tokenomics"), href: "/#tokenomics" },
     { name: t("header.nav.whitepaper"), href: "/whitepaper" },
@@ -100,7 +101,7 @@ const Header = ({
           <Link href={createLocalizedPath("/")} className="cursor-pointer">
             <Image
               src="/assets/logo.png"
-              alt="VORNA AI"
+              alt="TOKEN GAINERS"
               width={131}
               height={43}
             />

@@ -20,14 +20,7 @@ const featuresData = [
     reversed: true,
     link: "/de-pin"
   },
-  {
-    id: 3,
-    title: "home.ourFeatures.rwaTitle",
-    description: "home.ourFeatures.rwaDescription",
-    videoSrc: "/assets/features-video-3.mp4",
-    reversed: false,
-    link: "/rwa"
-  },
+  
 ];
 
 const OurFeatures = () => {

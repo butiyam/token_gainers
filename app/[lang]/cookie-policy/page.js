@@ -17,11 +17,11 @@ const CookiePolicy = () => {
         
         <div className="space-y-8 text-gray-300">
           <p>
-            For the purposes of this Cookie Policy, &quot;we&quot;, &quot;us&quot; and &quot;our&quot; refer to &quot;VORN AI&quot;.
+            For the purposes of this Cookie Policy, &quot;we&quot;, &quot;us&quot; and &quot;our&quot; refer to &quot;TOKEN GAINERS&quot;.
           </p>
           
           <p>
-            This Cookie Policy applies to the following &quot;Services&quot;: VORN AI.com and any other dedicated websites, apps, products, forums, and services we offer through the app or Website or other dedicated website which may be offered by us from time to time, or otherwise provided by us.
+            This Cookie Policy applies to the following &quot;Services&quot;: TOKENGAINERS.com and any other dedicated websites, apps, products, forums, and services we offer through the app or Website or other dedicated website which may be offered by us from time to time, or otherwise provided by us.
           </p>
           
           <p>
@@ -139,7 +139,7 @@ const CookiePolicy = () => {
             <h2 className="text-2xl font-semibold mb-4">8. Contact us</h2>
             <p>
               If you wish to contact us about this Cookies Policy and the use of cookies in the Services, please contact us at: 
-              <a href="mailto:admin@vorn.ai" className="text-[#a35bf5] hover:underline ml-1">admin@vorn.ai</a>.
+              <a href="mailto:admin@tokengainers.com" className="text-[#a35bf5] hover:underline ml-1">admin@tokengainers.com</a>.
             </p>
           </section>
           

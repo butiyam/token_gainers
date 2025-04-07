@@ -18,20 +18,7 @@ const AIUtility = () => {
     <I18nextProvider i18n={i18n}>
       <Header />
 
-      {/* Hero Section */}
-      <div className="relative ai-utility-hero flex flex-col items-center justify-center text-center overflow-y-hidden min-h-screen px-6">
-        {/* Hero Content */}
-        <div className="max-w-[821px] mx-auto">
-          <h1 className="text-[40px] md:text-[54px] leading-[48px] md:leading-[74px] font-bold text-white">
-            {t("aiUtility.title")}
-          </h1>
-          <p className="max-w-[665px] mx-auto text-[18px] leading-[30px] font-poppins text-white mt-[30px] md:mt-[25px]">
-            {t("aiUtility.description")}
-          </p>
-        </div>
-      </div>
 
-      <IntelligentAutomation />
       <AIUtilityServices />
       <Timeline />
 
