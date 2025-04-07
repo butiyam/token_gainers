@@ -8,7 +8,7 @@ const AIUtilityServices = () => {
   return (
     <div className="mt-10 md:pt-[92px] w-full px-4">
       <div className="max-w-[721px] mx-auto w-full flex items-center flex-col justify-center">
-        <h2 className="text-[32px] lg:text-[40px] leading-[48px] lg:leading-[60px] font-bold text-center text-white mb-[35px]">
+        <h2 className="text-[32px] lg:text-[40px] leading-[48px] lg:leading-[60px] font-bold text-center text-white mb-[0px] mt-[30px]">
           <span className="text-[#9442ED]">
             {t("aiUtility.services.title")}
           </span>{" "}
