@@ -54,7 +54,7 @@ const countDown =  new Date("2025-05-25").getTime(),
   }, 0)
 
  }
- fetchInfo();
+// fetchInfo();
 
   return (
     <div className="flex items-center lg:items-start justify-between lg:flex-row flex-col gap-[52px] lg:gap-5">
@@ -64,7 +64,7 @@ const countDown =  new Date("2025-05-25").getTime(),
             {t("home.hero.new")}
           </div>
           <h2 className="text-[#FFF] text-[16px] leading-[26px] font-normal tracking-[-0.01em]">
-            Token Launch In
+            Coin Launch On MEXC
           </h2>
           <div id="days" className="bg-[#ffff00] px-[5px] w-fit h-[18px] rounded-[40px] flex items-center justify-center inter text-black text-[10px] leading-[26px] tracking-[-0.01em] font-bold">
             00

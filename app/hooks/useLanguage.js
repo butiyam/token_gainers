@@ -29,15 +29,16 @@ const useLanguage = () => {
 
     const initializeLanguage = async () => {
       try {
-        const pathLang = pathname.split("/")[1];
+        const pathLang = 'en';//pathname.split("/")[1];
+        //console.log(pathLang)
         const storedLang =
           localStorage.getItem("selectedLanguage") ||
           localStorage.getItem("i18nextLng");
-        const normalizedLang = normalizeLanguage(pathLang || storedLang);
+        const normalizedLang = normalizeLanguage(pathLang);
 
         // Only change language if different and i18n is ready
         if (i18n.language !== normalizedLang && i18n.isInitialized) {
-          console.log("useLanguage: Changing to", normalizedLang);
+         // console.log("useLanguage: Changing to", normalizedLang);
           await i18n.changeLanguage(normalizedLang);
           localStorage.setItem("i18nextLng", normalizedLang); // Sync i18nextLng
         }
