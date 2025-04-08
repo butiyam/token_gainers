@@ -443,19 +443,21 @@ const BuyNowBox = () => {
       </div>
 
        {/* Tab ETH & BNB */}
-              <div className="mt-5 mb-4 sm:my-5 border border-[#8616DF] rounded-md sm:rounded-[9px] p-[3.87px] sm:p-[5px] flex items-center justify-between">
-                  <button onClick={() => setActiveTab(false)}  className="h-[46px] sm:h-[50px] w-full rounded-md sm:rounded-lg flex items-center justify-center gap-2 sm:gap-2.5 border border-[#FFFFFF26]"
-                  style={{
-                    background: "radial-gradient(42.46% 123.69% at 57.02% 58.9%, #A761FF 0%, #490A84 100%)",
-                  }}
-                  >
-                    <span className="text-[14px] sm:text-[16px] leading-[19.2px] font-normal">Buy FIRA</span>
-                  </button>
-                  <button disabled = 'true' className="h-[46px] sm:h-[50px] w-full rounded-md sm:rounded-lg flex items-center justify-center gap-2 sm:gap-2.5">
-                   <span className="text-[14px] sm:text-[16px] leading-[19.2px] font-normal">Buy Mine X</span>
-                  </button>
-              </div>
-
+       <div className="mt-5 mb-4 sm:my-5 border border-[#8616DF] rounded-md sm:rounded-[9px] p-[3.87px] sm:p-[5px] flex items-center justify-between">
+            <button  disabled   style={{
+              background: "radial-gradient(42.46% 123.69% at 57.02% 58.9%, #A761FF 0%, #490A84 100%)",
+            }}
+              className="h-[46px] sm:h-[50px] w-full rounded-md sm:rounded-lg flex items-center justify-center gap-2 sm:gap-2.5  border border-[#FFFFFF26]">
+              <span className="text-[14px] sm:text-[16px] leading-[19.2px] font-normal">Buy Mine X</span>
+            </button>
+            <button onClick={() => setActiveTab(false)} className="h-[46px] sm:h-[50px] w-full rounded-md sm:rounded-lg flex items-center justify-center gap-2 sm:gap-2.5"
+            
+            >
+              <span className="text-[14px] sm:text-[16px] leading-[19.2px] font-normal">Buy FIRA</span>
+            </button>
+          
+        </div>
+            
       <div className="px-4 sm:px-[30px]">
         {/* Choose amount & $VRN you receive */}
         <div className="mt-4 sm:mt-5 flex items-center gap-[15px] sm:gap-5" style={{marginBottom: '2rem'}}>
@@ -649,19 +651,20 @@ const BuyNowBox = () => {
       </div>
 
        {/* Tab ETH & BNB */}
-              <div className="mt-5 mb-4 sm:my-5 border border-[#8616DF] rounded-md sm:rounded-[9px] p-[3.87px] sm:p-[5px] flex items-center justify-between">
-                  <button disabled  className="h-[46px] sm:h-[50px] w-full rounded-md sm:rounded-lg flex items-center justify-center gap-2 sm:gap-2.5"
-                  
-                  >
-                    <span className="text-[14px] sm:text-[16px] leading-[19.2px] font-normal">Buy FIRA</span>
-                  </button>
-                  <button onClick={() => setActiveTab(true)} style={{
-                    background: "radial-gradient(42.46% 123.69% at 57.02% 58.9%, #A761FF 0%, #490A84 100%)",
-                  }}
-                   className="h-[46px] sm:h-[50px] w-full rounded-md sm:rounded-lg flex items-center justify-center gap-2 sm:gap-2.5  border border-[#FFFFFF26]">
-                   <span className="text-[14px] sm:text-[16px] leading-[19.2px] font-normal">Buy Mine X</span>
-                  </button>
-              </div>
+       <div className="mt-5 mb-4 sm:my-5 border border-[#8616DF] rounded-md sm:rounded-[9px] p-[3.87px] sm:p-[5px] flex items-center justify-between">
+            <button onClick={() => setActiveTab(true)}   className="h-[46px] sm:h-[50px] w-full rounded-md sm:rounded-lg flex items-center justify-center gap-2 sm:gap-2.5">
+              <span className="text-[14px] sm:text-[16px] leading-[19.2px] font-normal">Buy Mine X</span>
+            </button>
+            <button disabled className="h-[46px] sm:h-[50px] w-full rounded-md sm:rounded-lg flex items-center justify-center gap-2 sm:gap-2.5 border border-[#FFFFFF26]"
+            style={{
+              background: "radial-gradient(42.46% 123.69% at 57.02% 58.9%, #A761FF 0%, #490A84 100%)",
+            }}
+            >
+              <span className="text-[14px] sm:text-[16px] leading-[19.2px] font-normal">Buy FIRA</span>
+            </button>
+
+        </div>
+            
 
       <div className="px-4 sm:px-[30px]">
         {/* Choose amount & $VRN you receive */}
@@ -700,7 +703,7 @@ const BuyNowBox = () => {
             className="px-2 sm:px-2.5 py-1 bg-[#9442ED80] rounded-[99px] flex items-center justify-center border border-[#9442ED80]"
             style={{ backdropFilter: "blur(5px)" }}
           >
-            <h2   className="text-nowrap text-white text-[13px] sm:text-[14px] leading-[16.8px] font-normal">
+            <h2 onClick={() => switchBuyCurrency() }  className="text-nowrap text-white text-[13px] sm:text-[14px] leading-[16.8px] font-normal">
             <Image src="/assets/icons/down.png" alt="meta" width={24} height={24} />
             </h2>
           </div>
