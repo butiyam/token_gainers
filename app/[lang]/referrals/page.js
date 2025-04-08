@@ -5,7 +5,6 @@ import i18n from "../../../i18n";
 import useLanguage from "../../hooks/useLanguage";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import StakingSection from "../../components/Staking/StakingSection";
 import Referral from "../../components/Staking/Referral";
 import Leaderboard from "../../components/Staking/Leaderboard";
 import { useTranslation } from "react-i18next";
@@ -22,7 +21,7 @@ import Web3 from "web3"
 // setup blockchain here 
 const Provider = new Web3.providers.HttpProvider("https://rpc.ankr.com/eth");
 const web3 = new Web3(Provider);
-const Staking = () => {
+const Referrals = () => {
   useLanguage();
   const { t } = useTranslation();
 
@@ -106,31 +105,13 @@ const Staking = () => {
           className="w-full max-w-[1160px] mx-auto rounded-[20px] lg:py-7 p-[15px] lg:px-[20px] bg-[#10002080] border border-[#8616DF]"
           style={{ backdropFilter: "blur(14px)" }}
         >
-          {/* Total $VRN Balance & Staking Reward & Your Referral Earnings */}
-          <div className="w-full flex items-center gap-[20px] justify-between lg:flex-row flex-col">
-            <div style={{width: '50%'}} className="w-full relative px-[15px] sm:px-5 py-[12px] lg:py-[12px] flex lg:flex-col flex-row lg:items-start items-center justify-between rounded-[10px] lg:rounded-[12px] shadow-custom">
-              <h3 className="text-white text-[18px] leading-[24px] font-normal">
-                Total Mine X Balance
-              </h3>
-              <h2 className="text-white text-[24px] leading-[38.4px] font-normal">
-                {stackableTokenBalance}
-              </h2>
-            </div>
-            <div style={{width: '50%'}} className="w-full relative px-[15px] sm:px-5 py-[12px] lg:py-[12px] flex lg:flex-col flex-row lg:items-start items-center justify-between rounded-[10px] lg:rounded-[12px] shadow-custom">
-              <h3 className="text-white text-[18px] leading-[24px] font-normal">
-                {t("staking.stakingReward")}
-              </h3>
-              <h2 className="text-white text-[24px] leading-[38.4px] font-normal">
-              {totalReward > 0
-                  ? `${formatNumberWithCommas(totalReward.toFixed(2))} Mine X`
-                  : "0.00 Mine X"}
-                
-              </h2>
-            </div>
-           
-          </div>
-          <StakingSection />
+         
 
+          {/* Referral & Leaderboard */}
+          <div className="grid grid-rows-1 lg:grid-cols-2 gap-[20px]">
+            <Referral />
+            <Leaderboard />
+          </div>
         </div>
       </div>
       <Footer />
@@ -138,4 +119,4 @@ const Staking = () => {
   );
 };
 
-export default Staking;
+export default Referrals;
