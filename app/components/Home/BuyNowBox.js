@@ -37,7 +37,8 @@ const currenciesByChain = {
 const BuyNowBox = () => {
   const { t } = useTranslation()
   const [isHovered, setIsHovered] = useState(false)
-  const [activeTab, setActiveTab] = useState("BUY")
+  const [activeTab, setActiveTab] = useState(true);
+  
   const [sellCurrency, setSellCurrency] = useState(currenciesByChain.TG[0])
   const [buyCurrency, setBuyCurrency] = useState(currenciesByChain.USDT[0])
 
@@ -387,7 +388,10 @@ const BuyNowBox = () => {
 
 
   return (
-    <div className="relative text-center w-full h-full">
+    
+    <div className="h-full w-full py-[20px] sm:py-[30px] sm:w-[504px] sm:min-w-[504px] rounded-[15px] sm:rounded-[20px] bg-[#15012D0D] border border-[#842DFF]"
+            style={{ backdropFilter: "blur(100px)" }} >
+    <div style={{ display: activeTab? 'block': 'none'}} className="relative text-center w-full h-full">
       <div className="px-4 sm:px-[30px]">
         <h2 className="text-[24px] sm:text-[32px] leading-[29px] sm:leading-[38.4px] font-bold text-white">
           {t("home.buyNowBox.title")}
@@ -437,6 +441,20 @@ const BuyNowBox = () => {
           </div>
         </div>
       </div>
+
+       {/* Tab ETH & BNB */}
+              <div className="mt-5 mb-4 sm:my-5 border border-[#8616DF] rounded-md sm:rounded-[9px] p-[3.87px] sm:p-[5px] flex items-center justify-between">
+                  <button onClick={() => setActiveTab(false)}  className="h-[46px] sm:h-[50px] w-full rounded-md sm:rounded-lg flex items-center justify-center gap-2 sm:gap-2.5 border border-[#FFFFFF26]"
+                  style={{
+                    background: "radial-gradient(42.46% 123.69% at 57.02% 58.9%, #A761FF 0%, #490A84 100%)",
+                  }}
+                  >
+                    <span className="text-[14px] sm:text-[16px] leading-[19.2px] font-normal">Buy FIRA</span>
+                  </button>
+                  <button disabled = 'true' className="h-[46px] sm:h-[50px] w-full rounded-md sm:rounded-lg flex items-center justify-center gap-2 sm:gap-2.5">
+                   <span className="text-[14px] sm:text-[16px] leading-[19.2px] font-normal">Buy Mine X</span>
+                  </button>
+              </div>
 
       <div className="px-4 sm:px-[30px]">
         {/* Choose amount & $VRN you receive */}
@@ -578,6 +596,214 @@ const BuyNowBox = () => {
       </div>
       <div className="hidden">Modal state: {showReferModal ? "open" : "closed"}</div>
       {ReferEarnModal()}
+    </div>
+    <div style={{ display: activeTab? 'none': 'block'}} className="relative text-center w-full h-full">
+      <div className="px-4 sm:px-[30px]">
+        <h2 className="text-[24px] sm:text-[32px] leading-[29px] sm:leading-[38.4px] font-bold text-white">
+          {t("home.buyNowBox.title")}
+          <span className="text-[#8E00FF]">$FIRA</span> {t("home.buyNowBox.now")}
+        </h2>
+        <h4 className="hidden text-white/90 text-[13px] sm:text-[14px] leading-[16.8px] font-medium pt-[15px]">
+          {t("home.buyNowBox.untilPriceIncrease")}
+        </h4>
+        {/* Current & Next Price */}
+        <div className="hidden mt-5">
+          <div className="flex items-center justify-between gap-5">
+            <h2 className="text-white/90 text-[13px] sm:text-[14px] leading-[16.8px] font-normal">
+              {t("home.buyNowBox.currentPrice")}: 
+            </h2>
+            <h2 className="text-white/90 text-[13px] sm:text-[14px] leading-[16.8px] font-normal">
+              {t("home.buyNowBox.nextPrice")}: 
+            </h2>
+          </div>
+          <div className="my-2 sm:my-2.5 bg-[#250142] rounded-[49px] w-full h-[15px]">
+            <div
+              className="h-full w-[180px] rounded-[11px]"
+              
+            ></div>
+          </div>
+          <h3 className="text-[13px] sm:text-[14px] leading-[16.8px] font-normal text-[#C176FF]">
+            <span className="text-white/90">{t("home.buyNowBox.raised")}:</span>
+
+          </h3>
+        </div>
+      </div>
+
+      {/* Stackable & Purchased VRN */}
+      <div className="mt-5 w-full bg-[#7314C040] px-4">
+        <div className="max-w-[300px] sm:max-w-[395px] mx-auto w-full flex items-center justify-between sm:gap-[85px] py-2.5">
+          <div>
+            <h2 className="text-[13px] sm:text-[14px] leading-[16.8px] font-medium mb-[5px]">
+            Balance FIRA
+            </h2>
+            <h3 className="text-[#C176FF] text-[13px] sm:text-[14px] leading-[16.8px] font-normal">{stackableTokenBalance}</h3>
+          </div>
+          <div className="bg-[#842DFF] h-[40px] w-[0.5px]"></div>
+          <div>
+            <h2 className="text-[13px] sm:text-[14px] leading-[16.8px] font-medium mb-[5px]">
+            Purchased FIRA
+            </h2>
+            <h3 className="text-[#C176FF] text-[13px] sm:text-[14px] leading-[16.8px] font-normal">{tokenBalance}</h3>
+          </div>
+        </div>
+      </div>
+
+       {/* Tab ETH & BNB */}
+              <div className="mt-5 mb-4 sm:my-5 border border-[#8616DF] rounded-md sm:rounded-[9px] p-[3.87px] sm:p-[5px] flex items-center justify-between">
+                  <button disabled  className="h-[46px] sm:h-[50px] w-full rounded-md sm:rounded-lg flex items-center justify-center gap-2 sm:gap-2.5"
+                  
+                  >
+                    <span className="text-[14px] sm:text-[16px] leading-[19.2px] font-normal">Buy FIRA</span>
+                  </button>
+                  <button onClick={() => setActiveTab(true)} style={{
+                    background: "radial-gradient(42.46% 123.69% at 57.02% 58.9%, #A761FF 0%, #490A84 100%)",
+                  }}
+                   className="h-[46px] sm:h-[50px] w-full rounded-md sm:rounded-lg flex items-center justify-center gap-2 sm:gap-2.5  border border-[#FFFFFF26]">
+                   <span className="text-[14px] sm:text-[16px] leading-[19.2px] font-normal">Buy Mine X</span>
+                  </button>
+              </div>
+
+      <div className="px-4 sm:px-[30px]">
+        {/* Choose amount & $VRN you receive */}
+        <div className="mt-4 sm:mt-5 flex items-center gap-[15px] sm:gap-5" style={{marginBottom: '2rem'}}>
+          {/* Choose amount */}
+          <div className="flex flex-col gap-1.5 sm:gap-2 items-start w-full">
+            <h2 className="text-[13px] sm:text-[14px] leading-[16.8px] font-bold text-white">
+              From
+            </h2>
+            <div className="w-full h-[39px] sm:h-[50px] rounded-md sm:rounded-lg border border-[#8616DF] flex items-center justify-between gap-3 pl-3 sm:pl-4 pr-[3.5px] sm:pr-[5px]">
+              <input
+                type="text"
+                id="inputbuyamount"
+                ref={inputRef}
+                onChange={updateBuyAmount}
+                defaultValue={buyAmount}
+                placeholder="0.00"
+                className="w-full bg-transparent outline-none placeholder:text-white/80 text-white text-[14px] sm:text-base font-normal"
+              />
+              <Image
+                src={buyCurrency.icon || "/placeholder.svg"}
+                alt={buyCurrency.name}
+                width={30}
+                height={30}
+                style={{margin: '10px'}}
+              />
+            </div>
+          </div>
+         
+        </div>
+
+           {/* Listing price */}
+           <div className="w-full justify-center flex items-center gap-4 px-5">
+          <Image src="/assets/heading-arrow.svg" alt="arrow" width={110} height={1} className="sm:w-[110px] w-[85px]" />
+          <div
+            className="px-2 sm:px-2.5 py-1 bg-[#9442ED80] rounded-[99px] flex items-center justify-center border border-[#9442ED80]"
+            style={{ backdropFilter: "blur(5px)" }}
+          >
+            <h2   className="text-nowrap text-white text-[13px] sm:text-[14px] leading-[16.8px] font-normal">
+            <Image src="/assets/icons/down.png" alt="meta" width={24} height={24} />
+            </h2>
+          </div>
+          <Image
+            src="/assets/heading-arrow.svg"
+            alt="arrow"
+            width={110}
+            height={1}
+            className="rotate-180 sm:w-[110px] w-[85px]"
+          />
+        </div>
+
+        <div className="mt-4 sm:mt-5 flex items-center gap-[15px] sm:gap-5">
+        
+          {/* $VRN you receive */}
+          <div className="flex flex-col gap-1.5 sm:gap-2 items-start w-full">
+            <h2 className="text-[13px] sm:text-[14px] leading-[16.8px] font-bold text-white">
+               To
+            </h2>
+            <div className="w-full h-[39px] sm:h-[50px] rounded-md sm:rounded-lg border border-[#8616DF] flex items-center justify-between px-4 gap-5">
+              <span id="expectedTokens" className="text-white">
+                {(expectedTokens)}
+              </span>
+              <Image 
+                src={sellCurrency.icon || "/placeholder.svg"}
+                alt={sellCurrency.name}
+                width={30} 
+                height={30} />
+            </div>
+          </div>
+        </div>
+        {/* Available Bonus */}
+        <div style={{visibility: 'hidden'}} className="space-y-2 sm:space-y-[11px]">
+          <h3 className="text-white text-[13px] sm:text-[14px] font-bold text-left">
+            {t("home.buyNowBox.availableBonus")}
+          </h3>
+          <div className="grid grid-cols-3 gap-[9px] sm:gap-[11px] mt-4">
+           
+          </div>
+        </div>
+        {/* Connect and  Buy Now */}
+        {
+          isConnected ? (
+            <button
+              className={`${styles.stakingButtonBuyNow} ${isHovered ? styles.hovered : ""}`}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              
+          
+            >
+              <div className={styles.gradientBorder} />
+              <h3 className={styles.buttonContentBuyNow}>{buyButtonText}</h3>
+              <div className={styles.glowEffectBuyNow} />
+            </button>
+          ) : (
+            <button
+              className={`${styles.stakingButtonBuyNow} ${isHovered ? styles.hovered : ""}`}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              onClick={() => open(isConnected ? { view: "Account" } : undefined)}
+            >
+              <div className={styles.gradientBorder} />
+              <h3 className={styles.buttonContentBuyNow}>Connect</h3>
+              <div className={styles.glowEffectBuyNow} />
+            </button>
+          )
+        }
+
+      </div>
+
+      {/* Modal */}
+      <div className="px-5 sm:px-[30px]">
+        <div className="mt-5 flex items-center flex-wrap justify-center sm:justify-between gap-4 sm:gap-3">
+           <button
+              className="flex items-center gap-2 sm:gap-2.5"
+              onClick={() => {
+
+                setShowReferModal(true)
+              }}
+            >
+              <Image src="/assets/icons/refer-earn.svg" alt="Refer Earn" width={16} height={16} />
+              <h3 className="text-white/90 text-[13px] sm:text-[14px] leading-[16.8px] font-normal">Refer & Earn</h3>
+          </button>
+          <Link href="#" target="_blank" className="flex items-center gap-2 sm:gap-2.5">
+            <Image src="/assets/icons/how-to-buy.svg" alt="How to buy" width={16} height={16} />
+            <h3 className="text-white/90 text-[13px] sm:text-[14px] leading-[16.8px] font-normal">How to buy</h3>
+          </Link>
+          <Link href="#" target="_blank" className="flex items-center gap-2 sm:gap-2.5">
+            <Image
+              src="/assets/icons/my-wallet-wont-connect.svg"
+              alt="My wallet won't connect!"
+              width={16}
+              height={16}
+            />
+            <h3 className="text-white/90 text-[13px] sm:text-[14px] leading-[16.8px] font-normal">
+              My wallet won&apos;t connect!
+            </h3>
+          </Link>
+        </div>
+      </div>
+      <div className="hidden">Modal state: {showReferModal ? "open" : "closed"}</div>
+      {ReferEarnModal()}
+    </div>
     </div>
   )
 }

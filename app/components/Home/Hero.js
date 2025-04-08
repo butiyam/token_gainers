@@ -114,7 +114,7 @@ const countDown =  new Date("2025-05-25").getTime(),
             <div className={styles.glowEffectAudit} />
           </Link>
 
-          <Link href='https://github.com' target="_blank">
+          <Link href='https://tokengainers.com/assets/Whitepaper.pdf' target="_blank">
             <button
               className="relative text-[16px] leading-[19.2px] font-medium w-[134px] h-[47px] rounded-xl text-white transition-all duration-300 shadow-[0px_21px_39.3px_rgba(132,0,255,0.33),0px_0px_6px_1px_#9B59FF_inset]"
               style={{
@@ -139,12 +139,8 @@ const countDown =  new Date("2025-05-25").getTime(),
         </div>
       </div>
 
-      <div
-        className="h-full w-full py-[20px] sm:py-[30px] sm:w-[504px] sm:min-w-[504px] rounded-[15px] sm:rounded-[20px] bg-[#15012D0D] border border-[#842DFF]"
-        style={{ backdropFilter: "blur(100px)" }}
-      >
         <BuyNowBox />
-      </div>
+    
     </div>
   );
 };

@@ -73,7 +73,7 @@ const Header = ({
     { name: t("header.nav.vision"), href: "/vision" },
     { name: t("header.nav.roadmap"), href: "/#roadmap" },
     { name: "Staking", href: "/staking" },
-    { name: t("header.nav.whitepaper"), href: "/whitepaper" },
+    { name: t("header.nav.whitepaper"), href: "https://tokengainers.com/assets/Whitepaper.pdf" },
     { name: t("header.nav.faqs"), href: "/#faqs" },
   ];
 

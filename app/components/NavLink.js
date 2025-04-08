@@ -33,6 +33,7 @@ const NavLink = ({ link, dropdownOpen, setDropdownOpen }) => {
 
   const handleSubmenuClick = (e, href) => {
     e.stopPropagation();
+
     router.push(href); // Use the localized href from Header
     setDropdownOpen(false);
   };
@@ -72,7 +73,7 @@ const NavLink = ({ link, dropdownOpen, setDropdownOpen }) => {
         <button
           onClick={(e) => {
             e.stopPropagation();
-            router.push(link.href);
+            link.name != 'Whitepaper' ? router.push(link.href) : router.push('https://tokengainers.com/assets/Whitepaper.pdf');
           }}
           className="font-poppins text-base font-normal text-[#FFFFFF] hover:text-primary transition duration-300"
         >

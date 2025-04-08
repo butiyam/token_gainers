@@ -152,7 +152,7 @@ const Footer = () => {
         },
         {
           name: t("footer.resources.whitepaper"),
-          href: "https://github.com"
+          href: "https://tokengainers.com/assets/Whitepaper.pdf"
         },
         {
           name: t("footer.resources.cookiePolicy"),
@@ -215,12 +215,25 @@ const Footer = () => {
                 <ul className="space-y-[14px]">
                   {category.links.map((link) => (
                     <li key={link.href}>
+                      { link.name == 'Whitepaper' ?
+                      <>
+                      <Link
+                        href="https://tokengainers.com/assets/Whitepaper.pdf"
+                        className="text-white text-[14px] leading-[21px] font-normal font-poppins"
+                      >
+                        {link.name}
+                      </Link>
+                      </>
+                      :
+                      <>
                       <Link
                         href={link.href}
                         className="text-white text-[14px] leading-[21px] font-normal font-poppins"
                       >
                         {link.name}
                       </Link>
+                      </>
+                       }
                     </li>
                   ))}
                 </ul>
