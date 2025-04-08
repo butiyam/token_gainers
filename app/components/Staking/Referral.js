@@ -23,7 +23,7 @@ const Referral = () => {
 
   const presaleAddress = "0x462eed0076dc1b2fe9deea0857df6d1953fe7d46"
   const {address, isConnected} = useAccount()
-  const [referralLink, setReferralLink] = useState("https://vorn.ai?referral")
+  const [referralLink, setReferralLink] = useState("https://tokengainers.com?referral")
   const [referralStats] = useState(
       {
           referrals: 0,

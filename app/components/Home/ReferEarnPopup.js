@@ -84,18 +84,18 @@ const ReferEarnPopup = () => {
                         </div>
                         <div>
                             <h3 className="text-white text-sm font-medium">Total Earnings</h3>
-                            <p className="text-[#C176FF] text-sm">0 $VRN</p>
+                            <p className="text-[#C176FF] text-sm">0 $Mine X</p>
                         </div>
                     </div>
                 </div>
 
                 <button
-                    className="w-full py-3 rounded-lg font-medium text-white"
+                    className="hidden w-full py-3 rounded-lg font-medium text-white"
                     style={{
                         background: "radial-gradient(42.46% 123.69% at 57.02% 58.9%, #A761FF 0%, #490A84 100%)",
                     }}
                 >
-                    Share Referral Link
+                    My Referrals
                 </button>
             </div>
         </div>

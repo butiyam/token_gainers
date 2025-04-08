@@ -367,6 +367,24 @@ const BuyNowBox = () => {
     }
   }, [isConnected, address, balanceUSDTData, allowanceUSDTData, balanceTokenData, allowanceCoinData],)
 
+    // Add a new state for the modal
+    const [showReferModal, setShowReferModal] = useState(false)
+  
+    const ReferEarnModal = () => {
+      if (!showReferModal) return null
+  
+      // Only render in browser environment
+      if (typeof window === "undefined") return null
+  
+      return createPortal(
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center">
+          <div className="absolute inset-0 bg-black/70" onClick={() => setShowReferModal(false)}></div>
+          <ReferEarnPopup />
+        </div>,
+        document.body,
+      )
+    }
+
 
   return (
     <div className="relative text-center w-full h-full">
@@ -531,7 +549,16 @@ const BuyNowBox = () => {
       {/* Modal */}
       <div className="px-5 sm:px-[30px]">
         <div className="mt-5 flex items-center flex-wrap justify-center sm:justify-between gap-4 sm:gap-3">
-          
+           <button
+              className="flex items-center gap-2 sm:gap-2.5"
+              onClick={() => {
+
+                setShowReferModal(true)
+              }}
+            >
+              <Image src="/assets/icons/refer-earn.svg" alt="Refer Earn" width={16} height={16} />
+              <h3 className="text-white/90 text-[13px] sm:text-[14px] leading-[16.8px] font-normal">Refer & Earn</h3>
+          </button>
           <Link href="#" target="_blank" className="flex items-center gap-2 sm:gap-2.5">
             <Image src="/assets/icons/how-to-buy.svg" alt="How to buy" width={16} height={16} />
             <h3 className="text-white/90 text-[13px] sm:text-[14px] leading-[16.8px] font-normal">How to buy</h3>
@@ -549,6 +576,8 @@ const BuyNowBox = () => {
           </Link>
         </div>
       </div>
+      <div className="hidden">Modal state: {showReferModal ? "open" : "closed"}</div>
+      {ReferEarnModal()}
     </div>
   )
 }

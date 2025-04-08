@@ -132,9 +132,8 @@ const Staking = () => {
           <StakingSection />
           {/* Referral & Leaderboard */}
           <div className="grid grid-rows-1 lg:grid-cols-2 gap-[20px]">
-         {/*   <Referral />
+            <Referral />
             <Leaderboard />
-            */ }
           </div>
         </div>
       </div>

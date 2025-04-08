@@ -48,7 +48,8 @@ const Leaderboard = () => {
                 {item.user}
               </div>
               <div className="py-2.5 pr-6 xl:pr-10 text-right text-[16px] leading-[19.2px] font-medium text-white">
-                {item.amount}
+              { new Intl.NumberFormat('en-US',{currency: 'USD',}).format(Number(item.amount),)}
+                
               </div>
             </div>
           ))}

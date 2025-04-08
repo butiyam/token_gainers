@@ -65,7 +65,7 @@ export default function RewardsCalculator() {
       </div>
       <div className="mx-auto flex w-full justify-center items-center mt-[60px] lg:pb-[154px]">
         <Button
-          href="/"
+          href="/staking"
           translationKey="home.rewardsCalculator.buttonText"
           extraClass="h-[47px]"
         />

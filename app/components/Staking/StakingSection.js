@@ -32,13 +32,13 @@ const StakingSection = () => {
   };
 
   const monthDiff = (rate) => {
-    var months = '3 Months';
-    if(rate == 700){
-       months = '6 Months'
-    }else if(rate == 1200){
-      months = '9 Months'
-    }else if(rate == 1900){
-      months = '12 Months'
+    var months = '1 Days';
+    if(rate == 50){
+       months = '7 Days'
+    }else if(rate == 2100){
+      months = '30 Days'
+    }else if(rate == 1000){
+      months = '90 Days'
     }
     return months;
  };
@@ -104,7 +104,7 @@ const StakingSection = () => {
         setTotalAmount(numericStakeAmount + profit);
         
         
-      const periodDays = parseInt(selectedOption.period.split(" ")[0]) * 30;
+      const periodDays = parseInt(selectedOption.period.split(" ")[0]) * 1;
       console.log(periodDays)
       
       const currentDate = new Date();
@@ -155,42 +155,42 @@ const StakingSection = () => {
   const stakingOptions = [
     {
       period: t("home.rewardsCalculator.cards.0.title"), // This will get the translated text for each period
-      apr: "300%",
+      apr: "5%",
       bgColor: "#1C0035",
-      option: "3M",
+      option: "1D",
       textColor: "text-[#C176FF]",
     },
     {
       period: t("home.rewardsCalculator.cards.1.title"),
-      apr: "700%",
+      apr: "50%",
       bgColor: "#1C0035",
-      option: "6M",
+      option: "7D",
       textColor: "text-[#C176FF]",
     },
     {
       period: t("home.rewardsCalculator.cards.2.title"),
-      apr: "1200%",
+      apr: "210%",
       bgColor: "#1C0035",
-      option: "9M",
+      option: "30D",
       textColor: "text-[#C176FF]",
     },
     {
       period: t("home.rewardsCalculator.cards.3.title"),
-      apr: "1900%",
+      apr: "1000%",
       bgColor: "#1C0035",
-      option: "12M",
+      option: "90D",
       textColor: "text-[#C176FF]",
     },
   ];
 
   // Map periods to days
   const weekDays = {
-    "3M": 90,
-    "6M": 180,
-    "9M": 270,
-    "12M": 360,
+    "1D": 1,
+    "7D": 7,
+    "30D": 30,
+    "90D": 90,
   };
-  const [days, setDays] = useState(90);
+  const [days, setDays] = useState(1);
   const handlePeriodSelect = (index) => {
     setSelectedPeriodIndex(index);
 
@@ -306,7 +306,7 @@ async function handleStakeToken(){
         })
         const txn2 = await publicClient.waitForTransactionReceipt( { hash } );
         if(txn2.status === "success") {
-          notifySuccess('Staked `'+stakeAmount+'` VRN Successfully')
+          notifySuccess('Staked `'+stakeAmount+'` Mine x Successfully')
           setStakeButtonText("Stake Now")
         } else {
           notifyErrorMsg("Error in staking after approved")
@@ -332,7 +332,7 @@ async function handleStakeToken(){
         })
         const txn = await publicClient.waitForTransactionReceipt( { hash } );
         if(txn.status === "success") {
-          notifySuccess('Staked `'+stakeAmount+'`CYNQ Successfully')
+          notifySuccess('Staked `'+stakeAmount+'`Mine X Successfully')
           setStakeButtonText("Stake Now")
         }
       }catch(error){

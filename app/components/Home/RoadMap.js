@@ -11,9 +11,6 @@ export default function RoadMap() {
         t("home.roadMap.items.marketResearch"),
         t("home.roadMap.items.whitepaperRelease"),
         t("home.roadMap.items.tokenomicsDesign"),
-        t("home.roadMap.items.technicalArchitecture"),
-        t("home.roadMap.items.communityBuilding"),
-        t("home.roadMap.items.earlyPartnerships"),
       ],
     },
     {
@@ -24,8 +21,7 @@ export default function RoadMap() {
         t("home.roadMap.items.rwaTokenizationBeta"),
         t("home.roadMap.items.depinNodeDeployment"),
         t("home.roadMap.items.aiDaoPrototype"),
-        t("home.roadMap.items.smartContractAudits"),
-        t("home.roadMap.items.testnetIncentiveProgram"),
+
       ],
     },
     {
@@ -35,9 +31,6 @@ export default function RoadMap() {
         t("home.roadMap.items.mainnetDeployment"),
         t("home.roadMap.items.rwaMarketplace"),
         t("home.roadMap.items.aiManagedStakingPools"),
-        t("home.roadMap.items.energyTradingPlatform"),
-        t("home.roadMap.items.cexDexListings"),
-        t("home.roadMap.items.ecosystemIncentives"),
       ],
     },
     {
@@ -47,9 +40,6 @@ export default function RoadMap() {
         t("home.roadMap.items.aiModelMarketplace"),
         t("home.roadMap.items.crossChainCompatibility"),
         t("home.roadMap.items.layer2Scaling"),
-        t("home.roadMap.items.enterpriseIntegrations"),
-        t("home.roadMap.items.rwaExpansion"),
-        t("home.roadMap.items.globalOutreach"),
       ],
     },
   ];
