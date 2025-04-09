@@ -1,19 +1,59 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
+import stakingAbi from "../../components/contractABI/stakingAbi";
+import tokenAbi from "../../components/contractABI/tokenAbi";
+import presaleAbi from "../../components/contractABI/presaleAbi";
+import { useAppKit } from "@reown/appkit/react";
+import { useAccount, useReadContract, useWriteContract } from "wagmi";
+import { ethers } from "ethers";
+import Web3 from "web3"
+
+// setup blockchain here 
+const Provider = new Web3.providers.HttpProvider("https://data-seed-prebsc-1-s1.bnbchain.org:8545");
+const web3 = new Web3(Provider);
+let myReferrals = [];
 const Leaderboard = () => {
+
+
   const { t } = useTranslation();
-  const leaderboardData = [
-    { id: 1, user: "0x863E...8515", amount: "36474144.43" },
-    { id: 2, user: "0xB627...6d32", amount: "26057582.46" },
-    { id: 3, user: "0x6Fh2...b916", amount: "26561519.92" },
-    { id: 4, user: "0xBe56...A7aA", amount: "10000965.75" },
-    { id: 5, user: "0x8f19...b048", amount: "36474144.43" },
-    { id: 6, user: "0xB627...6d32", amount: "26561519.92" },
-    { id: 7, user: "0xBe56...A7aA", amount: "26057582.46" },
-    { id: 8, user: "0x8f19...b048", amount: "36474144.43" },
-    { id: 9, user: "0xB627...6d32", amount: "26561519.92" },
-  ];
+
+
+  // wallet open 
+    const {isConnected, address} = useAccount()
+  
+    const tokenAddress = "0x46c65c133Dd25617291133CD91C7E3475FBd54Ff";
+  
+    const [totalReward, setTotalReward] = useState(0);
+    
+    const formatNumberWithCommas = (number) => {
+      return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    };
+  
+    //
+  
+   // for total reward user will get
+  
+   // Fetch all user stakes
+   const { data: getReferralsInfo } = useReadContract({
+     abi: tokenAbi.abi,
+     address: tokenAddress,
+     functionName: "getReferrals",
+     args: [address],
+   });
+  
+    // use use-effect for isConnected and more things for prevent it from running multiple times(infinite loop)
+    useEffect(() => {
+      if (isConnected) {
+  
+          if(Array.isArray(getReferralsInfo)){
+              myReferrals = getReferralsInfo;
+            setTotalReward(Number(getReferralsInfo.length));
+          }
+        
+      }
+    }, [isConnected, address, getReferralsInfo],)
+
 
   return (
     <div className="mt-[20px] border border-[#440675] bg-[#0B0015] rounded-[12px] lg:p-[15px] pb-[20px]">
@@ -39,20 +79,29 @@ const Leaderboard = () => {
       {/* Data rows wrapper */}
       <div className="overflow-hidden mt-4 md:mt-[20px]">
         <div className="w-full">
-          {leaderboardData.map((item) => (
-            <div key={item.id} className="flex justify-between w-full">
+          {myReferrals.length > 0 ? (
+           myReferrals.map((item, index) => (
+
+            <div key={index} className="flex justify-between w-full">
               <div className="py-2.5 px-6 text-left text-[16px] leading-[19.2px] font-medium text-white ">
-                {item.id}
+                {index+1}
               </div>
               <div className="py-2.5 px-4 xl:pl-10 text-[16px] leading-[19.2px] font-medium text-center text-white">
-                {item.user}
+                {item.referrer}
               </div>
               <div className="py-2.5 pr-6 xl:pr-10 text-right text-[16px] leading-[19.2px] font-medium text-white">
-              { new Intl.NumberFormat('en-US',{currency: 'USD',}).format(Number(item.amount),)}
+              { new Intl.NumberFormat('en-US',{currency: 'USD',}).format(Number(item.tokensEarned),)}
                 
               </div>
             </div>
-          ))}
+
+          ))
+        )
+          :
+          (
+            <div style={{justifyContent: 'center'}} className="flex justify-between w-full"> No referrals found</div>
+          )
+          }
         </div>
       </div>
     </div>

@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { Copy, DollarSign, Sun } from 'lucide-react'
 import Web3 from 'web3'
 import { useAccount, useReadContract } from 'wagmi'
-import presaleAbi from "../../components/contractABI/presaleAbi.json"
+import presaleAbi from "../../components/contractABI/tokenAbi.json"
 
 // load bloackchain
-const Provider = new Web3.providers.HttpProvider("https://bsc-dataseed.binance.org/")
+const Provider = new Web3.providers.HttpProvider("https://data-seed-prebsc-1-s1.bnbchain.org:8545")
 const web3 = new Web3(Provider)
 const ReferEarnPopup = () => {
-    const presaleAddress = "0x462eed0076dc1b2fe9deea0857df6d1953fe7d46"
+    const presaleAddress = "0x46c65c133Dd25617291133CD91C7E3475FBd54Ff"
     const {address, isConnected} = useAccount()
     const [referralLink, setReferralLink] = useState("https://tokengainers.com/en?referral")
     const [referralStats] = useState(
@@ -42,6 +42,15 @@ const ReferEarnPopup = () => {
             if(hostname==='localhost') url = protocol+hostname+':3000'
             setReferralLink(url+'/en?referral='+address)
         }
+        
+        if(getReferralsInfo){
+
+            referralStats.referrals = getReferralsInfo.length;
+        }
+
+        if(getTotalReferralEarnInfo){
+            referralStats.bonus = web3.utils.fromWei(getTotalReferralEarnInfo.toString(), "ether");
+        }
       }, [isConnected, address, getTotalReferralEarnInfo, getReferralsInfo, referralStats])
     
     return (
@@ -73,7 +82,7 @@ const ReferEarnPopup = () => {
                         </div>
                         <div>
                             <h3 className="text-white text-sm font-medium">Total Referrals</h3>
-                            <p className="text-[#C176FF] text-sm">0</p>
+                            <p className="text-[#C176FF] text-sm">{referralStats.referrals}</p>
                         </div>
                     </div>
                 </div>
@@ -85,7 +94,7 @@ const ReferEarnPopup = () => {
                         </div>
                         <div>
                             <h3 className="text-white text-sm font-medium">Total Earnings</h3>
-                            <p className="text-[#C176FF] text-sm">0 $Mine X</p>
+                            <p className="text-[#C176FF] text-sm">{referralStats.bonus} $Mine X</p>
                         </div>
                     </div>
                 </div>

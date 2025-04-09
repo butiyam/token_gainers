@@ -3,10 +3,10 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Web3 from 'web3'
-import presaleAbi from "../contractABI/presaleAbi.json"
+import tokenAbi from "../contractABI/tokenAbi.json"
 import { useAccount, useReadContract } from "wagmi";
 
-const Provider = new Web3.providers.HttpProvider("https://bsc-dataseed.binance.org/")
+const Provider = new Web3.providers.HttpProvider("https://data-seed-prebsc-1-s1.bnbchain.org:8545")
 const web3 = new Web3(Provider)
 
 const Referral = () => {
@@ -21,25 +21,27 @@ const Referral = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const presaleAddress = "0x462eed0076dc1b2fe9deea0857df6d1953fe7d46"
+  const presaleAddress = "0x46c65c133Dd25617291133CD91C7E3475FBd54Ff"
   const {address, isConnected} = useAccount()
-  const [referralLink, setReferralLink] = useState("https://tokengainers.com?referral")
+  const [referralLink, setReferralLink] = useState("https://tokengainers.com/en?referral")
   const [referralStats] = useState(
       {
           referrals: 0,
           bonus: "0.00"
       }
   );
+
+  
   // use abi
   const { data: getReferralsInfo } = useReadContract({
-      abi: presaleAbi.abi,
+      abi: tokenAbi.abi,
       address: presaleAddress,
       functionName: 'getReferrals',
       args:[address],
     })
   
     const { data: getTotalReferralEarnInfo } = useReadContract({
-      abi: presaleAbi.abi,
+      abi: tokenAbi.abi,
       address: presaleAddress,
       functionName: 'getTotalReferralEarnings',
       args:[address],
@@ -54,6 +56,15 @@ const Referral = () => {
           if(hostname==='localhost') url = protocol+hostname+':3000'
           setReferralLink(url+'?referral='+address)
       }
+      if(getReferralsInfo){
+
+          referralStats.referrals = getReferralsInfo.length;
+      }
+
+      if(getTotalReferralEarnInfo){
+          referralStats.bonus = web3.utils.fromWei(getTotalReferralEarnInfo.toString(), "ether");
+      }
+      
     }, [isConnected, address, getTotalReferralEarnInfo, getReferralsInfo, referralStats])
   
 
@@ -67,14 +78,14 @@ const Referral = () => {
         <h2 className="text-[18px] leading-[24px] font-normal mb-[2px]">
           {t("staking.referral.totalReferrals")}
         </h2>
-        <h3 className="text-[26px] font-normal">0</h3>
+        <h3 className="text-[26px] font-normal">{referralStats.referrals}</h3>
       </div>
 
       <div className="mt-[15px] staking-section border-[#440675] border bg-[#1C0035] flex lg:flex-col flex-row lg:items-start items-center justify-between pb-2.5 pt-[14px] px-5 rounded-xl">
         <h2 className="text-[18px] leading-[24px] font-normal mb-[2px]">
           {t("staking.referral.totalEarnedAmount")}
         </h2>
-        <h3 className="text-[26px] font-normal">0</h3>
+        <h3 className="text-[26px] font-normal">{referralStats.bonus} $Mine X</h3>
       </div>
 
       {/* Referral Link Section */}
