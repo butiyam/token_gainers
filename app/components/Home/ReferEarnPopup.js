@@ -10,7 +10,7 @@ const web3 = new Web3(Provider)
 const ReferEarnPopup = () => {
     const presaleAddress = "0x462eed0076dc1b2fe9deea0857df6d1953fe7d46"
     const {address, isConnected} = useAccount()
-    const [referralLink, setReferralLink] = useState("https://vorn.ai?referral")
+    const [referralLink, setReferralLink] = useState("https://tokengainers.com/en?referral")
     const [referralStats] = useState(
         {
             referrals: 0,
@@ -38,8 +38,9 @@ const ReferEarnPopup = () => {
             const protocol = window.location.protocol;
             const hostname = window.location.hostname;
             let url = protocol+hostname;
+        
             if(hostname==='localhost') url = protocol+hostname+':3000'
-            setReferralLink(url+'?referral='+address)
+            setReferralLink(url+'/en?referral='+address)
         }
       }, [isConnected, address, getTotalReferralEarnInfo, getReferralsInfo, referralStats])
     
