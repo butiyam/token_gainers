@@ -2,7 +2,7 @@
 import { wagmiAdapter, projectId } from '../config/index'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { createAppKit } from '@reown/appkit/react'
-import { bscTestnet } from '@reown/appkit/networks'
+import { bsc } from '@reown/appkit/networks'
 import { coinbaseWallet } from 'wagmi/connectors'
 import React from 'react'
 import { WagmiProvider } from 'wagmi'
@@ -20,7 +20,7 @@ const metadata = {
   icons: ["https://tokengainers.com/assets/logo.png"]
 }
 // 3. Set the networks
-const networks = [ bscTestnet]
+const networks = [ bsc]
 
 // 5. Create modal
 createAppKit({
