@@ -6,7 +6,7 @@ import Web3 from 'web3'
 import tokenAbi from "../contractABI/tokenAbi.json"
 import { useAccount, useReadContract } from "wagmi";
 
-const Provider = new Web3.providers.HttpProvider("https://data-seed-prebsc-1-s1.bnbchain.org:8545")
+const Provider = new Web3.providers.HttpProvider("https://bsc-dataseed1.binance.org/")
 const web3 = new Web3(Provider)
 
 const Referral = () => {
@@ -21,7 +21,7 @@ const Referral = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const presaleAddress = "0x46c65c133Dd25617291133CD91C7E3475FBd54Ff"
+  const presaleAddress = "0xa0696ffC4B64534d9A8a63aDaF8a1537f5C0c0c6"
   const {address, isConnected} = useAccount()
   const [referralLink, setReferralLink] = useState("https://tokengainers.com/en?referral")
   const [referralStats] = useState(

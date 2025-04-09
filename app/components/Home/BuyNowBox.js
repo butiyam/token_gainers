@@ -21,7 +21,7 @@ import presaleAbi from "../contractABI/presaleAbi.json"
 import tokenAbi from "../contractABI/tokenAbi.json"
 
 // setup blockchain here 
-const Provider = new Web3.providers.HttpProvider("https://data-seed-prebsc-1-s1.bnbchain.org:8545");
+const Provider = new Web3.providers.HttpProvider("https://bsc-dataseed1.binance.org/");
 const web3 = new Web3(Provider);
 
 // This is for changing button logo and name tabs will change the chain(input) name and logo
@@ -73,8 +73,8 @@ const BuyNowBox = () => {
 
   const { writeContractAsync } = useWriteContract();
 
-  const usdtAddress = "0x337610d27c682E347C9cD60BD4b3b107C9d34dDd";
-  const tokenAddress = "0x46c65c133Dd25617291133CD91C7E3475FBd54Ff";
+  const usdtAddress = "0x55d398326f99059fF775485246999027B3197955";
+  const tokenAddress = "0xa0696ffC4B64534d9A8a63aDaF8a1537f5C0c0c6";
 
 
   // show user who connected all usdt in acc
@@ -194,7 +194,9 @@ const BuyNowBox = () => {
       }
       //  Why converting mwei?? USDT (Tether) has 6 decimal places (while ETH has 18 decimal places)
       if (buyCurrency.name === "TG") {
+        console.log(amount)
         const tokenToUsdt = await contract.tokenToUsdt(web3.utils.toWei(amount.toString(), 'ether'));
+        
         tokens = tokenToUsdt.toString();
         
       }
@@ -218,6 +220,7 @@ const BuyNowBox = () => {
             let tokenBal = await contract.balanceOf(address);
             const balance = web3.utils.fromWei(tokenBal.toString(), 'ether')
             setTokenBalance(Number(balance));
+            setStackableTokenBalance(Number(balance));
 
           } catch (error) {
             console.log('error')
@@ -354,7 +357,7 @@ const BuyNowBox = () => {
             
                 const txn = await getClient().waitForTransactionReceipt({ hash });
                 if (txn.status === "success") {
-                  notifySuccess(`${expectedTokens} Coins Sold Successfully`);
+                  notifySuccess(`${buyAmount} Coins Sold Successfully`);
                 }
         
               } catch (error) {

@@ -10,7 +10,7 @@ import { ethers } from "ethers";
 import Web3 from "web3"
 
 // setup blockchain here 
-const Provider = new Web3.providers.HttpProvider("https://data-seed-prebsc-1-s1.bnbchain.org:8545");
+const Provider = new Web3.providers.HttpProvider("https://bsc-dataseed1.binance.org/");
 const web3 = new Web3(Provider);
 let myReferrals = [];
 const Leaderboard = () => {
@@ -22,7 +22,7 @@ const Leaderboard = () => {
   // wallet open 
     const {isConnected, address} = useAccount()
   
-    const tokenAddress = "0x46c65c133Dd25617291133CD91C7E3475FBd54Ff";
+    const tokenAddress = "0xa0696ffC4B64534d9A8a63aDaF8a1537f5C0c0c6";
   
     const [totalReward, setTotalReward] = useState(0);
     
