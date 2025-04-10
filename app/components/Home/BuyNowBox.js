@@ -63,6 +63,7 @@ const BuyNowBox = () => {
   // use usestate for buy amount and buy now button stars
   const [buyAmount, setBuyAmount] = useState(0)
   const [expectedTokens, setExpectedTokens] = useState(0);
+  const [buyButtonState, setBuyButtonState] = useState(false)
   const [buyButtonText, setBuyButtonText] = useState('BUY NOW')
 
 
@@ -235,7 +236,7 @@ const BuyNowBox = () => {
     const amount = Number(inputRef.current.value);
 
     if (parseFloat(buyAmount) <= 0) {
-      setBuyButtonText('Buy Now');
+      setBuyButtonText('BUY NOW');
       notifyErrorMsg('Please enter amount');
       return;
     }
@@ -258,6 +259,7 @@ const BuyNowBox = () => {
       if(parseFloat(allowanceUSDTData.toString()) < parseFloat(buyAmount.toString())) {
         try {
           setBuyButtonText('Approving...');
+          setBuyButtonState(true);
     
           const hash = await  writeContractAsync({ 
             abi: tokenAbi.abi,
@@ -287,10 +289,13 @@ const BuyNowBox = () => {
               }
       
             } catch (error) {
+              setBuyButtonState(false);
+              setBuyButtonText("BUY NOW");
               console.error("Transaction failed", error);
               notifyErrorMsg(error?.shortMessage || "An unknown error occurred.");
             } finally {
               setBuyButtonText("BUY NOW");
+              setBuyButtonState(false);
             }
           }
         }catch(error){
@@ -299,6 +304,9 @@ const BuyNowBox = () => {
         }
       }else{
         try {
+
+          setBuyButtonText('Buying...');
+          setBuyButtonState(true);
           const hash = await writeContractAsync({
             abi: tokenAbi.abi,
             address: tokenAddress,
@@ -312,10 +320,13 @@ const BuyNowBox = () => {
           }
   
         } catch (error) {
+          setBuyButtonText("BUY NOW");
+          setBuyButtonState(false);
           console.error("Transaction failed", error);
           notifyErrorMsg(error?.shortMessage || "An unknown error occurred.");
         } finally {
           setBuyButtonText("BUY NOW");
+          setBuyButtonState(false);
         }
       }
 
@@ -332,6 +343,7 @@ const BuyNowBox = () => {
         if(parseFloat(allowanceCoin.toString()) < parseFloat(buyAmount.toString())) {
           try {
             setBuyButtonText('Approving...');
+            setBuyButtonState(true);
       
             const hash = await  writeContractAsync({ 
               abi: tokenAbi.abi,
@@ -361,35 +373,44 @@ const BuyNowBox = () => {
                 }
         
               } catch (error) {
+                setBuyButtonText("SELL NOW");
+                setBuyButtonState(false);
                 console.error("Transaction failed", error);
                 notifyErrorMsg(error?.shortMessage || "An unknown error occurred.");
               } finally {
                 setBuyButtonText("SELL NOW");
+                setBuyButtonState(false);
               }
             }
           }catch(error){
             console.log(error);
+            setBuyButtonState(false);
             setBuyButtonText('SELL NOW');
           }
         }else{
           try {
+
+            setBuyButtonText("Selling...");
+            setBuyButtonState(true);
+            
             const hash = await writeContractAsync({
               abi: tokenAbi.abi,
               address: tokenAddress,
-              functionName: 'buy',
-              args:[parseUnits(String(buyAmount), 18), referral],
+              functionName: 'sell',
+              args:[parseUnits(String(buyAmount), 18)],
             });
         
             const txn = await getClient().waitForTransactionReceipt({ hash });
             if (txn.status === "success") {
-              notifySuccess(`${expectedTokens} Coins Bought Successfully`);
+              notifySuccess(`${buyAmount} Coins Sold Successfully`);
             }
     
           } catch (error) {
             console.error("Transaction failed", error);
             notifyErrorMsg(error?.shortMessage || "An unknown error occurred.");
           } finally {
-            setBuyButtonText("BUY NOW");
+            setBuyButtonText("SELL NOW");
+            setBuyButtonState(false);
           }
         }
   
@@ -449,8 +470,8 @@ const BuyNowBox = () => {
     <div style={{ display: activeTab? 'block': 'none'}} className="relative text-center w-full h-full">
       <div className="px-4 sm:px-[30px]">
         <h2 className="text-[24px] sm:text-[32px] leading-[29px] sm:leading-[38.4px] font-bold text-white">
-          {t("home.buyNowBox.title")}
-          <span className="text-[#8E00FF]">$Mine X</span> {t("home.buyNowBox.now")}
+          {buyCurrency.name === "USDT"  ? 'Buy': 'Sell'}
+          <span className="text-[#8E00FF]"> $Mine X </span> {t("home.buyNowBox.now")}
         </h2>
         <h4 className="hidden text-white/90 text-[13px] sm:text-[14px] leading-[16.8px] font-medium pt-[15px]">
           {t("home.buyNowBox.untilPriceIncrease")}
@@ -582,19 +603,12 @@ const BuyNowBox = () => {
             </div>
           </div>
         </div>
-        {/* Available Bonus */}
-        <div style={{visibility: 'hidden'}} className="space-y-2 sm:space-y-[11px]">
-          <h3 className="text-white text-[13px] sm:text-[14px] font-bold text-left">
-            {t("home.buyNowBox.availableBonus")}
-          </h3>
-          <div className="grid grid-cols-3 gap-[9px] sm:gap-[11px] mt-4">
-           
-          </div>
-        </div>
+
         {/* Connect and  Buy Now */}
         {
           isConnected ? (
             <button
+            disabled={buyButtonState}
               className={`${styles.stakingButtonBuyNow} ${isHovered ? styles.hovered : ""}`}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
@@ -657,8 +671,8 @@ const BuyNowBox = () => {
     <div style={{ display: activeTab? 'none': 'block'}} className="relative text-center w-full h-full">
       <div className="px-4 sm:px-[30px]">
         <h2 className="text-[24px] sm:text-[32px] leading-[29px] sm:leading-[38.4px] font-bold text-white">
-          {t("home.buyNowBox.title")}
-          <span className="text-[#8E00FF]">$FIRA</span> {t("home.buyNowBox.now")}
+        {buyCurrency.name === "USDT"  ? 'Buy': 'Sell'}
+          <span className="text-[#8E00FF]"> $FIRA </span> {t("home.buyNowBox.now")}
         </h2>
         <h4 className="hidden text-white/90 text-[13px] sm:text-[14px] leading-[16.8px] font-medium pt-[15px]">
           {t("home.buyNowBox.untilPriceIncrease")}
@@ -790,15 +804,7 @@ const BuyNowBox = () => {
             </div>
           </div>
         </div>
-        {/* Available Bonus */}
-        <div style={{visibility: 'hidden'}} className="space-y-2 sm:space-y-[11px]">
-          <h3 className="text-white text-[13px] sm:text-[14px] font-bold text-left">
-            {t("home.buyNowBox.availableBonus")}
-          </h3>
-          <div className="grid grid-cols-3 gap-[9px] sm:gap-[11px] mt-4">
-           
-          </div>
-        </div>
+
         {/* Connect and  Buy Now */}
         {
           isConnected ? (
