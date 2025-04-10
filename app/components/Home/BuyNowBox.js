@@ -178,7 +178,7 @@ const BuyNowBox = () => {
 
     
     // Connect to the public RPC provider
-    const provider = new ethers.JsonRpcProvider('https://data-seed-prebsc-1-s1.bnbchain.org:8545');
+    const provider = new ethers.JsonRpcProvider('https://bsc-dataseed1.binance.org/');
     // Create a contract instance with the provider
     const contract = new ethers.Contract(tokenAddress, tokenAbi.abi, provider);
     try {
@@ -212,7 +212,7 @@ const BuyNowBox = () => {
   // fetch web3 data 
   const fetchBalance = async () => {
     // Connect to the public RPC provider
-    const provider = new ethers.JsonRpcProvider('https://data-seed-prebsc-1-s1.bnbchain.org:8545');
+    const provider = new ethers.JsonRpcProvider('https://bsc-dataseed1.binance.org/');
     // Create a contract instance with the provider
     const contract = new ethers.Contract(tokenAddress, tokenAbi.abi, provider);
       if (isConnected) {
